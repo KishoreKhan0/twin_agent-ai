@@ -1,0 +1,54 @@
+machine:
+  machine_id: line1_motor1
+  type: conveyor_motor
+  sampling_rate_hz: 1
+  duration_minutes: 60
+  random_seed: 42
+  start_time: "2026-05-20T14:00:00"
+
+operation:
+  operating_mode: production
+  load_baseline_pct: 65
+  load_variation_pct: 18
+
+sensors:
+  temperature_c:
+    normal_range: [40, 75]
+    noise_std: 0.8
+  vibration_mm_s:
+    normal_range: [0.1, 0.8]
+    noise_std: 0.05
+  rpm:
+    normal_range: [1200, 1800]
+    noise_std: 12
+  current_a:
+    normal_range: [5, 12]
+    noise_std: 0.35
+  load_pct:
+    normal_range: [20, 95]
+    noise_std: 2.5
+  belt_speed_mps:
+    normal_range: [0.5, 2.0]
+    noise_std: 0.02
+  throughput_units_min:
+    normal_range: [40, 160]
+    noise_std: 4.0
+  ambient_temperature_c:
+    normal_range: [18, 32]
+    noise_std: 0.3
+
+faults:
+  - type: bearing_wear
+    start_time: "00:35:00"
+    duration_minutes: 14
+    severity: medium
+
+  - type: overheating
+    start_time: "00:48:00"
+    duration_minutes: 8
+    severity: high
+
+  - type: belt_misalignment
+    start_time: "00:52:00"
+    duration_minutes: 5
+    severity: medium

@@ -1,0 +1,46 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+
+# Test and coverage outputs
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ruff cache
+.ruff_cache/
+
+# Environment files
+.env
+.env.local
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Project-generated data
+data/raw/*
+data/generated/*
+data/processed/*
+data/incidents/*
+data/reports/*
+
+# Keep folder placeholders if added later
+!data/raw/.gitkeep
+!data/generated/.gitkeep
+!data/processed/.gitkeep
+!data/incidents/.gitkeep
+!data/reports/.gitkeep

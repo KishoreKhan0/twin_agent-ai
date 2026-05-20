@@ -1,0 +1,18 @@
+# Core data stack
+numpy>=1.26
+pandas>=2.2
+PyYAML>=6.0
+pydantic>=2.7
+
+# Analytics and ML
+scikit-learn>=1.4
+
+# Visualization dashboard
+streamlit>=1.35
+plotly>=5.22
+
+# Testing
+pytest>=8.2
+
+# Development quality
+ruff>=0.5

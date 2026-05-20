@@ -1,0 +1,62 @@
+detector:
+  rolling_window_samples: 300
+  min_periods: 30
+
+  anomaly_thresholds:
+    low: 0.25
+    medium: 0.45
+    high: 0.70
+
+  incident_grouping:
+    min_duration_seconds: 20
+    max_gap_seconds: 90
+
+sensors:
+  temperature_c:
+    weight: 1.35
+    warning_min: 82
+    high_min: 90
+    z_warning: 2.5
+    z_high: 4.0
+    trend_lag_seconds: 600
+    trend_warning_delta: 6
+    trend_high_delta: 12
+
+  vibration_mm_s:
+    weight: 1.50
+    warning_min: 1.4
+    high_min: 2.5
+    z_warning: 2.5
+    z_high: 4.0
+    trend_lag_seconds: 300
+    trend_warning_delta: 0.45
+    trend_high_delta: 1.0
+
+  current_a:
+    weight: 1.15
+    warning_min: 13
+    high_min: 15
+    z_warning: 2.5
+    z_high: 4.0
+    trend_lag_seconds: 300
+    trend_warning_delta: 1.2
+    trend_high_delta: 2.4
+
+  rpm:
+    weight: 0.85
+    warning_min: 1150
+    warning_max: 1850
+    high_min: 1050
+    high_max: 1950
+    z_warning: 2.8
+    z_high: 4.5
+
+  throughput_units_min:
+    weight: 0.80
+    warning_min: 55
+    high_min: 35
+    z_warning: 2.8
+    z_high: 4.5
+    trend_lag_seconds: 300
+    trend_warning_delta: -18
+    trend_high_delta: -35
