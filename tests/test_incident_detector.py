@@ -33,6 +33,20 @@ def test_incident_detector_creates_incidents() -> None:
     assert len(incidents) >= 1
 
 
+def test_incident_detector_does_not_create_full_hour_incident() -> None:
+    processed = _processed_data()
+
+    with (PROJECT_ROOT / "configs" / "anomaly_config.yaml").open("r", encoding="utf-8") as file:
+        config = yaml.safe_load(file)
+
+    detector = IncidentDetector.from_config(config)
+    incidents = detector.detect_incidents(processed)
+
+    assert incidents
+    assert all(incident["duration_seconds"] < 3600 for incident in incidents)
+    assert incidents[0]["start_time"] > "2026-05-20T14:00:00"
+
+
 def test_incident_detector_incident_schema() -> None:
     processed = _processed_data()
 
@@ -62,5 +76,6 @@ def test_incident_detector_incident_schema() -> None:
     assert first["incident_id"].startswith("INC-")
     assert first["duration_seconds"] >= 20
     assert first["severity"] in {"low", "medium", "high"}
+    assert first["suspected_fault"] != "unknown_anomaly"
     assert isinstance(first["contributing_sensors"], list)
     assert isinstance(first["evidence"], dict)

@@ -13,7 +13,13 @@ import yaml
 
 @dataclass
 class AnomalyDetector:
-    """Detect anomalies using thresholds, rolling z-scores, and trend checks."""
+    """Detect anomalies using directional thresholds and rolling z-score columns.
+
+    The MVP intentionally uses conservative threshold-based scoring to avoid
+    flagging normal load-driven operating variation as an anomaly. Rolling
+    z-scores are still computed and stored for analysis, but the current config
+    keeps their contribution disabled by setting very high z thresholds.
+    """
 
     config: dict[str, Any]
 
@@ -45,7 +51,6 @@ class AnomalyDetector:
             raise ValueError("Anomaly config must define at least one sensor.")
 
         sensor_score_columns: list[str] = []
-        sensor_z_columns: list[str] = []
 
         for sensor_name, sensor_config in sensor_configs.items():
             if sensor_name not in result.columns:
@@ -53,18 +58,17 @@ class AnomalyDetector:
 
             threshold_score = self._threshold_score(result[sensor_name], sensor_config)
             z_values, z_score = self._rolling_z_score(result[sensor_name], sensor_config)
-            trend_score = self._trend_score(result[sensor_name], sensor_config)
 
             score_column = f"{sensor_name}_anomaly_score"
             z_column = f"{sensor_name}_rolling_z"
 
-            result[score_column] = np.maximum.reduce(
-                [threshold_score.to_numpy(), z_score.to_numpy(), trend_score.to_numpy()]
+            result[score_column] = np.maximum(
+                threshold_score.to_numpy(),
+                z_score.to_numpy(),
             ).round(4)
             result[z_column] = z_values.round(4)
 
             sensor_score_columns.append(score_column)
-            sensor_z_columns.append(z_column)
 
         if not sensor_score_columns:
             raise ValueError("No configured sensors were found in the dataframe.")
@@ -89,24 +93,50 @@ class AnomalyDetector:
 
     @staticmethod
     def _threshold_score(series: pd.Series, sensor_config: dict[str, Any]) -> pd.Series:
-        """Compute score from configured warning/high min/max bounds."""
+        """Compute directional score from configured warning/high bounds.
+
+        Supported directions:
+        - upper: anomaly when value is too high
+        - lower: anomaly when value is too low
+        - outside: anomaly when value is outside a low/high operating band
+        """
         values = series.astype(float)
         score = pd.Series(0.0, index=series.index)
+
+        direction = str(sensor_config.get("direction", "upper")).lower()
 
         warning_min = sensor_config.get("warning_min")
         high_min = sensor_config.get("high_min")
         warning_max = sensor_config.get("warning_max")
         high_max = sensor_config.get("high_max")
 
-        if warning_min is not None:
-            score = score.mask(values >= float(warning_min), 0.55)
-        if high_min is not None:
-            score = score.mask(values >= float(high_min), 0.95)
+        if direction == "upper":
+            if warning_min is not None:
+                score = score.mask(values >= float(warning_min), 0.55)
+            if high_min is not None:
+                score = score.mask(values >= float(high_min), 0.95)
 
-        if warning_max is not None:
-            score = score.mask(values >= float(warning_max), 0.55)
-        if high_max is not None:
-            score = score.mask(values >= float(high_max), 0.95)
+        elif direction == "lower":
+            if warning_min is not None:
+                score = score.mask(values <= float(warning_min), 0.55)
+            if high_min is not None:
+                score = score.mask(values <= float(high_min), 0.95)
+
+        elif direction == "outside":
+            if warning_min is not None:
+                score = score.mask(values <= float(warning_min), 0.55)
+            if warning_max is not None:
+                score = score.mask(values >= float(warning_max), 0.55)
+            if high_min is not None:
+                score = score.mask(values <= float(high_min), 0.95)
+            if high_max is not None:
+                score = score.mask(values >= float(high_max), 0.95)
+
+        else:
+            raise ValueError(
+                f"Unsupported threshold direction {direction!r}. "
+                "Expected one of: upper, lower, outside."
+            )
 
         return score.clip(0.0, 1.0)
 
@@ -136,31 +166,6 @@ class AnomalyDetector:
 
         z_score = ((abs_z - z_warning) / (z_high - z_warning)).clip(0.0, 1.0)
         return z_values, z_score
-
-    @staticmethod
-    def _trend_score(series: pd.Series, sensor_config: dict[str, Any]) -> pd.Series:
-        """Compute a trend score from configured lag and delta thresholds."""
-        if "trend_lag_seconds" not in sensor_config:
-            return pd.Series(0.0, index=series.index)
-
-        lag = int(sensor_config["trend_lag_seconds"])
-        warning_delta = float(sensor_config["trend_warning_delta"])
-        high_delta = float(sensor_config["trend_high_delta"])
-
-        values = series.astype(float)
-        delta = values - values.shift(lag)
-        score = pd.Series(0.0, index=series.index)
-
-        if warning_delta >= 0 and high_delta >= 0:
-            score = score.mask(delta >= warning_delta, 0.50)
-            score = score.mask(delta >= high_delta, 0.90)
-        elif warning_delta < 0 and high_delta < 0:
-            score = score.mask(delta <= warning_delta, 0.50)
-            score = score.mask(delta <= high_delta, 0.90)
-        else:
-            raise ValueError("trend_warning_delta and trend_high_delta must have the same sign.")
-
-        return score.fillna(0.0).clip(0.0, 1.0)
 
     def _combined_score(self, dataframe: pd.DataFrame, sensor_score_columns: list[str]) -> pd.Series:
         """Combine sensor scores into one weighted anomaly score."""
@@ -228,4 +233,6 @@ class AnomalyDetector:
             return "vibration_anomaly"
         if current_score >= 0.35:
             return "current_anomaly"
+        if throughput_score >= 0.35:
+            return "throughput_anomaly"
         return "unknown_anomaly"

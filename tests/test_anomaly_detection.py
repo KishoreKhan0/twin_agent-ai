@@ -39,6 +39,31 @@ def test_anomaly_detector_finds_fault_window_anomalies() -> None:
     assert fault_rows["anomaly_score"].mean() > normal_rows["anomaly_score"].mean()
 
 
+def test_anomaly_detector_does_not_flag_every_row() -> None:
+    simulator = MachineSimulator.from_config_file(PROJECT_ROOT / "configs" / "machine_config.yaml")
+    dataframe = simulator.simulate()
+
+    detector = AnomalyDetector.from_config_file(PROJECT_ROOT / "configs" / "anomaly_config.yaml")
+    processed = detector.detect(dataframe)
+
+    anomaly_ratio = processed["is_anomaly"].mean()
+
+    assert 0.05 < anomaly_ratio < 0.60
+
+
+def test_anomaly_detector_keeps_normal_false_positive_rate_reasonable() -> None:
+    simulator = MachineSimulator.from_config_file(PROJECT_ROOT / "configs" / "machine_config.yaml")
+    dataframe = simulator.simulate()
+
+    detector = AnomalyDetector.from_config_file(PROJECT_ROOT / "configs" / "anomaly_config.yaml")
+    processed = detector.detect(dataframe)
+
+    normal_rows = processed[processed["fault_label"] == "normal"]
+    normal_false_positive_rate = normal_rows["is_anomaly"].mean()
+
+    assert normal_false_positive_rate < 0.10
+
+
 def test_anomaly_detector_assigns_non_normal_suspected_faults() -> None:
     simulator = MachineSimulator.from_config_file(PROJECT_ROOT / "configs" / "machine_config.yaml")
     dataframe = simulator.simulate()

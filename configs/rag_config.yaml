@@ -1,0 +1,8 @@
+retrieval:
+  chunk_size_chars: 900
+  chunk_overlap_chars: 120
+  top_k: 4
+
+knowledge_base:
+  directory: knowledge_base
+  file_extension: ".md"

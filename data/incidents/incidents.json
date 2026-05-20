@@ -2,26 +2,24 @@
   {
     "incident_id": "INC-0001",
     "machine_id": "line1_motor1",
-    "start_time": "2026-05-20T14:00:00",
-    "end_time": "2026-05-20T14:59:59",
-    "duration_seconds": 3600,
+    "start_time": "2026-05-20T14:37:22",
+    "end_time": "2026-05-20T14:56:59",
+    "duration_seconds": 1178,
     "severity": "high",
-    "suspected_fault": "unknown_anomaly",
-    "max_anomaly_score": 0.9676,
-    "mean_anomaly_score": 0.6631,
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7526,
+    "mean_anomaly_score": 0.3971,
     "contributing_sensors": [
       "current_a",
-      "rpm",
       "temperature_c",
       "throughput_units_min",
       "vibration_mm_s"
     ],
     "evidence": {
-      "current_a": "value range 7.66 to 15.26; max sensor anomaly score 0.95",
-      "rpm": "value range 1353.70 to 1631.90; max sensor anomaly score 0.95",
-      "temperature_c": "value range 49.89 to 95.31; max sensor anomaly score 1.00",
-      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.95",
-      "vibration_mm_s": "value range 0.44 to 2.99; max sensor anomaly score 1.00"
+      "current_a": "value range 8.68 to 15.26; max sensor anomaly score 0.95",
+      "temperature_c": "value range 51.04 to 95.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.63 to 2.99; max sensor anomaly score 0.95"
     }
   }
 ]

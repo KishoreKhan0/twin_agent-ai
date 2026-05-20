@@ -77,9 +77,8 @@ class IncidentDetector:
         duration_seconds = int((end_time - start_time).total_seconds()) + 1
 
         severity = self._highest_severity(group["anomaly_severity"].tolist())
-        suspected_fault = self._most_common_non_normal(group["suspected_fault"].tolist())
-
         contributing_sensors = self._merge_contributors(group["contributing_sensors"].tolist())
+        suspected_fault = self._infer_group_fault(group, contributing_sensors)
         evidence = self._build_evidence(group, contributing_sensors)
 
         return {
@@ -102,13 +101,64 @@ class IncidentDetector:
         rank = {"none": 0, "low": 1, "medium": 2, "high": 3}
         return max(severities, key=lambda value: rank.get(value, 0))
 
+    def _infer_group_fault(self, group: pd.DataFrame, contributors: list[str]) -> str:
+        """Infer the dominant incident-level fault from sensor-score patterns."""
+        max_scores = {
+            "temperature_c": self._max_score(group, "temperature_c"),
+            "vibration_mm_s": self._max_score(group, "vibration_mm_s"),
+            "current_a": self._max_score(group, "current_a"),
+            "throughput_units_min": self._max_score(group, "throughput_units_min"),
+        }
+
+        if (
+            max_scores["vibration_mm_s"] >= 0.55
+            and max_scores["temperature_c"] >= 0.55
+        ):
+            return "bearing_wear"
+
+        if (
+            max_scores["vibration_mm_s"] >= 0.55
+            and max_scores["throughput_units_min"] >= 0.55
+            and max_scores["temperature_c"] < 0.55
+        ):
+            return "belt_misalignment"
+
+        if (
+            max_scores["temperature_c"] >= 0.55
+            and max_scores["vibration_mm_s"] < 0.55
+        ):
+            return "overheating"
+
+        if (
+            max_scores["current_a"] >= 0.55
+            and max_scores["temperature_c"] >= 0.35
+        ):
+            return "motor_overload"
+
+        return self._most_common_non_normal(group["suspected_fault"].tolist(), contributors)
+
     @staticmethod
-    def _most_common_non_normal(values: list[str]) -> str:
+    def _max_score(group: pd.DataFrame, sensor_name: str) -> float:
+        """Return max anomaly score for a sensor within a group."""
+        column = f"{sensor_name}_anomaly_score"
+        if column not in group.columns:
+            return 0.0
+        return float(group[column].max())
+
+    @staticmethod
+    def _most_common_non_normal(values: list[str], contributors: list[str]) -> str:
         """Return the most common suspected fault, ignoring normal labels."""
-        filtered = [value for value in values if value and value != "normal"]
-        if not filtered:
-            return "unknown_anomaly"
-        return Counter(filtered).most_common(1)[0][0]
+        filtered = [
+            value
+            for value in values
+            if isinstance(value, str) and value and value != "normal"
+        ]
+        if filtered:
+            return Counter(filtered).most_common(1)[0][0]
+
+        if contributors:
+            return f"{contributors[0]}_anomaly"
+        return "unknown_anomaly"
 
     @staticmethod
     def _merge_contributors(contributor_values: list[str]) -> list[str]:
