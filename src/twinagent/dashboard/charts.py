@@ -19,11 +19,23 @@ DEFAULT_SENSOR_COLUMNS = [
 ]
 
 
+PREMIUM_TEMPLATE = "plotly_dark"
+PREMIUM_COLORS = [
+    "#58a6ff",
+    "#35d0ff",
+    "#50fa7b",
+    "#ffca58",
+    "#ff6b6b",
+    "#a78bfa",
+    "#f472b6",
+]
+
+
 def create_sensor_timeseries_chart(
     dataframe: pd.DataFrame,
     sensor_columns: Iterable[str] | None = None,
 ) -> go.Figure:
-    """Create a multi-sensor time-series line chart."""
+    """Create a premium multi-sensor time-series line chart."""
     _validate_timestamp_column(dataframe)
 
     selected_sensors = [
@@ -34,28 +46,30 @@ def create_sensor_timeseries_chart(
 
     figure = go.Figure()
 
-    for sensor in selected_sensors:
+    for index, sensor in enumerate(selected_sensors):
         figure.add_trace(
             go.Scatter(
                 x=dataframe["timestamp"],
                 y=dataframe[sensor],
                 mode="lines",
                 name=sensor,
+                line={
+                    "width": 2.4,
+                    "color": PREMIUM_COLORS[index % len(PREMIUM_COLORS)],
+                },
             )
         )
 
-    figure.update_layout(
+    _apply_premium_layout(
+        figure,
         title="Sensor timeline",
-        xaxis_title="Time",
         yaxis_title="Sensor value",
-        legend_title="Sensor",
-        hovermode="x unified",
     )
     return figure
 
 
 def create_anomaly_score_chart(dataframe: pd.DataFrame) -> go.Figure:
-    """Create an anomaly-score timeline chart."""
+    """Create a premium anomaly-score timeline chart."""
     _validate_timestamp_column(dataframe)
     if "anomaly_score" not in dataframe.columns:
         raise ValueError("Dataframe must include anomaly_score.")
@@ -67,24 +81,27 @@ def create_anomaly_score_chart(dataframe: pd.DataFrame) -> go.Figure:
             y=dataframe["anomaly_score"],
             mode="lines",
             name="anomaly_score",
+            line={"width": 3.0, "color": "#ffca58"},
+            fill="tozeroy",
+            fillcolor="rgba(255, 202, 88, 0.12)",
         )
     )
 
-    figure.add_hline(y=0.25, line_dash="dash", annotation_text="low threshold")
-    figure.add_hline(y=0.45, line_dash="dash", annotation_text="medium threshold")
-    figure.add_hline(y=0.70, line_dash="dash", annotation_text="high threshold")
+    figure.add_hline(y=0.25, line_dash="dash", line_color="#58a6ff", annotation_text="low")
+    figure.add_hline(y=0.45, line_dash="dash", line_color="#ffca58", annotation_text="medium")
+    figure.add_hline(y=0.70, line_dash="dash", line_color="#ff6b6b", annotation_text="high")
 
-    figure.update_layout(
+    _apply_premium_layout(
+        figure,
         title="Anomaly score timeline",
-        xaxis_title="Time",
         yaxis_title="Anomaly score",
-        hovermode="x unified",
     )
+    figure.update_yaxes(range=[0, 1.05])
     return figure
 
 
 def create_health_score_chart(dataframe: pd.DataFrame) -> go.Figure:
-    """Create a health-score timeline chart."""
+    """Create a premium health-score timeline chart."""
     _validate_timestamp_column(dataframe)
     if "health_score" not in dataframe.columns:
         raise ValueError("Dataframe must include health_score.")
@@ -96,21 +113,23 @@ def create_health_score_chart(dataframe: pd.DataFrame) -> go.Figure:
             y=dataframe["health_score"],
             mode="lines",
             name="health_score",
+            line={"width": 3.0, "color": "#50fa7b"},
+            fill="tozeroy",
+            fillcolor="rgba(80, 250, 123, 0.10)",
         )
     )
 
-    figure.add_hline(y=85, line_dash="dash", annotation_text="healthy")
-    figure.add_hline(y=70, line_dash="dash", annotation_text="watch")
-    figure.add_hline(y=55, line_dash="dash", annotation_text="medium")
-    figure.add_hline(y=35, line_dash="dash", annotation_text="critical boundary")
+    figure.add_hline(y=85, line_dash="dash", line_color="#50fa7b", annotation_text="healthy")
+    figure.add_hline(y=70, line_dash="dash", line_color="#58a6ff", annotation_text="watch")
+    figure.add_hline(y=55, line_dash="dash", line_color="#ffca58", annotation_text="medium")
+    figure.add_hline(y=35, line_dash="dash", line_color="#ff6b6b", annotation_text="critical")
 
-    figure.update_layout(
+    _apply_premium_layout(
+        figure,
         title="Machine health score",
-        xaxis_title="Time",
         yaxis_title="Health score",
-        yaxis_range=[0, 105],
-        hovermode="x unified",
     )
+    figure.update_yaxes(range=[0, 105])
     return figure
 
 
@@ -140,3 +159,37 @@ def _validate_timestamp_column(dataframe: pd.DataFrame) -> None:
         raise ValueError("Cannot create chart from empty dataframe.")
     if "timestamp" not in dataframe.columns:
         raise ValueError("Dataframe must include timestamp column.")
+
+
+def _apply_premium_layout(figure: go.Figure, title: str, yaxis_title: str) -> None:
+    """Apply premium dark chart styling."""
+    figure.update_layout(
+        template=PREMIUM_TEMPLATE,
+        title={
+            "text": title,
+            "font": {"size": 20},
+        },
+        xaxis_title="Time",
+        yaxis_title=yaxis_title,
+        hovermode="x unified",
+        legend_title="",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(8, 18, 32, 0.45)",
+        margin={"l": 35, "r": 24, "t": 64, "b": 35},
+        font={"family": "Inter, Segoe UI, Arial", "color": "#dbeafe"},
+        legend={
+            "orientation": "h",
+            "yanchor": "bottom",
+            "y": 1.02,
+            "xanchor": "right",
+            "x": 1,
+        },
+    )
+    figure.update_xaxes(
+        gridcolor="rgba(255,255,255,0.08)",
+        zerolinecolor="rgba(255,255,255,0.1)",
+    )
+    figure.update_yaxes(
+        gridcolor="rgba(255,255,255,0.08)",
+        zerolinecolor="rgba(255,255,255,0.1)",
+    )
