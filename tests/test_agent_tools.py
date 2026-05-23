@@ -96,7 +96,7 @@ def test_agent_tools_retrieve_knowledge(tmp_path: Path) -> None:
     assert all(result.citation for result in results)
 
 
-def test_copilot_generates_grounded_incident_answer(tmp_path: Path) -> None:
+def test_copilot_generates_focused_incident_answer(tmp_path: Path) -> None:
     processed_path, incidents_path = _prepare_agent_files(tmp_path)
     tools = TwinAgentTools(
         processed_data_path=processed_path,
@@ -111,9 +111,11 @@ def test_copilot_generates_grounded_incident_answer(tmp_path: Path) -> None:
         question="Why did this incident trigger?",
     )
 
-    assert "Incident `INC-0001`" in answer
-    assert "Sensor evidence" in answer
-    assert "Engineering document guidance" in answer
-    assert "Recommended maintenance actions" in answer
-    assert "Uncertainty and limits" in answer
-    assert ".md::" in answer
+    assert "line1_motor1" in answer
+    assert "bearing_wear" in answer
+    assert "Minimum health score" in answer
+    assert "max anomaly score" in answer
+    assert "Sensor evidence" not in answer
+    assert "Engineering document guidance" not in answer
+    assert "Recommended maintenance actions" not in answer
+    assert "Uncertainty and limits" not in answer

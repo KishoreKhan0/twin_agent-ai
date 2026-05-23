@@ -164,5 +164,8 @@ def test_api_agent_incident_question_endpoint(tmp_path: Path) -> None:
     assert response.status_code == 200
     payload = response.json()
     assert payload["incident_id"] == "INC-0001"
-    assert "Sensor evidence" in payload["answer"]
-    assert "Engineering document guidance" in payload["answer"]
+    assert "bearing_wear" in payload["answer"]
+    assert "line1_motor1" in payload["answer"]
+    assert "Minimum health score" in payload["answer"]
+    assert "Sensor evidence" not in payload["answer"]
+    assert "Engineering document guidance" not in payload["answer"]
