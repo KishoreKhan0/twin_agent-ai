@@ -3,9 +3,14 @@ numpy>=1.26
 pandas>=2.2
 PyYAML>=6.0
 pydantic>=2.7
+python-dotenv>=1.0
 
 # Analytics and ML
 scikit-learn>=1.4
+
+# AI copilot provider
+openai>=1.30
+tenacity>=8.2
 
 # Visualization dashboard
 streamlit>=1.35

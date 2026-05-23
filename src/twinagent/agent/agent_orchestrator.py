@@ -1,8 +1,12 @@
-"""Intent-aware agentic copilot orchestrator for TwinAgent AI.
+"""Hybrid deterministic + AI-backed copilot orchestrator for TwinAgent AI.
 
-The copilot classifies the question first, then returns only the amount of
-information requested. Full incident reports are generated only when explicitly
-asked for.
+Default behavior remains deterministic and offline-friendly. When
+TWINAGENT_AI_ENABLED=1 and OPENAI_API_KEY is configured, the copilot builds a
+minimal trusted context package and asks the LLM to generate a focused answer.
+
+If the external AI provider is unavailable, rate-limited, or misconfigured, the
+user-facing answer stays clean and falls back to the deterministic focused answer.
+Raw provider errors are never appended to dashboard/API answers.
 """
 
 from __future__ import annotations
@@ -11,9 +15,27 @@ from dataclasses import dataclass
 from pathlib import Path
 from textwrap import indent
 
+from twinagent.agent.ai_context import CopilotContextBuilder
+from twinagent.agent.ai_provider import LLMResponse, create_llm_provider
+from twinagent.agent.memory import CopilotMemory
 from twinagent.agent.prompts import COPILOT_RESPONSE_POLICY
 from twinagent.agent.question_intent import CopilotIntent, classify_copilot_question
 from twinagent.agent.tools import TwinAgentTools
+
+
+SYSTEM_PROMPT = """You are TwinAgent AI, an industrial digital-twin copilot.
+
+Rules:
+- Answer only the user's question.
+- Use only the provided incident, sensor, document, and memory context.
+- Do not invent measurements, machines, incidents, sources, or physical inspection results.
+- If the question asks for one fact, answer with one concise fact.
+- If the question is messy or misspelled, infer the closest industrial-maintenance intent.
+- If the question is unrelated to this machine, incident, sensor data, or maintenance context, say no relevant incident result was found.
+- Use "suspected fault" unless there is explicit physical confirmation.
+- Mention uncertainty when recommending technician action.
+- Do not dump a full report unless the intent is full_report.
+"""
 
 
 @dataclass
@@ -21,6 +43,7 @@ class TwinAgentCopilot:
     """Tool-using copilot for focused incident Q&A and maintenance guidance."""
 
     tools: TwinAgentTools
+    memory: CopilotMemory | None = None
 
     @classmethod
     def from_project_root(cls, project_root: str | Path) -> "TwinAgentCopilot":
@@ -32,58 +55,162 @@ class TwinAgentCopilot:
             rag_config_path=root / "configs" / "rag_config.yaml",
             project_root=root,
         )
-        return cls(tools=tools)
+        memory = CopilotMemory(database_path=root / "data" / "processed" / "copilot_memory.db")
+        return cls(tools=tools, memory=memory)
 
     def answer_incident_question(
         self,
         incident_id: str,
         question: str = "What happened?",
     ) -> str:
-        """Answer an incident question using intent routing and tool calls."""
+        """Answer an incident question using intent routing, tools, and optional AI."""
         incident = self.tools.get_incident(incident_id)
-        intent = classify_copilot_question(question)
+        intent_result = classify_copilot_question(question)
+        intent = intent_result.intent
 
-        if intent.intent == CopilotIntent.IRRELEVANT:
+        deterministic_answer = self._answer_with_rules(
+            incident=incident,
+            question=question,
+            intent=intent,
+        )
+        response = self._try_ai_answer(
+            incident=incident,
+            question=question,
+            intent=intent,
+            deterministic_answer=deterministic_answer,
+        )
+
+        answer = response.text if response.used_ai and response.text.strip() else deterministic_answer
+        self._remember(
+            question=question,
+            answer=answer,
+            intent=intent.value,
+            provider=response.provider if response.used_ai else "deterministic",
+            model=response.model if response.used_ai else "rules",
+            incident_id=incident_id,
+        )
+        return answer
+
+    def _try_ai_answer(
+        self,
+        incident: dict,
+        question: str,
+        intent: CopilotIntent,
+        deterministic_answer: str,
+    ) -> LLMResponse:
+        """Attempt a real AI answer if configured, otherwise return deterministic fallback."""
+        provider = create_llm_provider()
+        if not provider.is_available():
+            return LLMResponse(
+                text=deterministic_answer,
+                provider="deterministic",
+                model="rules",
+                used_ai=False,
+            )
+
+        memory_items = []
+        if self.memory is not None:
+            memory_items = self.memory.recent_interactions(
+                limit=5,
+                incident_id=incident.get("incident_id"),
+            )
+
+        context_builder = CopilotContextBuilder(tools=self.tools)
+        context_package = context_builder.build(
+            question=question,
+            incident=incident,
+            intent=intent,
+            memory_items=memory_items,
+        )
+
+        user_prompt = (
+            "User question:\n"
+            f"{question}\n\n"
+            "Trusted context package:\n"
+            f"{context_package.to_json()}\n\n"
+            "Draft deterministic answer, if useful:\n"
+            f"{deterministic_answer}\n\n"
+            "Write the final answer. Be specific and concise unless full_report is requested."
+        )
+
+        try:
+            return provider.generate(system_prompt=SYSTEM_PROMPT, user_prompt=user_prompt)
+        except Exception:
+            # Important: do not leak provider stack traces, retry errors, quota messages,
+            # or raw exception objects into the dashboard. The fallback answer is still
+            # correct because it is generated from trusted project data.
+            return LLMResponse(
+                text=deterministic_answer,
+                provider="deterministic_after_ai_error",
+                model="rules",
+                used_ai=False,
+            )
+
+    def _remember(
+        self,
+        question: str,
+        answer: str,
+        intent: str,
+        provider: str,
+        model: str,
+        incident_id: str | None,
+    ) -> None:
+        """Persist interaction memory if configured."""
+        if self.memory is None:
+            return
+
+        self.memory.add_interaction(
+            question=question,
+            answer=answer,
+            intent=intent,
+            provider=provider,
+            model=model,
+            incident_id=incident_id,
+        )
+
+    def _answer_with_rules(self, incident: dict, question: str, intent: CopilotIntent) -> str:
+        """Return deterministic focused fallback answer."""
+        if intent == CopilotIntent.IRRELEVANT:
             return self._answer_irrelevant()
 
-        if intent.intent == CopilotIntent.FULL_REPORT:
+        if intent == CopilotIntent.FULL_REPORT:
             return self._answer_full_report(incident=incident, question=question)
 
-        if intent.intent == CopilotIntent.INCIDENT_TIME:
+        if intent == CopilotIntent.INCIDENT_TIME:
             return self._answer_incident_time(incident)
 
-        if intent.intent == CopilotIntent.MACHINE_ID:
+        if intent == CopilotIntent.MACHINE_ID:
             return f"The affected machine is `{incident['machine_id']}`."
 
-        if intent.intent == CopilotIntent.MACHINE_FAULT:
+        if intent == CopilotIntent.MACHINE_FAULT:
             return self._answer_machine_fault(incident, question)
 
-        if intent.intent == CopilotIntent.SEVERITY:
+        if intent == CopilotIntent.SEVERITY:
             return (
                 f"Incident `{incident['incident_id']}` is classified as "
                 f"**{incident['severity']}** severity."
             )
 
-        if intent.intent == CopilotIntent.HEALTH_STATUS:
+        if intent == CopilotIntent.HEALTH_STATUS:
             return self._answer_health_status(incident)
 
-        if intent.intent == CopilotIntent.ANOMALY_SCORE:
+        if intent == CopilotIntent.ANOMALY_SCORE:
             return (
                 f"For incident `{incident['incident_id']}`, the maximum anomaly score was "
                 f"**{incident['max_anomaly_score']}** and the mean anomaly score was "
                 f"**{incident['mean_anomaly_score']}**."
             )
 
-        if intent.intent == CopilotIntent.SENSOR_EVIDENCE:
+        if intent == CopilotIntent.SENSOR_EVIDENCE:
             return self._answer_sensor_evidence(incident)
 
-        if intent.intent == CopilotIntent.MAINTENANCE_ACTION:
+        if intent == CopilotIntent.MAINTENANCE_ACTION:
             return self._answer_maintenance_action(incident, question)
 
-        if intent.intent == CopilotIntent.ENGINEERING_SOURCES:
+        if intent == CopilotIntent.ENGINEERING_SOURCES:
             return self._answer_engineering_sources(incident, question)
 
-        if intent.intent == CopilotIntent.CURRENT_STATUS:
+        if intent == CopilotIntent.CURRENT_STATUS:
             return self._answer_current_status()
 
         return self._answer_incident_summary(incident)

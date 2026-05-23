@@ -261,6 +261,31 @@ def inject_premium_css() -> None:
             margin: 0.8rem 0 1rem 0;
         }
 
+        .answer-card {
+            padding: 1.25rem 1.35rem;
+            border-radius: 24px;
+            border: 1px solid rgba(88,166,255,0.25);
+            background:
+                linear-gradient(180deg, rgba(88,166,255,0.12), rgba(255,255,255,0.045));
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+            margin: 0.9rem 0 1rem 0;
+        }
+
+        .answer-label {
+            color: #93c5fd;
+            font-size: 0.78rem;
+            font-weight: 900;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .answer-text {
+            color: #eef6ff;
+            font-size: 1.02rem;
+            line-height: 1.65;
+        }
+
         .status-pill {
             display: inline-flex;
             align-items: center;
@@ -342,7 +367,6 @@ def inject_premium_css() -> None:
             filter: brightness(1.07);
         }
 
-        /* Native copilot renderer: consistent font sizes without raw HTML cards. */
         div[data-testid="stExpander"] {
             border-radius: 18px;
             border: 1px solid rgba(255,255,255,0.13);
@@ -368,13 +392,6 @@ def inject_premium_css() -> None:
             line-height: 1.5 !important;
             color: #bfd0e6 !important;
             margin: 0 !important;
-        }
-
-        .copilot-section-label {
-            font-size: 1.02rem;
-            font-weight: 900;
-            color: #ffffff;
-            margin: 0.2rem 0 0.45rem 0;
         }
 
         .footer-note {
@@ -659,7 +676,8 @@ def render_copilot_section(incidents) -> None:
 
 
 def render_copilot_answer_native(answer: str) -> None:
-    """Render copilot answer using Streamlit-native containers only."""
+    """Render copilot answers, including short/freeform answers and full reports."""
+    answer = clean_copilot_answer_for_display(answer)
     question, sections = parse_copilot_answer(answer)
 
     st.markdown(
@@ -675,10 +693,69 @@ def render_copilot_answer_native(answer: str) -> None:
     if question:
         st.info(f"Question: {strip_markdown(question)}")
 
+    if not sections:
+        render_short_answer(answer)
+        return
+
     for index, (title, body_lines) in enumerate(sections, start=1):
         with st.container(border=True):
             st.markdown(f"**{index}. {strip_markdown(title)}**")
             render_copilot_body_lines(body_lines)
+
+
+
+def clean_copilot_answer_for_display(answer: str) -> str:
+    """Remove provider failure/debug text from user-facing dashboard output."""
+    if not answer:
+        return ""
+
+    # Remove the old fallback suffix that was previously appended by the backend.
+    patterns = [
+        r"\n*_?AI provider failed, so this answer used deterministic fallback:.*",
+        r"\n*_?AI provider failed.*",
+        r"\n*RetryError\[.*",
+        r"\n*state=finished raised .*",
+    ]
+
+    cleaned = answer
+    for pattern in patterns:
+        cleaned = re.sub(pattern, "", cleaned, flags=re.IGNORECASE | re.DOTALL)
+
+    # Defensive cleanup for any unmatched raw exception fragments.
+    blocked_fragments = [
+        "RateLimitError",
+        "RetryError",
+        "Future at",
+        "state=finished raised",
+        "OpenAIError",
+        "APIStatusError",
+    ]
+
+    lines = []
+    for line in cleaned.splitlines():
+        if any(fragment in line for fragment in blocked_fragments):
+            continue
+        lines.append(line)
+
+    return "\n".join(lines).strip()
+
+
+def render_short_answer(answer: str) -> None:
+    """Render a focused short/freeform copilot answer."""
+    cleaned_answer = strip_markdown(clean_copilot_answer_for_display(answer))
+    if not cleaned_answer:
+        st.warning("No answer was generated for this question.")
+        return
+
+    st.markdown(
+        f"""
+        <div class="answer-card">
+            <div class="answer-label">Focused answer</div>
+            <div class="answer-text">{escape(cleaned_answer)}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 def render_copilot_body_lines(body_lines: list[str]) -> None:
@@ -714,7 +791,6 @@ def render_copilot_body_lines(body_lines: list[str]) -> None:
             source_citation = source_match.group(3)
             continue
 
-        # Retrieved source excerpts are plain paragraphs immediately after a source line.
         if source_title and not line.startswith("- "):
             with st.expander(source_title, expanded=False):
                 if source_citation:
