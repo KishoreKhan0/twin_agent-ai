@@ -1,5 +1,5 @@
-"""FastAPI backend components for TwinAgent AI."""
+"""FastAPI application package for TwinAgent AI."""
 
-from twinagent.api.main import create_app
+from twinagent.api.app import create_app
 
 __all__ = ["create_app"]

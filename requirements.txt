@@ -1,26 +1,12 @@
-# Core data stack
-numpy>=1.26
-pandas>=2.2
-PyYAML>=6.0
-pydantic>=2.7
-
-# Analytics and ML
-scikit-learn>=1.4
-
-# Visualization dashboard
-streamlit>=1.35
-plotly>=5.22
-
-# MQTT streaming extension
-paho-mqtt>=2.1
-
-# FastAPI backend
-fastapi>=0.115
-uvicorn[standard]>=0.32
-httpx>=0.27
-
-# Testing
-pytest>=8.2
-
-# Development quality
-ruff>=0.5
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+streamlit>=1.40.0
+pandas>=2.2.0
+numpy>=1.26.0
+scikit-learn>=1.5.0
+joblib>=1.4.0
+plotly>=5.24.0
+PyYAML>=6.0.0
+requests>=2.32.0
+httpx>=0.27.0
+pytest>=8.0.0

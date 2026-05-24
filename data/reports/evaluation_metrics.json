@@ -1,118 +1,434 @@
 {
   "summary": {
-    "rows": 3600,
+    "rows": 21600,
     "machine_id": "line1_motor1",
     "time_start": "2026-05-20T14:00:00",
-    "time_end": "2026-05-20T14:59:59",
-    "fault_rows": 1320,
-    "anomaly_rows": 934,
-    "incident_count": 1
+    "time_end": "2026-05-20T19:59:59",
+    "fault_rows": 7200,
+    "anomaly_rows": 5158,
+    "incident_count": 24
   },
   "binary_detection": {
-    "rows": 3600,
-    "true_positive": 934,
-    "false_positive": 0,
-    "true_negative": 2280,
-    "false_negative": 386,
-    "precision": 1.0,
-    "recall": 0.7076,
-    "f1_score": 0.8287,
-    "accuracy": 0.8928,
-    "specificity": 1.0,
-    "false_positive_rate": 0.0
+    "rows": 21600,
+    "true_positive": 5142,
+    "false_positive": 16,
+    "true_negative": 14384,
+    "false_negative": 2058,
+    "precision": 0.9969,
+    "recall": 0.7142,
+    "f1_score": 0.8322,
+    "accuracy": 0.904,
+    "specificity": 0.9989,
+    "false_positive_rate": 0.0011
   },
   "detection_delay": {
-    "fault_episodes": 1,
-    "detected_episodes": 1,
+    "fault_episodes": 12,
+    "detected_episodes": 12,
     "missed_episodes": 0,
-    "mean_detection_delay_seconds": 142.0,
-    "max_detection_delay_seconds": 142.0,
+    "mean_detection_delay_seconds": 95.33,
+    "max_detection_delay_seconds": 350.0,
     "episodes": [
       {
         "episode": 1,
         "fault_labels": [
-          "bearing_wear",
-          "bearing_wear+overheating",
-          "belt_misalignment",
-          "overheating",
-          "overheating+belt_misalignment"
+          "bearing_wear"
         ],
-        "start_time": "2026-05-20T14:35:00",
-        "end_time": "2026-05-20T14:56:59",
-        "duration_seconds": 1320,
+        "start_time": "2026-05-20T14:20:00",
+        "end_time": "2026-05-20T14:29:59",
+        "duration_seconds": 600,
         "detected": true,
-        "detected_at": "2026-05-20T14:37:22",
-        "delay_seconds": 142.0
+        "detected_at": "2026-05-20T14:21:29",
+        "delay_seconds": 89.0
+      },
+      {
+        "episode": 2,
+        "fault_labels": [
+          "overheating"
+        ],
+        "start_time": "2026-05-20T14:47:00",
+        "end_time": "2026-05-20T14:54:59",
+        "duration_seconds": 480,
+        "detected": true,
+        "detected_at": "2026-05-20T14:48:24",
+        "delay_seconds": 84.0
+      },
+      {
+        "episode": 3,
+        "fault_labels": [
+          "belt_misalignment"
+        ],
+        "start_time": "2026-05-20T15:15:00",
+        "end_time": "2026-05-20T15:23:59",
+        "duration_seconds": 540,
+        "detected": true,
+        "detected_at": "2026-05-20T15:16:16",
+        "delay_seconds": 76.0
+      },
+      {
+        "episode": 4,
+        "fault_labels": [
+          "motor_overload"
+        ],
+        "start_time": "2026-05-20T15:45:00",
+        "end_time": "2026-05-20T15:51:59",
+        "duration_seconds": 420,
+        "detected": true,
+        "detected_at": "2026-05-20T15:45:01",
+        "delay_seconds": 1.0
+      },
+      {
+        "episode": 5,
+        "fault_labels": [
+          "bearing_wear"
+        ],
+        "start_time": "2026-05-20T16:12:00",
+        "end_time": "2026-05-20T16:23:59",
+        "duration_seconds": 720,
+        "detected": true,
+        "detected_at": "2026-05-20T16:13:28",
+        "delay_seconds": 88.0
+      },
+      {
+        "episode": 6,
+        "fault_labels": [
+          "cooling_failure"
+        ],
+        "start_time": "2026-05-20T16:44:00",
+        "end_time": "2026-05-20T16:53:59",
+        "duration_seconds": 600,
+        "detected": true,
+        "detected_at": "2026-05-20T16:47:27",
+        "delay_seconds": 207.0
+      },
+      {
+        "episode": 7,
+        "fault_labels": [
+          "belt_misalignment"
+        ],
+        "start_time": "2026-05-20T17:16:00",
+        "end_time": "2026-05-20T17:23:59",
+        "duration_seconds": 480,
+        "detected": true,
+        "detected_at": "2026-05-20T17:16:10",
+        "delay_seconds": 10.0
+      },
+      {
+        "episode": 8,
+        "fault_labels": [
+          "sensor_drift"
+        ],
+        "start_time": "2026-05-20T17:48:00",
+        "end_time": "2026-05-20T17:59:59",
+        "duration_seconds": 720,
+        "detected": true,
+        "detected_at": "2026-05-20T17:48:59",
+        "delay_seconds": 59.0
+      },
+      {
+        "episode": 9,
+        "fault_labels": [
+          "overheating"
+        ],
+        "start_time": "2026-05-20T18:22:00",
+        "end_time": "2026-05-20T18:32:59",
+        "duration_seconds": 660,
+        "detected": true,
+        "detected_at": "2026-05-20T18:27:50",
+        "delay_seconds": 350.0
+      },
+      {
+        "episode": 10,
+        "fault_labels": [
+          "bearing_wear"
+        ],
+        "start_time": "2026-05-20T18:55:00",
+        "end_time": "2026-05-20T19:08:59",
+        "duration_seconds": 840,
+        "detected": true,
+        "detected_at": "2026-05-20T18:56:21",
+        "delay_seconds": 81.0
+      },
+      {
+        "episode": 11,
+        "fault_labels": [
+          "motor_overload"
+        ],
+        "start_time": "2026-05-20T19:28:00",
+        "end_time": "2026-05-20T19:36:59",
+        "duration_seconds": 540,
+        "detected": true,
+        "detected_at": "2026-05-20T19:29:19",
+        "delay_seconds": 79.0
+      },
+      {
+        "episode": 12,
+        "fault_labels": [
+          "belt_misalignment"
+        ],
+        "start_time": "2026-05-20T19:45:00",
+        "end_time": "2026-05-20T19:54:59",
+        "duration_seconds": 600,
+        "detected": true,
+        "detected_at": "2026-05-20T19:45:20",
+        "delay_seconds": 20.0
       }
     ]
   },
   "incident_overlap": {
-    "incident_count": 1,
-    "truth_fault_rows": 1320,
-    "incident_window_rows": 1178,
-    "overlap_rows": 1178,
-    "union_rows": 1320,
-    "incident_overlap_score": 0.8924
+    "incident_count": 24,
+    "truth_fault_rows": 7200,
+    "incident_window_rows": 5487,
+    "overlap_rows": 5395,
+    "union_rows": 7292,
+    "incident_overlap_score": 0.7399
   },
   "row_fault_classification": {
-    "evaluated_rows": 934,
-    "row_alignment_accuracy": 0.1852,
-    "accuracy": 0.1852,
+    "evaluated_rows": 5142,
+    "row_alignment_accuracy": 0.2981,
+    "accuracy": 0.2981,
     "confusion_matrix": [
       {
         "truth_fault_group": "bearing_wear",
         "predicted_fault_type": "vibration_anomaly",
-        "count": 550
+        "count": 1742
       },
       {
-        "truth_fault_group": "bearing_wear+overheating",
+        "truth_fault_group": "bearing_wear",
         "predicted_fault_type": "bearing_wear",
-        "count": 58
-      },
-      {
-        "truth_fault_group": "bearing_wear+overheating",
-        "predicted_fault_type": "vibration_anomaly",
-        "count": 2
+        "count": 73
       },
       {
         "truth_fault_group": "belt_misalignment",
         "predicted_fault_type": "vibration_anomaly",
-        "count": 60
+        "count": 1465
       },
       {
-        "truth_fault_group": "belt_misalignment+overheating",
-        "predicted_fault_type": "bearing_wear",
-        "count": 149
-      },
-      {
-        "truth_fault_group": "belt_misalignment+overheating",
-        "predicted_fault_type": "overheating",
-        "count": 85
-      },
-      {
-        "truth_fault_group": "belt_misalignment+overheating",
+        "truth_fault_group": "belt_misalignment",
         "predicted_fault_type": "belt_misalignment",
-        "count": 4
+        "count": 11
+      },
+      {
+        "truth_fault_group": "cooling_failure",
+        "predicted_fault_type": "overheating",
+        "count": 368
+      },
+      {
+        "truth_fault_group": "cooling_failure",
+        "predicted_fault_type": "motor_overload",
+        "count": 1
+      },
+      {
+        "truth_fault_group": "motor_overload",
+        "predicted_fault_type": "motor_overload",
+        "count": 800
       },
       {
         "truth_fault_group": "overheating",
         "predicted_fault_type": "overheating",
-        "count": 26
+        "count": 649
+      },
+      {
+        "truth_fault_group": "overheating",
+        "predicted_fault_type": "motor_overload",
+        "count": 32
+      },
+      {
+        "truth_fault_group": "sensor_drift",
+        "predicted_fault_type": "motor_overload",
+        "count": 1
       }
     ]
   },
   "incident_diagnosis": {
-    "evaluated_incidents": 1,
-    "correct_incidents": 1,
-    "incident_diagnosis_accuracy": 1.0,
+    "evaluated_incidents": 24,
+    "correct_incidents": 9,
+    "incident_diagnosis_accuracy": 0.375,
     "diagnoses": [
       {
         "incident_id": "INC-0001",
+        "predicted_fault": "vibration_anomaly",
+        "truth_faults": [
+          "bearing_wear"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0002",
+        "predicted_fault": "vibration_anomaly",
+        "truth_faults": [
+          "bearing_wear"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0003",
+        "predicted_fault": "vibration_anomaly",
+        "truth_faults": [
+          "bearing_wear"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0004",
+        "predicted_fault": "overheating",
+        "truth_faults": [
+          "overheating"
+        ],
+        "is_correct": true
+      },
+      {
+        "incident_id": "INC-0005",
+        "predicted_fault": "vibration_anomaly",
+        "truth_faults": [
+          "belt_misalignment"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0006",
+        "predicted_fault": "overheating",
+        "truth_faults": [
+          "motor_overload"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0007",
+        "predicted_fault": "throughput_anomaly",
+        "truth_faults": [],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0008",
+        "predicted_fault": "vibration_anomaly",
+        "truth_faults": [
+          "bearing_wear"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0009",
+        "predicted_fault": "vibration_anomaly",
+        "truth_faults": [
+          "bearing_wear"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0010",
+        "predicted_fault": "vibration_anomaly",
+        "truth_faults": [
+          "bearing_wear"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0011",
+        "predicted_fault": "overheating",
+        "truth_faults": [
+          "cooling_failure"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0012",
+        "predicted_fault": "vibration_anomaly",
+        "truth_faults": [
+          "belt_misalignment"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0013",
+        "predicted_fault": "vibration_anomaly",
+        "truth_faults": [
+          "belt_misalignment"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0014",
+        "predicted_fault": "overheating",
+        "truth_faults": [
+          "overheating"
+        ],
+        "is_correct": true
+      },
+      {
+        "incident_id": "INC-0015",
         "predicted_fault": "bearing_wear",
         "truth_faults": [
-          "bearing_wear",
-          "belt_misalignment",
-          "overheating"
+          "bearing_wear"
+        ],
+        "is_correct": true
+      },
+      {
+        "incident_id": "INC-0016",
+        "predicted_fault": "bearing_wear",
+        "truth_faults": [
+          "bearing_wear"
+        ],
+        "is_correct": true
+      },
+      {
+        "incident_id": "INC-0017",
+        "predicted_fault": "bearing_wear",
+        "truth_faults": [
+          "bearing_wear"
+        ],
+        "is_correct": true
+      },
+      {
+        "incident_id": "INC-0018",
+        "predicted_fault": "bearing_wear",
+        "truth_faults": [
+          "bearing_wear"
+        ],
+        "is_correct": true
+      },
+      {
+        "incident_id": "INC-0019",
+        "predicted_fault": "throughput_anomaly",
+        "truth_faults": [],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0020",
+        "predicted_fault": "overheating",
+        "truth_faults": [
+          "motor_overload"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0021",
+        "predicted_fault": "overheating",
+        "truth_faults": [
+          "motor_overload"
+        ],
+        "is_correct": false
+      },
+      {
+        "incident_id": "INC-0022",
+        "predicted_fault": "belt_misalignment",
+        "truth_faults": [
+          "belt_misalignment"
+        ],
+        "is_correct": true
+      },
+      {
+        "incident_id": "INC-0023",
+        "predicted_fault": "belt_misalignment",
+        "truth_faults": [
+          "belt_misalignment"
+        ],
+        "is_correct": true
+      },
+      {
+        "incident_id": "INC-0024",
+        "predicted_fault": "belt_misalignment",
+        "truth_faults": [
+          "belt_misalignment"
         ],
         "is_correct": true
       }

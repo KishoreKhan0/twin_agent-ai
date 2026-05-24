@@ -1,0 +1,161 @@
+{
+  "fleet": {
+    "machine_count": 12,
+    "sensor_rows": 43200,
+    "incident_rows": 80,
+    "time_start": "2026-05-20T14:00:00",
+    "time_end": "2026-05-21T03:49:59",
+    "incident_segmentation": {
+      "enabled": true,
+      "long_incident_threshold_seconds": 420,
+      "target_segment_seconds": 300,
+      "max_segments_per_incident": 6
+    }
+  },
+  "fault_patterns": [
+    {
+      "suspected_fault": "bearing_wear",
+      "incident_count": 64,
+      "machines": [
+        "line1_motor1",
+        "line1_motor2",
+        "line2_motor1",
+        "line2_motor2",
+        "line3_motor1",
+        "line3_motor2",
+        "line4_motor1",
+        "line4_motor2",
+        "line5_motor1",
+        "line5_motor2",
+        "line6_motor1",
+        "line6_motor2"
+      ],
+      "severity_counts": {
+        "high": 60,
+        "medium": 4
+      },
+      "average_duration_seconds": 274.45,
+      "max_anomaly_score": 0.7974,
+      "common_sensors": [
+        "temperature_c",
+        "vibration_mm_s",
+        "current_a",
+        "throughput_units_min"
+      ],
+      "incident_ids": [
+        "FLEET-M01-0001-S01",
+        "FLEET-M01-0001-S02",
+        "FLEET-M01-0001-S03",
+        "FLEET-M01-0001-S04",
+        "FLEET-M02-0003-S01",
+        "FLEET-M02-0003-S02",
+        "FLEET-M02-0003-S03",
+        "FLEET-M02-0003-S04",
+        "FLEET-M02-0003-S05",
+        "FLEET-M03-0001-S01",
+        "FLEET-M03-0001-S02",
+        "FLEET-M03-0002",
+        "FLEET-M04-0003-S01",
+        "FLEET-M04-0003-S02",
+        "FLEET-M04-0003-S03",
+        "FLEET-M04-0003-S04",
+        "FLEET-M04-0003-S05",
+        "FLEET-M05-0001-S01",
+        "FLEET-M05-0001-S02",
+        "FLEET-M05-0001-S03",
+        "FLEET-M05-0001-S04",
+        "FLEET-M05-0001-S05",
+        "FLEET-M06-0003-S01",
+        "FLEET-M06-0003-S02",
+        "FLEET-M06-0003-S03",
+        "FLEET-M06-0003-S04",
+        "FLEET-M06-0003-S05",
+        "FLEET-M06-0003-S06",
+        "FLEET-M07-0003-S01",
+        "FLEET-M07-0003-S02",
+        "FLEET-M07-0003-S03",
+        "FLEET-M07-0003-S04",
+        "FLEET-M07-0003-S05",
+        "FLEET-M08-0003-S01",
+        "FLEET-M08-0003-S02",
+        "FLEET-M08-0003-S03",
+        "FLEET-M08-0003-S04",
+        "FLEET-M08-0003-S05",
+        "FLEET-M08-0003-S06",
+        "FLEET-M09-0001-S01",
+        "FLEET-M09-0001-S02",
+        "FLEET-M09-0001-S03",
+        "FLEET-M09-0001-S04",
+        "FLEET-M09-0001-S05",
+        "FLEET-M10-0001",
+        "FLEET-M10-0003-S01",
+        "FLEET-M10-0003-S02",
+        "FLEET-M10-0003-S03",
+        "FLEET-M10-0003-S04",
+        "FLEET-M10-0003-S05",
+        "FLEET-M10-0003-S06",
+        "FLEET-M11-0004-S01",
+        "FLEET-M11-0004-S02",
+        "FLEET-M11-0004-S03",
+        "FLEET-M11-0004-S04",
+        "FLEET-M11-0004-S05",
+        "FLEET-M12-0001-S01",
+        "FLEET-M12-0001-S02",
+        "FLEET-M12-0003-S01",
+        "FLEET-M12-0003-S02",
+        "FLEET-M12-0003-S03",
+        "FLEET-M12-0003-S04",
+        "FLEET-M12-0003-S05",
+        "FLEET-M12-0003-S06"
+      ]
+    },
+    {
+      "suspected_fault": "current_anomaly",
+      "incident_count": 16,
+      "machines": [
+        "line1_motor2",
+        "line2_motor2",
+        "line3_motor2",
+        "line4_motor1",
+        "line4_motor2",
+        "line5_motor2",
+        "line6_motor1",
+        "line6_motor2"
+      ],
+      "severity_counts": {
+        "low": 7,
+        "medium": 9
+      },
+      "average_duration_seconds": 179.94,
+      "max_anomaly_score": 0.6142,
+      "common_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ],
+      "incident_ids": [
+        "FLEET-M02-0001",
+        "FLEET-M02-0002",
+        "FLEET-M04-0001",
+        "FLEET-M04-0002",
+        "FLEET-M06-0001",
+        "FLEET-M06-0002",
+        "FLEET-M07-0001",
+        "FLEET-M07-0002",
+        "FLEET-M08-0001",
+        "FLEET-M08-0002",
+        "FLEET-M10-0002",
+        "FLEET-M11-0001",
+        "FLEET-M11-0002",
+        "FLEET-M11-0003",
+        "FLEET-M12-0002-S01",
+        "FLEET-M12-0002-S02"
+      ]
+    }
+  ],
+  "example_questions": [
+    "Which machine should maintenance inspect first?",
+    "Compare bearing wear incidents.",
+    "Which issue appears most often?",
+    "Show current anomaly incidents."
+  ]
+}

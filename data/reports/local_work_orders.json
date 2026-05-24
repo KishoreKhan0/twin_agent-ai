@@ -1,0 +1,705 @@
+{
+  "total_work_orders": 24,
+  "open_p1_count": 4,
+  "open_p2_count": 17,
+  "machines_affected": 1,
+  "top_priority_machine": "line1_motor1",
+  "work_orders": [
+    {
+      "work_order_id": "LWO-00015",
+      "source_incident_id": "INC-0015",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "status": "open",
+      "start_time": "2026-05-20T18:56:21",
+      "end_time": "2026-05-20T18:59:31",
+      "due_within_hours": 4,
+      "estimated_effort_minutes": 135,
+      "recommended_action": "Prioritize bearing inspection, lubrication review, vibration check, and replacement planning if trend persists.",
+      "inspection_checklist": [
+        "Inspect bearing housing for abnormal vibration and heat.",
+        "Check lubrication condition and contamination.",
+        "Review vibration trend around the incident window.",
+        "Inspect shaft alignment and coupling condition.",
+        "Plan bearing replacement if vibration remains elevated."
+      ],
+      "safety_note": "Treat as urgent. Lock out/tag out before physical inspection if machine intervention is required.",
+      "evidence_summary": "high incident with final diagnosis bearing_wear; duration 190s; max anomaly 0.7001; sensors: current_a, temperature_c, vibration_mm_s. Diagnosis source: rule_ml_agreement; rule=bearing_wear; ml=bearing_wear (0.9672).",
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00016",
+      "source_incident_id": "INC-0016",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "status": "open",
+      "start_time": "2026-05-20T18:59:31",
+      "end_time": "2026-05-20T19:02:40",
+      "due_within_hours": 4,
+      "estimated_effort_minutes": 135,
+      "recommended_action": "Prioritize bearing inspection, lubrication review, vibration check, and replacement planning if trend persists.",
+      "inspection_checklist": [
+        "Inspect bearing housing for abnormal vibration and heat.",
+        "Check lubrication condition and contamination.",
+        "Review vibration trend around the incident window.",
+        "Inspect shaft alignment and coupling condition.",
+        "Plan bearing replacement if vibration remains elevated."
+      ],
+      "safety_note": "Treat as urgent. Lock out/tag out before physical inspection if machine intervention is required.",
+      "evidence_summary": "high incident with final diagnosis bearing_wear; duration 189s; max anomaly 0.7001; sensors: current_a, temperature_c, vibration_mm_s. Diagnosis source: rule_ml_agreement; rule=bearing_wear; ml=bearing_wear (0.9664).",
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00017",
+      "source_incident_id": "INC-0017",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "status": "open",
+      "start_time": "2026-05-20T19:02:40",
+      "end_time": "2026-05-20T19:05:49",
+      "due_within_hours": 4,
+      "estimated_effort_minutes": 135,
+      "recommended_action": "Prioritize bearing inspection, lubrication review, vibration check, and replacement planning if trend persists.",
+      "inspection_checklist": [
+        "Inspect bearing housing for abnormal vibration and heat.",
+        "Check lubrication condition and contamination.",
+        "Review vibration trend around the incident window.",
+        "Inspect shaft alignment and coupling condition.",
+        "Plan bearing replacement if vibration remains elevated."
+      ],
+      "safety_note": "Treat as urgent. Lock out/tag out before physical inspection if machine intervention is required.",
+      "evidence_summary": "high incident with final diagnosis bearing_wear; duration 189s; max anomaly 0.7001; sensors: current_a, temperature_c, vibration_mm_s. Diagnosis source: rule_ml_agreement; rule=bearing_wear; ml=bearing_wear (0.9584).",
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00018",
+      "source_incident_id": "INC-0018",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "status": "open",
+      "start_time": "2026-05-20T19:05:49",
+      "end_time": "2026-05-20T19:08:59",
+      "due_within_hours": 4,
+      "estimated_effort_minutes": 135,
+      "recommended_action": "Prioritize bearing inspection, lubrication review, vibration check, and replacement planning if trend persists.",
+      "inspection_checklist": [
+        "Inspect bearing housing for abnormal vibration and heat.",
+        "Check lubrication condition and contamination.",
+        "Review vibration trend around the incident window.",
+        "Inspect shaft alignment and coupling condition.",
+        "Plan bearing replacement if vibration remains elevated."
+      ],
+      "safety_note": "Treat as urgent. Lock out/tag out before physical inspection if machine intervention is required.",
+      "evidence_summary": "high incident with final diagnosis bearing_wear; duration 190s; max anomaly 0.7001; sensors: current_a, temperature_c, vibration_mm_s. Diagnosis source: rule_ml_agreement; rule=bearing_wear; ml=bearing_wear (0.8856).",
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00001",
+      "source_incident_id": "INC-0001",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "bearing_wear",
+      "status": "open",
+      "start_time": "2026-05-20T14:21:29",
+      "end_time": "2026-05-20T14:24:19",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 95,
+      "recommended_action": "Prioritize bearing inspection, lubrication review, vibration check, and replacement planning if trend persists.",
+      "inspection_checklist": [
+        "Inspect bearing housing for abnormal vibration and heat.",
+        "Check lubrication condition and contamination.",
+        "Review vibration trend around the incident window.",
+        "Inspect shaft alignment and coupling condition.",
+        "Plan bearing replacement if vibration remains elevated."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis bearing_wear; duration 170s; max anomaly 0.5662; sensors: vibration_mm_s. Diagnosis source: ml_override_generic_rule; rule=vibration_anomaly; ml=bearing_wear (0.9592).",
+      "contributing_sensors": [
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00002",
+      "source_incident_id": "INC-0002",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "bearing_wear",
+      "status": "open",
+      "start_time": "2026-05-20T14:24:19",
+      "end_time": "2026-05-20T14:27:09",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 95,
+      "recommended_action": "Prioritize bearing inspection, lubrication review, vibration check, and replacement planning if trend persists.",
+      "inspection_checklist": [
+        "Inspect bearing housing for abnormal vibration and heat.",
+        "Check lubrication condition and contamination.",
+        "Review vibration trend around the incident window.",
+        "Inspect shaft alignment and coupling condition.",
+        "Plan bearing replacement if vibration remains elevated."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis bearing_wear; duration 170s; max anomaly 0.5662; sensors: vibration_mm_s. Diagnosis source: ml_override_generic_rule; rule=vibration_anomaly; ml=bearing_wear (0.9936).",
+      "contributing_sensors": [
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00003",
+      "source_incident_id": "INC-0003",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "bearing_wear",
+      "status": "open",
+      "start_time": "2026-05-20T14:27:09",
+      "end_time": "2026-05-20T14:29:59",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 95,
+      "recommended_action": "Prioritize bearing inspection, lubrication review, vibration check, and replacement planning if trend persists.",
+      "inspection_checklist": [
+        "Inspect bearing housing for abnormal vibration and heat.",
+        "Check lubrication condition and contamination.",
+        "Review vibration trend around the incident window.",
+        "Inspect shaft alignment and coupling condition.",
+        "Plan bearing replacement if vibration remains elevated."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis bearing_wear; duration 170s; max anomaly 0.5662; sensors: vibration_mm_s. Diagnosis source: ml_override_generic_rule; rule=vibration_anomaly; ml=bearing_wear (0.875).",
+      "contributing_sensors": [
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00004",
+      "source_incident_id": "INC-0004",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "overheating",
+      "status": "open",
+      "start_time": "2026-05-20T14:48:24",
+      "end_time": "2026-05-20T14:54:59",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 100,
+      "recommended_action": "Inspect cooling path, motor load, ambient conditions, and electrical terminals before extended operation.",
+      "inspection_checklist": [
+        "Check cooling airflow and fan operation.",
+        "Inspect motor surface temperature and thermal hot spots.",
+        "Verify motor load and duty cycle during the incident.",
+        "Inspect electrical terminals for loose or heated contacts.",
+        "Confirm ambient temperature and ventilation conditions."
+      ],
+      "safety_note": "Verify electrical and thermal safety before touching motor housing or terminals.",
+      "evidence_summary": "medium incident with final diagnosis overheating; duration 396s; max anomaly 0.5523; sensors: current_a, temperature_c. Diagnosis source: rule_ml_agreement; rule=overheating; ml=overheating (0.6984).",
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00006",
+      "source_incident_id": "INC-0006",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "motor_overload",
+      "status": "open",
+      "start_time": "2026-05-20T15:45:01",
+      "end_time": "2026-05-20T15:51:59",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 100,
+      "recommended_action": "Inspect electrical current draw, mechanical loading, conveyor drag, and drive/VFD overload history.",
+      "inspection_checklist": [
+        "Inspect motor current draw under production load.",
+        "Check conveyor for mechanical jam, drag, or overloading.",
+        "Review drive/VFD overload history and current limits.",
+        "Verify belt tension and downstream blockage.",
+        "Reduce load and retest current stability."
+      ],
+      "safety_note": "Verify electrical and thermal safety before touching motor housing or terminals.",
+      "evidence_summary": "medium incident with final diagnosis motor_overload; duration 419s; max anomaly 0.6061; sensors: current_a, temperature_c. Diagnosis source: ml_high_confidence_disagreement; rule=overheating; ml=motor_overload (0.929). Diagnosis requires review before closing the work order.",
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00008",
+      "source_incident_id": "INC-0008",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "bearing_wear",
+      "status": "open",
+      "start_time": "2026-05-20T16:13:28",
+      "end_time": "2026-05-20T16:16:58",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 100,
+      "recommended_action": "Prioritize bearing inspection, lubrication review, vibration check, and replacement planning if trend persists.",
+      "inspection_checklist": [
+        "Inspect bearing housing for abnormal vibration and heat.",
+        "Check lubrication condition and contamination.",
+        "Review vibration trend around the incident window.",
+        "Inspect shaft alignment and coupling condition.",
+        "Plan bearing replacement if vibration remains elevated."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis bearing_wear; duration 210s; max anomaly 0.6278; sensors: current_a, vibration_mm_s. Diagnosis source: ml_override_generic_rule; rule=vibration_anomaly; ml=bearing_wear (0.9488).",
+      "contributing_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00009",
+      "source_incident_id": "INC-0009",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "bearing_wear",
+      "status": "open",
+      "start_time": "2026-05-20T16:16:58",
+      "end_time": "2026-05-20T16:20:29",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 100,
+      "recommended_action": "Prioritize bearing inspection, lubrication review, vibration check, and replacement planning if trend persists.",
+      "inspection_checklist": [
+        "Inspect bearing housing for abnormal vibration and heat.",
+        "Check lubrication condition and contamination.",
+        "Review vibration trend around the incident window.",
+        "Inspect shaft alignment and coupling condition.",
+        "Plan bearing replacement if vibration remains elevated."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis bearing_wear; duration 211s; max anomaly 0.6278; sensors: current_a, vibration_mm_s. Diagnosis source: ml_override_generic_rule; rule=vibration_anomaly; ml=bearing_wear (0.958).",
+      "contributing_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00010",
+      "source_incident_id": "INC-0010",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "bearing_wear",
+      "status": "open",
+      "start_time": "2026-05-20T16:20:29",
+      "end_time": "2026-05-20T16:23:59",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 100,
+      "recommended_action": "Prioritize bearing inspection, lubrication review, vibration check, and replacement planning if trend persists.",
+      "inspection_checklist": [
+        "Inspect bearing housing for abnormal vibration and heat.",
+        "Check lubrication condition and contamination.",
+        "Review vibration trend around the incident window.",
+        "Inspect shaft alignment and coupling condition.",
+        "Plan bearing replacement if vibration remains elevated."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis bearing_wear; duration 210s; max anomaly 0.6278; sensors: current_a, vibration_mm_s. Diagnosis source: ml_override_generic_rule; rule=vibration_anomaly; ml=bearing_wear (0.8872).",
+      "contributing_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00011",
+      "source_incident_id": "INC-0011",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "overheating",
+      "status": "open",
+      "start_time": "2026-05-20T16:47:27",
+      "end_time": "2026-05-20T16:53:59",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 100,
+      "recommended_action": "Inspect cooling path, motor load, ambient conditions, and electrical terminals before extended operation.",
+      "inspection_checklist": [
+        "Check cooling airflow and fan operation.",
+        "Inspect motor surface temperature and thermal hot spots.",
+        "Verify motor load and duty cycle during the incident.",
+        "Inspect electrical terminals for loose or heated contacts.",
+        "Confirm ambient temperature and ventilation conditions."
+      ],
+      "safety_note": "Verify electrical and thermal safety before touching motor housing or terminals.",
+      "evidence_summary": "medium incident with final diagnosis overheating; duration 393s; max anomaly 0.5523; sensors: current_a, temperature_c. Diagnosis source: rule_retained_ml_disagreement; rule=overheating; ml=cooling_failure (0.8133). Diagnosis requires review before closing the work order.",
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00012",
+      "source_incident_id": "INC-0012",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "belt_misalignment",
+      "status": "open",
+      "start_time": "2026-05-20T17:16:10",
+      "end_time": "2026-05-20T17:20:04",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 100,
+      "recommended_action": "Inspect belt tracking, tension, pulley alignment, and roller condition before full-speed restart.",
+      "inspection_checklist": [
+        "Inspect belt tracking and pulley alignment.",
+        "Check belt tension and edge wear.",
+        "Inspect idlers/rollers for seizure or uneven rotation.",
+        "Verify conveyor load distribution.",
+        "Realign belt before restarting at full load."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis belt_misalignment; duration 234s; max anomaly 0.5662; sensors: current_a, vibration_mm_s. Diagnosis source: ml_override_generic_rule; rule=vibration_anomaly; ml=belt_misalignment (0.9687).",
+      "contributing_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00013",
+      "source_incident_id": "INC-0013",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "belt_misalignment",
+      "status": "open",
+      "start_time": "2026-05-20T17:20:04",
+      "end_time": "2026-05-20T17:23:59",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 100,
+      "recommended_action": "Inspect belt tracking, tension, pulley alignment, and roller condition before full-speed restart.",
+      "inspection_checklist": [
+        "Inspect belt tracking and pulley alignment.",
+        "Check belt tension and edge wear.",
+        "Inspect idlers/rollers for seizure or uneven rotation.",
+        "Verify conveyor load distribution.",
+        "Realign belt before restarting at full load."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis belt_misalignment; duration 235s; max anomaly 0.5662; sensors: current_a, vibration_mm_s. Diagnosis source: ml_override_generic_rule; rule=vibration_anomaly; ml=belt_misalignment (0.9368).",
+      "contributing_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00014",
+      "source_incident_id": "INC-0014",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "overheating",
+      "status": "open",
+      "start_time": "2026-05-20T18:27:50",
+      "end_time": "2026-05-20T18:32:59",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 100,
+      "recommended_action": "Inspect cooling path, motor load, ambient conditions, and electrical terminals before extended operation.",
+      "inspection_checklist": [
+        "Check cooling airflow and fan operation.",
+        "Inspect motor surface temperature and thermal hot spots.",
+        "Verify motor load and duty cycle during the incident.",
+        "Inspect electrical terminals for loose or heated contacts.",
+        "Confirm ambient temperature and ventilation conditions."
+      ],
+      "safety_note": "Verify electrical and thermal safety before touching motor housing or terminals.",
+      "evidence_summary": "medium incident with final diagnosis overheating; duration 310s; max anomaly 0.6587; sensors: current_a, temperature_c. Diagnosis source: rule_ml_agreement; rule=overheating; ml=overheating (0.8697).",
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00020",
+      "source_incident_id": "INC-0020",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "motor_overload",
+      "status": "open",
+      "start_time": "2026-05-20T19:29:19",
+      "end_time": "2026-05-20T19:33:09",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 90,
+      "recommended_action": "Inspect electrical current draw, mechanical loading, conveyor drag, and drive/VFD overload history.",
+      "inspection_checklist": [
+        "Inspect motor current draw under production load.",
+        "Check conveyor for mechanical jam, drag, or overloading.",
+        "Review drive/VFD overload history and current limits.",
+        "Verify belt tension and downstream blockage.",
+        "Reduce load and retest current stability."
+      ],
+      "safety_note": "Verify electrical and thermal safety before touching motor housing or terminals.",
+      "evidence_summary": "medium incident with final diagnosis motor_overload; duration 230s; max anomaly 0.6061; sensors: current_a, temperature_c. Diagnosis source: ml_high_confidence_disagreement; rule=overheating; ml=motor_overload (0.872). Diagnosis requires review before closing the work order.",
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00021",
+      "source_incident_id": "INC-0021",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "motor_overload",
+      "status": "open",
+      "start_time": "2026-05-20T19:33:09",
+      "end_time": "2026-05-20T19:36:59",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 90,
+      "recommended_action": "Inspect electrical current draw, mechanical loading, conveyor drag, and drive/VFD overload history.",
+      "inspection_checklist": [
+        "Inspect motor current draw under production load.",
+        "Check conveyor for mechanical jam, drag, or overloading.",
+        "Review drive/VFD overload history and current limits.",
+        "Verify belt tension and downstream blockage.",
+        "Reduce load and retest current stability."
+      ],
+      "safety_note": "Verify electrical and thermal safety before touching motor housing or terminals.",
+      "evidence_summary": "medium incident with final diagnosis motor_overload; duration 230s; max anomaly 0.6061; sensors: current_a, temperature_c. Diagnosis source: ml_high_confidence_disagreement; rule=overheating; ml=motor_overload (0.932). Diagnosis requires review before closing the work order.",
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00022",
+      "source_incident_id": "INC-0022",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "belt_misalignment",
+      "status": "open",
+      "start_time": "2026-05-20T19:45:20",
+      "end_time": "2026-05-20T19:48:33",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 105,
+      "recommended_action": "Inspect belt tracking, tension, pulley alignment, and roller condition before full-speed restart.",
+      "inspection_checklist": [
+        "Inspect belt tracking and pulley alignment.",
+        "Check belt tension and edge wear.",
+        "Inspect idlers/rollers for seizure or uneven rotation.",
+        "Verify conveyor load distribution.",
+        "Realign belt before restarting at full load."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis belt_misalignment; duration 193s; max anomaly 0.609; sensors: current_a, throughput_units_min, vibration_mm_s. Diagnosis source: rule_ml_agreement; rule=belt_misalignment; ml=belt_misalignment (0.8712).",
+      "contributing_sensors": [
+        "current_a",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00023",
+      "source_incident_id": "INC-0023",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "belt_misalignment",
+      "status": "open",
+      "start_time": "2026-05-20T19:48:33",
+      "end_time": "2026-05-20T19:51:46",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 105,
+      "recommended_action": "Inspect belt tracking, tension, pulley alignment, and roller condition before full-speed restart.",
+      "inspection_checklist": [
+        "Inspect belt tracking and pulley alignment.",
+        "Check belt tension and edge wear.",
+        "Inspect idlers/rollers for seizure or uneven rotation.",
+        "Verify conveyor load distribution.",
+        "Realign belt before restarting at full load."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis belt_misalignment; duration 193s; max anomaly 0.609; sensors: current_a, throughput_units_min, vibration_mm_s. Diagnosis source: rule_ml_agreement; rule=belt_misalignment; ml=belt_misalignment (0.948).",
+      "contributing_sensors": [
+        "current_a",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00024",
+      "source_incident_id": "INC-0024",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P2",
+      "severity": "medium",
+      "suspected_fault": "belt_misalignment",
+      "status": "open",
+      "start_time": "2026-05-20T19:51:46",
+      "end_time": "2026-05-20T19:54:59",
+      "due_within_hours": 24,
+      "estimated_effort_minutes": 105,
+      "recommended_action": "Inspect belt tracking, tension, pulley alignment, and roller condition before full-speed restart.",
+      "inspection_checklist": [
+        "Inspect belt tracking and pulley alignment.",
+        "Check belt tension and edge wear.",
+        "Inspect idlers/rollers for seizure or uneven rotation.",
+        "Verify conveyor load distribution.",
+        "Realign belt before restarting at full load."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "medium incident with final diagnosis belt_misalignment; duration 193s; max anomaly 0.609; sensors: current_a, throughput_units_min, vibration_mm_s. Diagnosis source: rule_ml_agreement; rule=belt_misalignment; ml=belt_misalignment (0.8616).",
+      "contributing_sensors": [
+        "current_a",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00005",
+      "source_incident_id": "INC-0005",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P3",
+      "severity": "low",
+      "suspected_fault": "belt_misalignment",
+      "status": "open",
+      "start_time": "2026-05-20T15:16:16",
+      "end_time": "2026-05-20T15:23:59",
+      "due_within_hours": 72,
+      "estimated_effort_minutes": 85,
+      "recommended_action": "Inspect belt tracking, tension, pulley alignment, and roller condition before full-speed restart.",
+      "inspection_checklist": [
+        "Inspect belt tracking and pulley alignment.",
+        "Check belt tension and edge wear.",
+        "Inspect idlers/rollers for seizure or uneven rotation.",
+        "Verify conveyor load distribution.",
+        "Realign belt before restarting at full load."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "low incident with final diagnosis belt_misalignment; duration 464s; max anomaly 0.3894; sensors: current_a, vibration_mm_s. Diagnosis source: ml_override_generic_rule; rule=vibration_anomaly; ml=belt_misalignment (0.9164).",
+      "contributing_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00007",
+      "source_incident_id": "INC-0007",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P3",
+      "severity": "low",
+      "suspected_fault": "throughput_anomaly",
+      "status": "open",
+      "start_time": "2026-05-20T16:10:32",
+      "end_time": "2026-05-20T16:11:19",
+      "due_within_hours": 72,
+      "estimated_effort_minutes": 40,
+      "recommended_action": "Review sensor evidence and perform general mechanical/electrical inspection.",
+      "inspection_checklist": [
+        "Review contributing sensor traces.",
+        "Inspect machine condition near the incident time window.",
+        "Check for simultaneous load, temperature, and vibration excursions.",
+        "Escalate to reliability engineer if repeated."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "low incident with final diagnosis throughput_anomaly; duration 48s; max anomaly 0.2903; sensors: throughput_units_min. Diagnosis source: rule_retained_ml_normal; rule=throughput_anomaly; ml=normal (0.99). Diagnosis requires review before closing the work order.",
+      "contributing_sensors": [
+        "throughput_units_min"
+      ]
+    },
+    {
+      "work_order_id": "LWO-00019",
+      "source_incident_id": "INC-0019",
+      "machine_id": "line1_motor1",
+      "line_id": "unknown",
+      "display_name": "line1_motor1",
+      "priority": "P3",
+      "severity": "low",
+      "suspected_fault": "throughput_anomaly",
+      "status": "open",
+      "start_time": "2026-05-20T19:26:25",
+      "end_time": "2026-05-20T19:27:08",
+      "due_within_hours": 72,
+      "estimated_effort_minutes": 40,
+      "recommended_action": "Review sensor evidence and perform general mechanical/electrical inspection.",
+      "inspection_checklist": [
+        "Review contributing sensor traces.",
+        "Inspect machine condition near the incident time window.",
+        "Check for simultaneous load, temperature, and vibration excursions.",
+        "Escalate to reliability engineer if repeated."
+      ],
+      "safety_note": "Follow standard maintenance safety procedure before inspection.",
+      "evidence_summary": "low incident with final diagnosis throughput_anomaly; duration 44s; max anomaly 0.2903; sensors: throughput_units_min. Diagnosis source: rule_retained_ml_normal; rule=throughput_anomaly; ml=normal (0.986). Diagnosis requires review before closing the work order.",
+      "contributing_sensors": [
+        "throughput_units_min"
+      ]
+    }
+  ]
+}

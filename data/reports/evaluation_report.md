@@ -3,66 +3,91 @@
 ## Dataset summary
 
 - Machine ID: `line1_motor1`
-- Time range: `2026-05-20T14:00:00` to `2026-05-20T14:59:59`
-- Total rows: **3600**
-- Fault rows: **1320**
-- Anomaly rows: **934**
-- Incidents: **1**
+- Time range: `2026-05-20T14:00:00` to `2026-05-20T19:59:59`
+- Total rows: **21600**
+- Fault rows: **7200**
+- Anomaly rows: **5158**
+- Incidents: **24**
 
 ## Binary anomaly detection metrics
 
 | Metric | Value |
 |---|---:|
-| Precision | 1.0 |
-| Recall | 0.7076 |
-| F1 score | 0.8287 |
-| Accuracy | 0.8928 |
-| False positive rate | 0.0 |
-| True positive | 934 |
-| False positive | 0 |
-| True negative | 2280 |
-| False negative | 386 |
+| Precision | 0.9969 |
+| Recall | 0.7142 |
+| F1 score | 0.8322 |
+| Accuracy | 0.904 |
+| False positive rate | 0.0011 |
+| True positive | 5142 |
+| False positive | 16 |
+| True negative | 14384 |
+| False negative | 2058 |
 
 ## Detection delay
 
-- Fault episodes: **1**
-- Detected episodes: **1**
+- Fault episodes: **12**
+- Detected episodes: **12**
 - Missed episodes: **0**
-- Mean detection delay: **142.0 seconds**
-- Max detection delay: **142.0 seconds**
+- Mean detection delay: **95.33 seconds**
+- Max detection delay: **350.0 seconds**
 
 ## Incident overlap
 
-- Incident overlap score: **0.8924**
-- Ground-truth fault rows: **1320**
-- Incident-window rows: **1178**
-- Overlap rows: **1178**
+- Incident overlap score: **0.7399**
+- Ground-truth fault rows: **7200**
+- Incident-window rows: **5487**
+- Overlap rows: **5395**
 
 ## Incident-level diagnosis
 
-- Evaluated incidents: **1**
-- Correct incidents: **1**
-- Incident diagnosis accuracy: **1.0**
+- Evaluated incidents: **24**
+- Correct incidents: **9**
+- Incident diagnosis accuracy: **0.375**
 
 | Incident | Predicted fault | Ground-truth faults | Correct |
 |---|---|---|---|
-| INC-0001 | bearing_wear | bearing_wear, belt_misalignment, overheating | True |
+| INC-0001 | vibration_anomaly | bearing_wear | False |
+| INC-0002 | vibration_anomaly | bearing_wear | False |
+| INC-0003 | vibration_anomaly | bearing_wear | False |
+| INC-0004 | overheating | overheating | True |
+| INC-0005 | vibration_anomaly | belt_misalignment | False |
+| INC-0006 | overheating | motor_overload | False |
+| INC-0007 | throughput_anomaly |  | False |
+| INC-0008 | vibration_anomaly | bearing_wear | False |
+| INC-0009 | vibration_anomaly | bearing_wear | False |
+| INC-0010 | vibration_anomaly | bearing_wear | False |
+| INC-0011 | overheating | cooling_failure | False |
+| INC-0012 | vibration_anomaly | belt_misalignment | False |
+| INC-0013 | vibration_anomaly | belt_misalignment | False |
+| INC-0014 | overheating | overheating | True |
+| INC-0015 | bearing_wear | bearing_wear | True |
+| INC-0016 | bearing_wear | bearing_wear | True |
+| INC-0017 | bearing_wear | bearing_wear | True |
+| INC-0018 | bearing_wear | bearing_wear | True |
+| INC-0019 | throughput_anomaly |  | False |
+| INC-0020 | overheating | motor_overload | False |
+| INC-0021 | overheating | motor_overload | False |
+| INC-0022 | belt_misalignment | belt_misalignment | True |
+| INC-0023 | belt_misalignment | belt_misalignment | True |
+| INC-0024 | belt_misalignment | belt_misalignment | True |
 
 ## Row-level suspected-fault alignment
 
-- Evaluated anomaly rows inside fault windows: **934**
-- Row alignment accuracy: **0.1852**
+- Evaluated anomaly rows inside fault windows: **5142**
+- Row alignment accuracy: **0.2981**
 
 | Ground-truth fault group | Predicted fault | Count |
 |---|---|---:|
-| bearing_wear | vibration_anomaly | 550 |
-| bearing_wear+overheating | bearing_wear | 58 |
-| bearing_wear+overheating | vibration_anomaly | 2 |
-| belt_misalignment | vibration_anomaly | 60 |
-| belt_misalignment+overheating | bearing_wear | 149 |
-| belt_misalignment+overheating | overheating | 85 |
-| belt_misalignment+overheating | belt_misalignment | 4 |
-| overheating | overheating | 26 |
+| bearing_wear | vibration_anomaly | 1742 |
+| bearing_wear | bearing_wear | 73 |
+| belt_misalignment | vibration_anomaly | 1465 |
+| belt_misalignment | belt_misalignment | 11 |
+| cooling_failure | overheating | 368 |
+| cooling_failure | motor_overload | 1 |
+| motor_overload | motor_overload | 800 |
+| overheating | overheating | 649 |
+| overheating | motor_overload | 32 |
+| sensor_drift | motor_overload | 1 |
 
 ## Notes
 

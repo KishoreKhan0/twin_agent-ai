@@ -1,0 +1,221 @@
+{
+  "window_count": 359,
+  "train_window_count": 269,
+  "test_window_count": 90,
+  "feature_count": 70,
+  "class_count": 7,
+  "classes": [
+    "bearing_wear",
+    "belt_misalignment",
+    "cooling_failure",
+    "motor_overload",
+    "normal",
+    "overheating",
+    "sensor_drift"
+  ],
+  "accuracy": 0.9333,
+  "macro_f1": 0.7888,
+  "weighted_f1": 0.9332,
+  "classification_report": {
+    "bearing_wear": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 10.0
+    },
+    "belt_misalignment": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "cooling_failure": {
+      "precision": 0.25,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.2857142857142857,
+      "support": 3.0
+    },
+    "motor_overload": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "normal": {
+      "precision": 0.9827586206896551,
+      "recall": 1.0,
+      "f1-score": 0.991304347826087,
+      "support": 57.0
+    },
+    "overheating": {
+      "precision": 0.5,
+      "recall": 0.4,
+      "f1-score": 0.4444444444444444,
+      "support": 5.0
+    },
+    "sensor_drift": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.8,
+      "support": 3.0
+    },
+    "accuracy": 0.9333333333333333,
+    "macro avg": {
+      "precision": 0.8189655172413792,
+      "recall": 0.7714285714285716,
+      "f1-score": 0.7887804397121166,
+      "support": 90.0
+    },
+    "weighted avg": {
+      "precision": 0.9363026819923372,
+      "recall": 0.9333333333333333,
+      "f1-score": 0.9331523656161339,
+      "support": 90.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      10,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      57,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2
+    ]
+  ],
+  "feature_columns": [
+    "temperature_c_mean",
+    "temperature_c_std",
+    "temperature_c_min",
+    "temperature_c_max",
+    "temperature_c_range",
+    "temperature_c_last",
+    "temperature_c_slope",
+    "vibration_mm_s_mean",
+    "vibration_mm_s_std",
+    "vibration_mm_s_min",
+    "vibration_mm_s_max",
+    "vibration_mm_s_range",
+    "vibration_mm_s_last",
+    "vibration_mm_s_slope",
+    "rpm_mean",
+    "rpm_std",
+    "rpm_min",
+    "rpm_max",
+    "rpm_range",
+    "rpm_last",
+    "rpm_slope",
+    "current_a_mean",
+    "current_a_std",
+    "current_a_min",
+    "current_a_max",
+    "current_a_range",
+    "current_a_last",
+    "current_a_slope",
+    "load_pct_mean",
+    "load_pct_std",
+    "load_pct_min",
+    "load_pct_max",
+    "load_pct_range",
+    "load_pct_last",
+    "load_pct_slope",
+    "belt_speed_mps_mean",
+    "belt_speed_mps_std",
+    "belt_speed_mps_min",
+    "belt_speed_mps_max",
+    "belt_speed_mps_range",
+    "belt_speed_mps_last",
+    "belt_speed_mps_slope",
+    "throughput_units_min_mean",
+    "throughput_units_min_std",
+    "throughput_units_min_min",
+    "throughput_units_min_max",
+    "throughput_units_min_range",
+    "throughput_units_min_last",
+    "throughput_units_min_slope",
+    "ambient_temperature_c_mean",
+    "ambient_temperature_c_std",
+    "ambient_temperature_c_min",
+    "ambient_temperature_c_max",
+    "ambient_temperature_c_range",
+    "ambient_temperature_c_last",
+    "ambient_temperature_c_slope",
+    "anomaly_score_mean",
+    "anomaly_score_std",
+    "anomaly_score_min",
+    "anomaly_score_max",
+    "anomaly_score_range",
+    "anomaly_score_last",
+    "anomaly_score_slope",
+    "health_score_mean",
+    "health_score_std",
+    "health_score_min",
+    "health_score_max",
+    "health_score_range",
+    "health_score_last",
+    "health_score_slope"
+  ],
+  "config": {
+    "window_size": 120,
+    "step_size": 60,
+    "test_size": 0.25,
+    "random_state": 42,
+    "n_estimators": 250,
+    "max_depth": 18
+  }
+}

@@ -1,0 +1,1797 @@
+{
+  "fleet_machine_count": 12,
+  "fleet_incident_count": 80,
+  "fleet_time_start": "2026-05-20T14:00:00",
+  "fleet_time_end": "2026-05-21T03:49:59",
+  "top_machine": {
+    "machine_id": "line6_motor2",
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "priority_score": 439.0,
+    "priority_level": "critical",
+    "incident_count": 10,
+    "high_incident_count": 6,
+    "minimum_health_score": 25,
+    "anomaly_rows": 2318,
+    "suspected_faults": [
+      "bearing_wear",
+      "current_anomaly"
+    ],
+    "recommended_action": "Stop machine if still active and perform immediate inspection.",
+    "reason": "10 incident(s), 6 high-severity incident(s), minimum health 25, 2318 anomaly row(s), suspected faults: bearing_wear, current_anomaly."
+  },
+  "top_incident": {
+    "incident_id": "FLEET-M11-0004-S04",
+    "machine_id": "line6_motor1",
+    "line_id": "line6",
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "priority_score": 148.4,
+    "priority_level": "high",
+    "start_time": "2026-05-21T02:27:02",
+    "end_time": "2026-05-21T02:32:01",
+    "duration_seconds": 299,
+    "max_anomaly_score": 0.7974,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 299s, 4 contributing sensor(s)."
+  },
+  "machine_triage": [
+    {
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "display_name": "Line 6 Conveyor Motor 2",
+      "priority_score": 439.0,
+      "priority_level": "critical",
+      "incident_count": 10,
+      "high_incident_count": 6,
+      "minimum_health_score": 25,
+      "anomaly_rows": 2318,
+      "suspected_faults": [
+        "bearing_wear",
+        "current_anomaly"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "10 incident(s), 6 high-severity incident(s), minimum health 25, 2318 anomaly row(s), suspected faults: bearing_wear, current_anomaly."
+    },
+    {
+      "machine_id": "line5_motor2",
+      "line_id": "line5",
+      "display_name": "Line 5 Conveyor Motor 2",
+      "priority_score": 419.0,
+      "priority_level": "critical",
+      "incident_count": 8,
+      "high_incident_count": 6,
+      "minimum_health_score": 25,
+      "anomaly_rows": 2136,
+      "suspected_faults": [
+        "bearing_wear",
+        "current_anomaly"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "8 incident(s), 6 high-severity incident(s), minimum health 25, 2136 anomaly row(s), suspected faults: bearing_wear, current_anomaly."
+    },
+    {
+      "machine_id": "line4_motor2",
+      "line_id": "line4",
+      "display_name": "Line 4 Conveyor Motor 2",
+      "priority_score": 419.0,
+      "priority_level": "critical",
+      "incident_count": 8,
+      "high_incident_count": 6,
+      "minimum_health_score": 25,
+      "anomaly_rows": 1889,
+      "suspected_faults": [
+        "bearing_wear",
+        "current_anomaly"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "8 incident(s), 6 high-severity incident(s), minimum health 25, 1889 anomaly row(s), suspected faults: bearing_wear, current_anomaly."
+    },
+    {
+      "machine_id": "line3_motor2",
+      "line_id": "line3",
+      "display_name": "Line 3 Conveyor Motor 2",
+      "priority_score": 419.0,
+      "priority_level": "critical",
+      "incident_count": 8,
+      "high_incident_count": 6,
+      "minimum_health_score": 25,
+      "anomaly_rows": 1619,
+      "suspected_faults": [
+        "bearing_wear",
+        "current_anomaly"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "8 incident(s), 6 high-severity incident(s), minimum health 25, 1619 anomaly row(s), suspected faults: bearing_wear, current_anomaly."
+    },
+    {
+      "machine_id": "line6_motor1",
+      "line_id": "line6",
+      "display_name": "Line 6 Conveyor Motor 1",
+      "priority_score": 399.8,
+      "priority_level": "critical",
+      "incident_count": 8,
+      "high_incident_count": 5,
+      "minimum_health_score": 25,
+      "anomaly_rows": 1352,
+      "suspected_faults": [
+        "bearing_wear",
+        "current_anomaly"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "8 incident(s), 5 high-severity incident(s), minimum health 25, 1352 anomaly row(s), suspected faults: bearing_wear, current_anomaly."
+    },
+    {
+      "machine_id": "line2_motor2",
+      "line_id": "line2",
+      "display_name": "Line 2 Conveyor Motor 2",
+      "priority_score": 391.0,
+      "priority_level": "critical",
+      "incident_count": 7,
+      "high_incident_count": 5,
+      "minimum_health_score": 25,
+      "anomaly_rows": 1437,
+      "suspected_faults": [
+        "bearing_wear",
+        "current_anomaly"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "7 incident(s), 5 high-severity incident(s), minimum health 25, 1437 anomaly row(s), suspected faults: bearing_wear, current_anomaly."
+    },
+    {
+      "machine_id": "line1_motor2",
+      "line_id": "line1",
+      "display_name": "Line 1 Conveyor Motor 2",
+      "priority_score": 388.35,
+      "priority_level": "critical",
+      "incident_count": 7,
+      "high_incident_count": 5,
+      "minimum_health_score": 25,
+      "anomaly_rows": 1294,
+      "suspected_faults": [
+        "bearing_wear",
+        "current_anomaly"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "7 incident(s), 5 high-severity incident(s), minimum health 25, 1294 anomaly row(s), suspected faults: bearing_wear, current_anomaly."
+    },
+    {
+      "machine_id": "line4_motor1",
+      "line_id": "line4",
+      "display_name": "Line 4 Conveyor Motor 1",
+      "priority_score": 386.52,
+      "priority_level": "critical",
+      "incident_count": 7,
+      "high_incident_count": 5,
+      "minimum_health_score": 25,
+      "anomaly_rows": 1221,
+      "suspected_faults": [
+        "bearing_wear",
+        "current_anomaly"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "7 incident(s), 5 high-severity incident(s), minimum health 25, 1221 anomaly row(s), suspected faults: bearing_wear, current_anomaly."
+    },
+    {
+      "machine_id": "line3_motor1",
+      "line_id": "line3",
+      "display_name": "Line 3 Conveyor Motor 1",
+      "priority_score": 356.2,
+      "priority_level": "critical",
+      "incident_count": 5,
+      "high_incident_count": 5,
+      "minimum_health_score": 25,
+      "anomaly_rows": 1128,
+      "suspected_faults": [
+        "bearing_wear"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "5 incident(s), 5 high-severity incident(s), minimum health 25, 1128 anomaly row(s), suspected faults: bearing_wear."
+    },
+    {
+      "machine_id": "line5_motor1",
+      "line_id": "line5",
+      "display_name": "Line 5 Conveyor Motor 1",
+      "priority_score": 355.88,
+      "priority_level": "critical",
+      "incident_count": 5,
+      "high_incident_count": 5,
+      "minimum_health_score": 25,
+      "anomaly_rows": 1115,
+      "suspected_faults": [
+        "bearing_wear"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "5 incident(s), 5 high-severity incident(s), minimum health 25, 1115 anomaly row(s), suspected faults: bearing_wear."
+    },
+    {
+      "machine_id": "line1_motor1",
+      "line_id": "line1",
+      "display_name": "Line 1 Conveyor Motor 1",
+      "priority_score": 321.75,
+      "priority_level": "critical",
+      "incident_count": 4,
+      "high_incident_count": 4,
+      "minimum_health_score": 27,
+      "anomaly_rows": 934,
+      "suspected_faults": [
+        "bearing_wear"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "4 incident(s), 4 high-severity incident(s), minimum health 27, 934 anomaly row(s), suspected faults: bearing_wear."
+    },
+    {
+      "machine_id": "line2_motor1",
+      "line_id": "line2",
+      "display_name": "Line 2 Conveyor Motor 1",
+      "priority_score": 269.57,
+      "priority_level": "critical",
+      "incident_count": 3,
+      "high_incident_count": 2,
+      "minimum_health_score": 31,
+      "anomaly_rows": 815,
+      "suspected_faults": [
+        "bearing_wear"
+      ],
+      "recommended_action": "Stop machine if still active and perform immediate inspection.",
+      "reason": "3 incident(s), 2 high-severity incident(s), minimum health 31, 815 anomaly row(s), suspected faults: bearing_wear."
+    }
+  ],
+  "incident_triage": [
+    {
+      "incident_id": "FLEET-M11-0004-S04",
+      "machine_id": "line6_motor1",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.4,
+      "priority_level": "high",
+      "start_time": "2026-05-21T02:27:02",
+      "end_time": "2026-05-21T02:32:01",
+      "duration_seconds": 299,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 299s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M11-0004-S02",
+      "machine_id": "line6_motor1",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.4,
+      "priority_level": "high",
+      "start_time": "2026-05-21T02:17:05",
+      "end_time": "2026-05-21T02:22:04",
+      "duration_seconds": 299,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 299s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M04-0003-S04",
+      "machine_id": "line2_motor2",
+      "line_id": "line2",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.4,
+      "priority_level": "high",
+      "start_time": "2026-05-20T18:17:02",
+      "end_time": "2026-05-20T18:22:01",
+      "duration_seconds": 299,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 299s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M04-0003-S02",
+      "machine_id": "line2_motor2",
+      "line_id": "line2",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.4,
+      "priority_level": "high",
+      "start_time": "2026-05-20T18:07:05",
+      "end_time": "2026-05-20T18:12:04",
+      "duration_seconds": 299,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 299s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M11-0004-S05",
+      "machine_id": "line6_motor1",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.39,
+      "priority_level": "high",
+      "start_time": "2026-05-21T02:32:01",
+      "end_time": "2026-05-21T02:36:59",
+      "duration_seconds": 298,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 298s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M11-0004-S03",
+      "machine_id": "line6_motor1",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.39,
+      "priority_level": "high",
+      "start_time": "2026-05-21T02:22:04",
+      "end_time": "2026-05-21T02:27:02",
+      "duration_seconds": 298,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 298s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M11-0004-S01",
+      "machine_id": "line6_motor1",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.39,
+      "priority_level": "high",
+      "start_time": "2026-05-21T02:12:07",
+      "end_time": "2026-05-21T02:17:05",
+      "duration_seconds": 298,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 298s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M04-0003-S05",
+      "machine_id": "line2_motor2",
+      "line_id": "line2",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.39,
+      "priority_level": "high",
+      "start_time": "2026-05-20T18:22:01",
+      "end_time": "2026-05-20T18:26:59",
+      "duration_seconds": 298,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 298s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M04-0003-S03",
+      "machine_id": "line2_motor2",
+      "line_id": "line2",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.39,
+      "priority_level": "high",
+      "start_time": "2026-05-20T18:12:04",
+      "end_time": "2026-05-20T18:17:02",
+      "duration_seconds": 298,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 298s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M04-0003-S01",
+      "machine_id": "line2_motor2",
+      "line_id": "line2",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.39,
+      "priority_level": "high",
+      "start_time": "2026-05-20T18:02:07",
+      "end_time": "2026-05-20T18:07:05",
+      "duration_seconds": 298,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 298s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M02-0003-S05",
+      "machine_id": "line1_motor2",
+      "line_id": "line1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.33,
+      "priority_level": "high",
+      "start_time": "2026-05-20T16:02:08",
+      "end_time": "2026-05-20T16:06:59",
+      "duration_seconds": 291,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 291s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M02-0003-S04",
+      "machine_id": "line1_motor2",
+      "line_id": "line1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.33,
+      "priority_level": "high",
+      "start_time": "2026-05-20T15:57:17",
+      "end_time": "2026-05-20T16:02:08",
+      "duration_seconds": 291,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 291s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M02-0003-S03",
+      "machine_id": "line1_motor2",
+      "line_id": "line1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.33,
+      "priority_level": "high",
+      "start_time": "2026-05-20T15:52:26",
+      "end_time": "2026-05-20T15:57:17",
+      "duration_seconds": 291,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 291s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M02-0003-S02",
+      "machine_id": "line1_motor2",
+      "line_id": "line1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.33,
+      "priority_level": "high",
+      "start_time": "2026-05-20T15:47:35",
+      "end_time": "2026-05-20T15:52:26",
+      "duration_seconds": 291,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 291s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M02-0003-S01",
+      "machine_id": "line1_motor2",
+      "line_id": "line1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.33,
+      "priority_level": "high",
+      "start_time": "2026-05-20T15:42:44",
+      "end_time": "2026-05-20T15:47:35",
+      "duration_seconds": 291,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 291s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M12-0003-S06",
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.27,
+      "priority_level": "high",
+      "start_time": "2026-05-21T03:42:16",
+      "end_time": "2026-05-21T03:46:59",
+      "duration_seconds": 283,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 283s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M12-0003-S05",
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.27,
+      "priority_level": "high",
+      "start_time": "2026-05-21T03:37:33",
+      "end_time": "2026-05-21T03:42:16",
+      "duration_seconds": 283,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 283s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M12-0003-S04",
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.27,
+      "priority_level": "high",
+      "start_time": "2026-05-21T03:32:50",
+      "end_time": "2026-05-21T03:37:33",
+      "duration_seconds": 283,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 283s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M12-0003-S03",
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.27,
+      "priority_level": "high",
+      "start_time": "2026-05-21T03:28:07",
+      "end_time": "2026-05-21T03:32:50",
+      "duration_seconds": 283,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 283s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M12-0003-S02",
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.27,
+      "priority_level": "high",
+      "start_time": "2026-05-21T03:23:24",
+      "end_time": "2026-05-21T03:28:07",
+      "duration_seconds": 283,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 283s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M12-0003-S01",
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.27,
+      "priority_level": "high",
+      "start_time": "2026-05-21T03:18:41",
+      "end_time": "2026-05-21T03:23:24",
+      "duration_seconds": 283,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 283s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M10-0003-S05",
+      "machine_id": "line5_motor2",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.12,
+      "priority_level": "high",
+      "start_time": "2026-05-21T01:18:10",
+      "end_time": "2026-05-21T01:22:35",
+      "duration_seconds": 265,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 265s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M10-0003-S02",
+      "machine_id": "line5_motor2",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.12,
+      "priority_level": "high",
+      "start_time": "2026-05-21T01:04:57",
+      "end_time": "2026-05-21T01:09:22",
+      "duration_seconds": 265,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 265s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M10-0003-S06",
+      "machine_id": "line5_motor2",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.11,
+      "priority_level": "high",
+      "start_time": "2026-05-21T01:22:35",
+      "end_time": "2026-05-21T01:26:59",
+      "duration_seconds": 264,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 264s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M10-0003-S04",
+      "machine_id": "line5_motor2",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.11,
+      "priority_level": "high",
+      "start_time": "2026-05-21T01:13:46",
+      "end_time": "2026-05-21T01:18:10",
+      "duration_seconds": 264,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 264s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M10-0003-S03",
+      "machine_id": "line5_motor2",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.11,
+      "priority_level": "high",
+      "start_time": "2026-05-21T01:09:22",
+      "end_time": "2026-05-21T01:13:46",
+      "duration_seconds": 264,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 264s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M10-0003-S01",
+      "machine_id": "line5_motor2",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.11,
+      "priority_level": "high",
+      "start_time": "2026-05-21T01:00:33",
+      "end_time": "2026-05-21T01:04:57",
+      "duration_seconds": 264,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 264s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M08-0003-S06",
+      "machine_id": "line4_motor2",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.07,
+      "priority_level": "high",
+      "start_time": "2026-05-20T23:02:40",
+      "end_time": "2026-05-20T23:06:59",
+      "duration_seconds": 259,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 259s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M08-0003-S05",
+      "machine_id": "line4_motor2",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.07,
+      "priority_level": "high",
+      "start_time": "2026-05-20T22:58:21",
+      "end_time": "2026-05-20T23:02:40",
+      "duration_seconds": 259,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 259s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M08-0003-S04",
+      "machine_id": "line4_motor2",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.07,
+      "priority_level": "high",
+      "start_time": "2026-05-20T22:54:02",
+      "end_time": "2026-05-20T22:58:21",
+      "duration_seconds": 259,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 259s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M08-0003-S03",
+      "machine_id": "line4_motor2",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.07,
+      "priority_level": "high",
+      "start_time": "2026-05-20T22:49:43",
+      "end_time": "2026-05-20T22:54:02",
+      "duration_seconds": 259,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 259s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M08-0003-S02",
+      "machine_id": "line4_motor2",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.07,
+      "priority_level": "high",
+      "start_time": "2026-05-20T22:45:24",
+      "end_time": "2026-05-20T22:49:43",
+      "duration_seconds": 259,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 259s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M08-0003-S01",
+      "machine_id": "line4_motor2",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.07,
+      "priority_level": "high",
+      "start_time": "2026-05-20T22:41:05",
+      "end_time": "2026-05-20T22:45:24",
+      "duration_seconds": 259,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 259s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M07-0003-S05",
+      "machine_id": "line4_motor1",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.03,
+      "priority_level": "high",
+      "start_time": "2026-05-20T21:52:45",
+      "end_time": "2026-05-20T21:56:59",
+      "duration_seconds": 254,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 254s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M07-0003-S03",
+      "machine_id": "line4_motor1",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.03,
+      "priority_level": "high",
+      "start_time": "2026-05-20T21:44:18",
+      "end_time": "2026-05-20T21:48:32",
+      "duration_seconds": 254,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 254s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M07-0003-S01",
+      "machine_id": "line4_motor1",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.03,
+      "priority_level": "high",
+      "start_time": "2026-05-20T21:35:51",
+      "end_time": "2026-05-20T21:40:05",
+      "duration_seconds": 254,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 254s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M07-0003-S04",
+      "machine_id": "line4_motor1",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.02,
+      "priority_level": "high",
+      "start_time": "2026-05-20T21:48:32",
+      "end_time": "2026-05-20T21:52:45",
+      "duration_seconds": 253,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 253s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M07-0003-S02",
+      "machine_id": "line4_motor1",
+      "line_id": "line4",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.02,
+      "priority_level": "high",
+      "start_time": "2026-05-20T21:40:05",
+      "end_time": "2026-05-20T21:44:18",
+      "duration_seconds": 253,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 253s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M09-0001-S05",
+      "machine_id": "line5_motor1",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.0,
+      "priority_level": "high",
+      "start_time": "2026-05-21T00:12:48",
+      "end_time": "2026-05-21T00:16:59",
+      "duration_seconds": 251,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 251s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M09-0001-S04",
+      "machine_id": "line5_motor1",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.0,
+      "priority_level": "high",
+      "start_time": "2026-05-21T00:08:37",
+      "end_time": "2026-05-21T00:12:48",
+      "duration_seconds": 251,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 251s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M09-0001-S03",
+      "machine_id": "line5_motor1",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.0,
+      "priority_level": "high",
+      "start_time": "2026-05-21T00:04:26",
+      "end_time": "2026-05-21T00:08:37",
+      "duration_seconds": 251,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 251s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M09-0001-S02",
+      "machine_id": "line5_motor1",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.0,
+      "priority_level": "high",
+      "start_time": "2026-05-21T00:00:15",
+      "end_time": "2026-05-21T00:04:26",
+      "duration_seconds": 251,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 251s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M09-0001-S01",
+      "machine_id": "line5_motor1",
+      "line_id": "line5",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 148.0,
+      "priority_level": "high",
+      "start_time": "2026-05-20T23:56:04",
+      "end_time": "2026-05-21T00:00:15",
+      "duration_seconds": 251,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 251s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M06-0003-S06",
+      "machine_id": "line3_motor2",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.99,
+      "priority_level": "high",
+      "start_time": "2026-05-20T20:42:49",
+      "end_time": "2026-05-20T20:46:59",
+      "duration_seconds": 250,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 250s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M06-0003-S05",
+      "machine_id": "line3_motor2",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.99,
+      "priority_level": "high",
+      "start_time": "2026-05-20T20:38:39",
+      "end_time": "2026-05-20T20:42:49",
+      "duration_seconds": 250,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 250s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M06-0003-S04",
+      "machine_id": "line3_motor2",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.99,
+      "priority_level": "high",
+      "start_time": "2026-05-20T20:34:29",
+      "end_time": "2026-05-20T20:38:39",
+      "duration_seconds": 250,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 250s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M06-0003-S03",
+      "machine_id": "line3_motor2",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.99,
+      "priority_level": "high",
+      "start_time": "2026-05-20T20:30:19",
+      "end_time": "2026-05-20T20:34:29",
+      "duration_seconds": 250,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 250s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M06-0003-S02",
+      "machine_id": "line3_motor2",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.99,
+      "priority_level": "high",
+      "start_time": "2026-05-20T20:26:09",
+      "end_time": "2026-05-20T20:30:19",
+      "duration_seconds": 250,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 250s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M06-0003-S01",
+      "machine_id": "line3_motor2",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.99,
+      "priority_level": "high",
+      "start_time": "2026-05-20T20:21:59",
+      "end_time": "2026-05-20T20:26:09",
+      "duration_seconds": 250,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 250s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M05-0001-S05",
+      "machine_id": "line3_motor1",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.98,
+      "priority_level": "high",
+      "start_time": "2026-05-20T19:32:51",
+      "end_time": "2026-05-20T19:36:59",
+      "duration_seconds": 248,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 248s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M05-0001-S04",
+      "machine_id": "line3_motor1",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.98,
+      "priority_level": "high",
+      "start_time": "2026-05-20T19:28:42",
+      "end_time": "2026-05-20T19:32:51",
+      "duration_seconds": 249,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 249s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M05-0001-S03",
+      "machine_id": "line3_motor1",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.98,
+      "priority_level": "high",
+      "start_time": "2026-05-20T19:24:34",
+      "end_time": "2026-05-20T19:28:42",
+      "duration_seconds": 248,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 248s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M05-0001-S02",
+      "machine_id": "line3_motor1",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.98,
+      "priority_level": "high",
+      "start_time": "2026-05-20T19:20:25",
+      "end_time": "2026-05-20T19:24:34",
+      "duration_seconds": 249,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 249s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M05-0001-S01",
+      "machine_id": "line3_motor1",
+      "line_id": "line3",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 147.98,
+      "priority_level": "high",
+      "start_time": "2026-05-20T19:16:17",
+      "end_time": "2026-05-20T19:20:25",
+      "duration_seconds": 248,
+      "max_anomaly_score": 0.7974,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7974, duration 248s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M01-0001-S03",
+      "machine_id": "line1_motor1",
+      "line_id": "line1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 146.8,
+      "priority_level": "high",
+      "start_time": "2026-05-20T14:47:10",
+      "end_time": "2026-05-20T14:52:05",
+      "duration_seconds": 295,
+      "max_anomaly_score": 0.7526,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7526, duration 295s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M01-0001-S04",
+      "machine_id": "line1_motor1",
+      "line_id": "line1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 146.79,
+      "priority_level": "high",
+      "start_time": "2026-05-20T14:52:05",
+      "end_time": "2026-05-20T14:56:59",
+      "duration_seconds": 294,
+      "max_anomaly_score": 0.7526,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7526, duration 294s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M01-0001-S02",
+      "machine_id": "line1_motor1",
+      "line_id": "line1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 146.79,
+      "priority_level": "high",
+      "start_time": "2026-05-20T14:42:16",
+      "end_time": "2026-05-20T14:47:10",
+      "duration_seconds": 294,
+      "max_anomaly_score": 0.7526,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7526, duration 294s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M01-0001-S01",
+      "machine_id": "line1_motor1",
+      "line_id": "line1",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 146.79,
+      "priority_level": "high",
+      "start_time": "2026-05-20T14:37:22",
+      "end_time": "2026-05-20T14:42:16",
+      "duration_seconds": 294,
+      "max_anomaly_score": 0.7526,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7526, duration 294s, 4 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M03-0001-S02",
+      "machine_id": "line2_motor1",
+      "line_id": "line2",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 140.9,
+      "priority_level": "high",
+      "start_time": "2026-05-20T17:04:11",
+      "end_time": "2026-05-20T17:08:59",
+      "duration_seconds": 288,
+      "max_anomaly_score": 0.7001,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7001, duration 288s, 3 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M03-0001-S01",
+      "machine_id": "line2_motor1",
+      "line_id": "line2",
+      "severity": "high",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 140.9,
+      "priority_level": "high",
+      "start_time": "2026-05-20T16:59:23",
+      "end_time": "2026-05-20T17:04:11",
+      "duration_seconds": 288,
+      "max_anomaly_score": 0.7001,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "vibration_mm_s"
+      ],
+      "reason": "high severity, suspected bearing_wear, max anomaly 0.7001, duration 288s, 3 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M10-0001",
+      "machine_id": "line5_motor2",
+      "line_id": "line5",
+      "severity": "medium",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 116.42,
+      "priority_level": "medium",
+      "start_time": "2026-05-21T00:30:22",
+      "end_time": "2026-05-21T00:37:08",
+      "duration_seconds": 407,
+      "max_anomaly_score": 0.6864,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "vibration_mm_s"
+      ],
+      "reason": "medium severity, suspected bearing_wear, max anomaly 0.6864, duration 407s, 3 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M12-0001-S02",
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "severity": "medium",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 115.33,
+      "priority_level": "medium",
+      "start_time": "2026-05-21T02:54:41",
+      "end_time": "2026-05-21T02:59:18",
+      "duration_seconds": 277,
+      "max_anomaly_score": 0.6864,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "vibration_mm_s"
+      ],
+      "reason": "medium severity, suspected bearing_wear, max anomaly 0.6864, duration 277s, 3 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M12-0001-S01",
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "severity": "medium",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 115.32,
+      "priority_level": "medium",
+      "start_time": "2026-05-21T02:50:05",
+      "end_time": "2026-05-21T02:54:41",
+      "duration_seconds": 276,
+      "max_anomaly_score": 0.6864,
+      "contributing_sensors": [
+        "current_a",
+        "temperature_c",
+        "vibration_mm_s"
+      ],
+      "reason": "medium severity, suspected bearing_wear, max anomaly 0.6864, duration 276s, 3 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M03-0002",
+      "machine_id": "line2_motor1",
+      "line_id": "line2",
+      "severity": "medium",
+      "suspected_fault": "bearing_wear",
+      "priority_score": 113.73,
+      "priority_level": "medium",
+      "start_time": "2026-05-20T17:11:50",
+      "end_time": "2026-05-20T17:16:59",
+      "duration_seconds": 310,
+      "max_anomaly_score": 0.6327,
+      "contributing_sensors": [
+        "temperature_c",
+        "throughput_units_min",
+        "vibration_mm_s"
+      ],
+      "reason": "medium severity, suspected bearing_wear, max anomaly 0.6327, duration 310s, 3 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M10-0002",
+      "machine_id": "line5_motor2",
+      "line_id": "line5",
+      "severity": "medium",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 97.81,
+      "priority_level": "medium",
+      "start_time": "2026-05-21T00:45:25",
+      "end_time": "2026-05-21T00:52:02",
+      "duration_seconds": 398,
+      "max_anomaly_score": 0.6142,
+      "contributing_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ],
+      "reason": "medium severity, suspected current_anomaly, max anomaly 0.6142, duration 398s, 2 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M08-0001",
+      "machine_id": "line4_motor2",
+      "line_id": "line4",
+      "severity": "medium",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 97.36,
+      "priority_level": "medium",
+      "start_time": "2026-05-20T22:10:22",
+      "end_time": "2026-05-20T22:16:04",
+      "duration_seconds": 343,
+      "max_anomaly_score": 0.6142,
+      "contributing_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ],
+      "reason": "medium severity, suspected current_anomaly, max anomaly 0.6142, duration 343s, 2 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M12-0002-S02",
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "severity": "medium",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 96.26,
+      "priority_level": "medium",
+      "start_time": "2026-05-21T03:08:55",
+      "end_time": "2026-05-21T03:12:26",
+      "duration_seconds": 211,
+      "max_anomaly_score": 0.6142,
+      "contributing_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ],
+      "reason": "medium severity, suspected current_anomaly, max anomaly 0.6142, duration 211s, 2 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M12-0002-S01",
+      "machine_id": "line6_motor2",
+      "line_id": "line6",
+      "severity": "medium",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 96.25,
+      "priority_level": "medium",
+      "start_time": "2026-05-21T03:05:25",
+      "end_time": "2026-05-21T03:08:55",
+      "duration_seconds": 210,
+      "max_anomaly_score": 0.6142,
+      "contributing_sensors": [
+        "current_a",
+        "vibration_mm_s"
+      ],
+      "reason": "medium severity, suspected current_anomaly, max anomaly 0.6142, duration 210s, 2 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M08-0002",
+      "machine_id": "line4_motor2",
+      "line_id": "line4",
+      "severity": "medium",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 90.61,
+      "priority_level": "medium",
+      "start_time": "2026-05-20T22:25:51",
+      "end_time": "2026-05-20T22:31:41",
+      "duration_seconds": 351,
+      "max_anomaly_score": 0.5338,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "medium severity, suspected current_anomaly, max anomaly 0.5338, duration 351s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M06-0001",
+      "machine_id": "line3_motor2",
+      "line_id": "line3",
+      "severity": "medium",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 90.4,
+      "priority_level": "medium",
+      "start_time": "2026-05-20T19:50:31",
+      "end_time": "2026-05-20T19:55:56",
+      "duration_seconds": 326,
+      "max_anomaly_score": 0.5338,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "medium severity, suspected current_anomaly, max anomaly 0.5338, duration 326s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M06-0002",
+      "machine_id": "line3_motor2",
+      "line_id": "line3",
+      "severity": "medium",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 90.29,
+      "priority_level": "medium",
+      "start_time": "2026-05-20T20:06:12",
+      "end_time": "2026-05-20T20:11:24",
+      "duration_seconds": 313,
+      "max_anomaly_score": 0.5338,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "medium severity, suspected current_anomaly, max anomaly 0.5338, duration 313s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M04-0001",
+      "machine_id": "line2_motor2",
+      "line_id": "line2",
+      "severity": "medium",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 88.85,
+      "priority_level": "medium",
+      "start_time": "2026-05-20T17:33:22",
+      "end_time": "2026-05-20T17:35:41",
+      "duration_seconds": 140,
+      "max_anomaly_score": 0.5338,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "medium severity, suspected current_anomaly, max anomaly 0.5338, duration 140s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M11-0001",
+      "machine_id": "line6_motor1",
+      "line_id": "line6",
+      "severity": "medium",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 88.44,
+      "priority_level": "medium",
+      "start_time": "2026-05-21T01:44:11",
+      "end_time": "2026-05-21T01:45:41",
+      "duration_seconds": 91,
+      "max_anomaly_score": 0.5338,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "medium severity, suspected current_anomaly, max anomaly 0.5338, duration 91s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M04-0002",
+      "machine_id": "line2_motor2",
+      "line_id": "line2",
+      "severity": "low",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 56.99,
+      "priority_level": "watch",
+      "start_time": "2026-05-20T17:46:39",
+      "end_time": "2026-05-20T17:50:59",
+      "duration_seconds": 261,
+      "max_anomaly_score": 0.3091,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "low severity, suspected current_anomaly, max anomaly 0.3091, duration 261s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M11-0002",
+      "machine_id": "line6_motor1",
+      "line_id": "line6",
+      "severity": "low",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 55.54,
+      "priority_level": "watch",
+      "start_time": "2026-05-21T01:56:39",
+      "end_time": "2026-05-21T01:58:05",
+      "duration_seconds": 87,
+      "max_anomaly_score": 0.3091,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "low severity, suspected current_anomaly, max anomaly 0.3091, duration 87s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M02-0002",
+      "machine_id": "line1_motor2",
+      "line_id": "line1",
+      "severity": "low",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 55.19,
+      "priority_level": "watch",
+      "start_time": "2026-05-20T15:26:39",
+      "end_time": "2026-05-20T15:27:22",
+      "duration_seconds": 44,
+      "max_anomaly_score": 0.3091,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "low severity, suspected current_anomaly, max anomaly 0.3091, duration 44s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M07-0002",
+      "machine_id": "line4_motor1",
+      "line_id": "line4",
+      "severity": "low",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 55.06,
+      "priority_level": "watch",
+      "start_time": "2026-05-20T21:33:05",
+      "end_time": "2026-05-20T21:33:33",
+      "duration_seconds": 29,
+      "max_anomaly_score": 0.3091,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "low severity, suspected current_anomaly, max anomaly 0.3091, duration 29s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M02-0001",
+      "machine_id": "line1_motor2",
+      "line_id": "line1",
+      "severity": "low",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 55.04,
+      "priority_level": "watch",
+      "start_time": "2026-05-20T15:14:32",
+      "end_time": "2026-05-20T15:14:58",
+      "duration_seconds": 27,
+      "max_anomaly_score": 0.3091,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "low severity, suspected current_anomaly, max anomaly 0.3091, duration 27s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M11-0003",
+      "machine_id": "line6_motor1",
+      "line_id": "line6",
+      "severity": "low",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 55.02,
+      "priority_level": "watch",
+      "start_time": "2026-05-21T02:00:17",
+      "end_time": "2026-05-21T02:00:40",
+      "duration_seconds": 24,
+      "max_anomaly_score": 0.3091,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "low severity, suspected current_anomaly, max anomaly 0.3091, duration 24s, 1 contributing sensor(s)."
+    },
+    {
+      "incident_id": "FLEET-M07-0001",
+      "machine_id": "line4_motor1",
+      "line_id": "line4",
+      "severity": "low",
+      "suspected_fault": "current_anomaly",
+      "priority_score": 55.02,
+      "priority_level": "watch",
+      "start_time": "2026-05-20T21:04:32",
+      "end_time": "2026-05-20T21:04:55",
+      "duration_seconds": 24,
+      "max_anomaly_score": 0.3091,
+      "contributing_sensors": [
+        "current_a"
+      ],
+      "reason": "low severity, suspected current_anomaly, max anomaly 0.3091, duration 24s, 1 contributing sensor(s)."
+    }
+  ]
+}

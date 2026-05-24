@@ -30,9 +30,18 @@ from twinagent.analytics import (  # noqa: E402
     IncidentDetector,
     PredictiveMaintenanceAdvisor,
 )
+from twinagent.analytics.incident_segments import expand_incident_episodes  # noqa: E402
 from twinagent.evaluation import EvaluationBenchmark  # noqa: E402
 from twinagent.simulation import MachineSimulator  # noqa: E402
 from twinagent.storage import SQLiteRepository  # noqa: E402
+
+
+def default_local_config_path() -> Path:
+    """Return rich local demo config path, falling back to compact config."""
+    rich_config = PROJECT_ROOT / "configs" / "local_demo_config.yaml"
+    if rich_config.exists():
+        return rich_config
+    return PROJECT_ROOT / "configs" / "machine_config.yaml"
 
 
 def main() -> None:
@@ -50,7 +59,8 @@ def main() -> None:
     incidents_path = data_incidents / "incidents.json"
     database_path = data_processed / "twinagent.db"
 
-    simulator = MachineSimulator.from_config_file(PROJECT_ROOT / "configs" / "machine_config.yaml")
+    local_config_path = default_local_config_path()
+    simulator = MachineSimulator.from_config_file(local_config_path)
     raw_data = simulator.simulate()
     raw_data.to_csv(sensor_data_path, index=False)
 
@@ -66,7 +76,8 @@ def main() -> None:
     with (PROJECT_ROOT / "configs" / "anomaly_config.yaml").open("r", encoding="utf-8") as file:
         anomaly_config = yaml.safe_load(file)
 
-    incidents = IncidentDetector.from_config(anomaly_config).detect_incidents(processed)
+    raw_incidents = IncidentDetector.from_config(anomaly_config).detect_incidents(processed)
+    incidents = expand_incident_episodes(raw_incidents)
 
     processed.to_csv(processed_path, index=False)
     incidents_path.write_text(json.dumps(incidents, indent=2), encoding="utf-8")
@@ -88,12 +99,14 @@ def main() -> None:
         writer.write_report(incident_id=incidents[0]["incident_id"], output_dir=data_reports)
 
     print("TwinAgent AI demo data bootstrap complete.")
+    print(f"Local config used: {local_config_path}")
     print(f"Raw sensor CSV: {sensor_data_path}")
     print(f"Processed CSV: {processed_path}")
     print(f"Incidents JSON: {incidents_path}")
     print(f"SQLite database: {database_path}")
     print(f"Sensor rows written: {sensor_rows}")
-    print(f"Incidents written: {incident_rows}")
+    print(f"Raw detector incidents: {len(raw_incidents)}")
+    print(f"Operational incidents written: {incident_rows}")
     print(f"Reports directory: {data_reports}")
 
 
