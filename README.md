@@ -51,6 +51,7 @@ Add screenshots under `docs/assets/` using the names below.
 | Dashboard | API |
 |---|---|
 | ![Overview](docs/assets/overview.png) | ![Swagger](docs/assets/swagger.png) |
+| ![Sensor Intelligence](docs/assets/sensor-intelligence.png) | ![Copilot](docs/assets/copilot.png) |
 | ![Incidents](docs/assets/incidents.png) | ![Pipeline](docs/assets/pipeline-output.png) |
 | ![Work Orders](docs/assets/work-orders.png) | ![Docker](docs/assets/docker-running.png) |
 
