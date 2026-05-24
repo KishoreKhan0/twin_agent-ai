@@ -34,7 +34,9 @@ Docker Compose demo
 ```
 
 ---
+## License
 
+MIT License. See `LICENSE`.
 ## Implemented features
 
 ### Digital twin simulation
