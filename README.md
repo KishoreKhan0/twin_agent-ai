@@ -5,11 +5,10 @@
 ![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-red)
 ![Docker](https://img.shields.io/badge/Docker-Compose-blue)
 ![ML](https://img.shields.io/badge/ML-Fault%20Diagnosis-purple)
-![Tests](https://img.shields.io/badge/Tests-114%20Passing-brightgreen)
 
 TwinAgent AI is an end-to-end industrial digital-twin maintenance platform for simulated conveyor-motor assets. It combines sensor simulation, anomaly detection, health scoring, incident detection, ML fault diagnosis, diagnosis reconciliation, fleet triage, work-order generation, FastAPI serving, Docker deployment, and a Streamlit monitoring workspace.
 
-## Why this project matters
+## About the project
 
 Industrial maintenance systems should not only detect anomalies; they should explain what happened, prioritize assets, generate technician-ready actions, and expose the results through reliable APIs. TwinAgent AI demonstrates that complete workflow in a reproducible local system.
 
@@ -28,21 +27,6 @@ Industrial maintenance systems should not only detect anomalies; they should exp
 - Streamlit dashboard
 - Docker Compose workflow
 - Automated test suite
-
-## Validated demo output
-
-A full pipeline run produces:
-
-```text
-Local incidents: 24
-Reconciled incidents: 24
-Fleet machines: 12
-Fleet incidents: 80
-ML windows/classes: 359 / 7
-ML weighted F1: 0.9332
-Local work orders: 24
-Fleet work orders: 80
-```
 
 ## Screenshots
 
@@ -145,25 +129,6 @@ Stop:
 docker compose down
 ```
 
-Run the pipeline inside Docker:
-
-```cmd
-docker compose --profile pipeline run --rm pipeline
-```
-
-## API smoke test
-
-With the API running:
-
-```cmd
-python scripts\smoke_test_api.py
-```
-
-Expected ending:
-
-```text
-TwinAgent AI API smoke test passed.
-```
 
 ## Important URLs
 
@@ -211,40 +176,6 @@ bootstrap local demo data
 → export work orders
 ```
 
-With tests first:
-
-```cmd
-python scripts\run_full_pipeline.py --include-tests
-```
-
-Local-only run:
-
-```cmd
-python scripts\run_full_pipeline.py --local-only
-```
-
-## Tests vs runtime scripts
-
-The `tests/` folder is for development and regression checks. It is not part of normal runtime.
-
-Normal use:
-
-```cmd
-python scripts\run_full_pipeline.py
-```
-
-Before pushing changes:
-
-```cmd
-python -m pytest
-```
-
-Full validation:
-
-```cmd
-python scripts\run_full_pipeline.py --include-tests
-```
-
 ## ML diagnosis flow
 
 ```text
@@ -255,23 +186,8 @@ rule-based incident diagnosis
 → work-order generation
 ```
 
-Example final diagnosis fields:
-
-```json
-{
-  "final_diagnosis": "bearing_wear",
-  "final_diagnosis_source": "ml_override_generic_rule",
-  "diagnosis_confidence": "high",
-  "requires_review": false
-}
-```
-
 ## Limitations
 
 - Uses synthetic demo data, not certified production maintenance data.
 - ML metrics are for the simulated dataset and should not be overclaimed as real-world performance.
 - Outputs are decision-support signals, not certified maintenance decisions.
-
-## License
-
-MIT License. See `LICENSE`.
