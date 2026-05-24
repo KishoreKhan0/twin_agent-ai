@@ -1,0 +1,2142 @@
+[
+  {
+    "incident_id": "FLEET-M01-0001-S01",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T14:37:22",
+    "end_time": "2026-05-20T14:42:16",
+    "duration_seconds": 294,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7526,
+    "mean_anomaly_score": 0.3971,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.68 to 15.26; max sensor anomaly score 0.95",
+      "temperature_c": "value range 51.04 to 95.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.63 to 2.99; max sensor anomaly score 0.95"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M01-0001",
+    "episode_index": 1,
+    "episode_count": 4
+  },
+  {
+    "incident_id": "FLEET-M01-0001-S02",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T14:42:16",
+    "end_time": "2026-05-20T14:47:10",
+    "duration_seconds": 294,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7526,
+    "mean_anomaly_score": 0.3971,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.68 to 15.26; max sensor anomaly score 0.95",
+      "temperature_c": "value range 51.04 to 95.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.63 to 2.99; max sensor anomaly score 0.95"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M01-0001",
+    "episode_index": 2,
+    "episode_count": 4
+  },
+  {
+    "incident_id": "FLEET-M01-0001-S03",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T14:47:10",
+    "end_time": "2026-05-20T14:52:05",
+    "duration_seconds": 295,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7526,
+    "mean_anomaly_score": 0.3971,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.68 to 15.26; max sensor anomaly score 0.95",
+      "temperature_c": "value range 51.04 to 95.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.63 to 2.99; max sensor anomaly score 0.95"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M01-0001",
+    "episode_index": 3,
+    "episode_count": 4
+  },
+  {
+    "incident_id": "FLEET-M01-0001-S04",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T14:52:05",
+    "end_time": "2026-05-20T14:56:59",
+    "duration_seconds": 294,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7526,
+    "mean_anomaly_score": 0.3971,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.68 to 15.26; max sensor anomaly score 0.95",
+      "temperature_c": "value range 51.04 to 95.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.63 to 2.99; max sensor anomaly score 0.95"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M01-0001",
+    "episode_index": 4,
+    "episode_count": 4
+  },
+  {
+    "incident_id": "FLEET-M02-0001",
+    "machine_id": "line1_motor2",
+    "start_time": "2026-05-20T15:14:32",
+    "end_time": "2026-05-20T15:14:58",
+    "duration_seconds": 27,
+    "severity": "low",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.3091,
+    "mean_anomaly_score": 0.3091,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 15.02; max sensor anomaly score 0.55"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M02-0001",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M02-0002",
+    "machine_id": "line1_motor2",
+    "start_time": "2026-05-20T15:26:39",
+    "end_time": "2026-05-20T15:27:22",
+    "duration_seconds": 44,
+    "severity": "low",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.3091,
+    "mean_anomaly_score": 0.3091,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.21 to 14.58; max sensor anomaly score 0.55"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M02-0002",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M02-0003-S01",
+    "machine_id": "line1_motor2",
+    "start_time": "2026-05-20T15:42:44",
+    "end_time": "2026-05-20T15:47:35",
+    "duration_seconds": 291,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4554,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.37 to 16.48; max sensor anomaly score 0.95",
+      "temperature_c": "value range 55.54 to 99.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.76 to 3.73; max sensor anomaly score 0.95"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M02-0003",
+    "episode_index": 1,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M02-0003-S02",
+    "machine_id": "line1_motor2",
+    "start_time": "2026-05-20T15:47:35",
+    "end_time": "2026-05-20T15:52:26",
+    "duration_seconds": 291,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4554,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.37 to 16.48; max sensor anomaly score 0.95",
+      "temperature_c": "value range 55.54 to 99.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.76 to 3.73; max sensor anomaly score 0.95"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M02-0003",
+    "episode_index": 2,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M02-0003-S03",
+    "machine_id": "line1_motor2",
+    "start_time": "2026-05-20T15:52:26",
+    "end_time": "2026-05-20T15:57:17",
+    "duration_seconds": 291,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4554,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.37 to 16.48; max sensor anomaly score 0.95",
+      "temperature_c": "value range 55.54 to 99.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.76 to 3.73; max sensor anomaly score 0.95"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M02-0003",
+    "episode_index": 3,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M02-0003-S04",
+    "machine_id": "line1_motor2",
+    "start_time": "2026-05-20T15:57:17",
+    "end_time": "2026-05-20T16:02:08",
+    "duration_seconds": 291,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4554,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.37 to 16.48; max sensor anomaly score 0.95",
+      "temperature_c": "value range 55.54 to 99.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.76 to 3.73; max sensor anomaly score 0.95"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M02-0003",
+    "episode_index": 4,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M02-0003-S05",
+    "machine_id": "line1_motor2",
+    "start_time": "2026-05-20T16:02:08",
+    "end_time": "2026-05-20T16:06:59",
+    "duration_seconds": 291,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4554,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.37 to 16.48; max sensor anomaly score 0.95",
+      "temperature_c": "value range 55.54 to 99.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.76 to 3.73; max sensor anomaly score 0.95"
+    },
+    "line_id": "line1",
+    "display_name": "Line 1 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M02-0003",
+    "episode_index": 5,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M03-0001-S01",
+    "machine_id": "line2_motor1",
+    "start_time": "2026-05-20T16:59:23",
+    "end_time": "2026-05-20T17:04:11",
+    "duration_seconds": 288,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7001,
+    "mean_anomaly_score": 0.351,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.44 to 14.65; max sensor anomaly score 0.55",
+      "temperature_c": "value range 55.22 to 89.70; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 2.63; max sensor anomaly score 0.95"
+    },
+    "line_id": "line2",
+    "display_name": "Line 2 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M03-0001",
+    "episode_index": 1,
+    "episode_count": 2
+  },
+  {
+    "incident_id": "FLEET-M03-0001-S02",
+    "machine_id": "line2_motor1",
+    "start_time": "2026-05-20T17:04:11",
+    "end_time": "2026-05-20T17:08:59",
+    "duration_seconds": 288,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7001,
+    "mean_anomaly_score": 0.351,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.44 to 14.65; max sensor anomaly score 0.55",
+      "temperature_c": "value range 55.22 to 89.70; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 2.63; max sensor anomaly score 0.95"
+    },
+    "line_id": "line2",
+    "display_name": "Line 2 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M03-0001",
+    "episode_index": 2,
+    "episode_count": 2
+  },
+  {
+    "incident_id": "FLEET-M03-0002",
+    "machine_id": "line2_motor1",
+    "start_time": "2026-05-20T17:11:50",
+    "end_time": "2026-05-20T17:16:59",
+    "duration_seconds": 310,
+    "severity": "medium",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.6327,
+    "mean_anomaly_score": 0.3577,
+    "contributing_sensors": [
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "temperature_c": "value range 49.04 to 93.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 119.03; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.56 to 1.90; max sensor anomaly score 0.55"
+    },
+    "line_id": "line2",
+    "display_name": "Line 2 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M03-0002",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M04-0001",
+    "machine_id": "line2_motor2",
+    "start_time": "2026-05-20T17:33:22",
+    "end_time": "2026-05-20T17:35:41",
+    "duration_seconds": 140,
+    "severity": "medium",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.5338,
+    "mean_anomaly_score": 0.3201,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 15.58; max sensor anomaly score 0.95"
+    },
+    "line_id": "line2",
+    "display_name": "Line 2 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M04-0001",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M04-0002",
+    "machine_id": "line2_motor2",
+    "start_time": "2026-05-20T17:46:39",
+    "end_time": "2026-05-20T17:50:59",
+    "duration_seconds": 261,
+    "severity": "low",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.3091,
+    "mean_anomaly_score": 0.3091,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 15.12; max sensor anomaly score 0.55"
+    },
+    "line_id": "line2",
+    "display_name": "Line 2 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M04-0002",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M04-0003-S01",
+    "machine_id": "line2_motor2",
+    "start_time": "2026-05-20T18:02:07",
+    "end_time": "2026-05-20T18:07:05",
+    "duration_seconds": 298,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4725,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.72 to 17.09; max sensor anomaly score 0.95",
+      "temperature_c": "value range 57.04 to 101.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.82 to 4.03; max sensor anomaly score 0.95"
+    },
+    "line_id": "line2",
+    "display_name": "Line 2 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M04-0003",
+    "episode_index": 1,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M04-0003-S02",
+    "machine_id": "line2_motor2",
+    "start_time": "2026-05-20T18:07:05",
+    "end_time": "2026-05-20T18:12:04",
+    "duration_seconds": 299,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4725,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.72 to 17.09; max sensor anomaly score 0.95",
+      "temperature_c": "value range 57.04 to 101.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.82 to 4.03; max sensor anomaly score 0.95"
+    },
+    "line_id": "line2",
+    "display_name": "Line 2 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M04-0003",
+    "episode_index": 2,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M04-0003-S03",
+    "machine_id": "line2_motor2",
+    "start_time": "2026-05-20T18:12:04",
+    "end_time": "2026-05-20T18:17:02",
+    "duration_seconds": 298,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4725,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.72 to 17.09; max sensor anomaly score 0.95",
+      "temperature_c": "value range 57.04 to 101.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.82 to 4.03; max sensor anomaly score 0.95"
+    },
+    "line_id": "line2",
+    "display_name": "Line 2 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M04-0003",
+    "episode_index": 3,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M04-0003-S04",
+    "machine_id": "line2_motor2",
+    "start_time": "2026-05-20T18:17:02",
+    "end_time": "2026-05-20T18:22:01",
+    "duration_seconds": 299,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4725,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.72 to 17.09; max sensor anomaly score 0.95",
+      "temperature_c": "value range 57.04 to 101.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.82 to 4.03; max sensor anomaly score 0.95"
+    },
+    "line_id": "line2",
+    "display_name": "Line 2 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M04-0003",
+    "episode_index": 4,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M04-0003-S05",
+    "machine_id": "line2_motor2",
+    "start_time": "2026-05-20T18:22:01",
+    "end_time": "2026-05-20T18:26:59",
+    "duration_seconds": 298,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4725,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.72 to 17.09; max sensor anomaly score 0.95",
+      "temperature_c": "value range 57.04 to 101.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.82 to 4.03; max sensor anomaly score 0.95"
+    },
+    "line_id": "line2",
+    "display_name": "Line 2 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M04-0003",
+    "episode_index": 5,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M05-0001-S01",
+    "machine_id": "line3_motor1",
+    "start_time": "2026-05-20T19:16:17",
+    "end_time": "2026-05-20T19:20:25",
+    "duration_seconds": 248,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4304,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.03 to 15.87; max sensor anomaly score 0.95",
+      "temperature_c": "value range 53.54 to 97.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.65 to 3.23; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M05-0001",
+    "episode_index": 1,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M05-0001-S02",
+    "machine_id": "line3_motor1",
+    "start_time": "2026-05-20T19:20:25",
+    "end_time": "2026-05-20T19:24:34",
+    "duration_seconds": 249,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4304,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.03 to 15.87; max sensor anomaly score 0.95",
+      "temperature_c": "value range 53.54 to 97.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.65 to 3.23; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M05-0001",
+    "episode_index": 2,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M05-0001-S03",
+    "machine_id": "line3_motor1",
+    "start_time": "2026-05-20T19:24:34",
+    "end_time": "2026-05-20T19:28:42",
+    "duration_seconds": 248,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4304,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.03 to 15.87; max sensor anomaly score 0.95",
+      "temperature_c": "value range 53.54 to 97.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.65 to 3.23; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M05-0001",
+    "episode_index": 3,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M05-0001-S04",
+    "machine_id": "line3_motor1",
+    "start_time": "2026-05-20T19:28:42",
+    "end_time": "2026-05-20T19:32:51",
+    "duration_seconds": 249,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4304,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.03 to 15.87; max sensor anomaly score 0.95",
+      "temperature_c": "value range 53.54 to 97.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.65 to 3.23; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M05-0001",
+    "episode_index": 4,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M05-0001-S05",
+    "machine_id": "line3_motor1",
+    "start_time": "2026-05-20T19:32:51",
+    "end_time": "2026-05-20T19:36:59",
+    "duration_seconds": 248,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4304,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.03 to 15.87; max sensor anomaly score 0.95",
+      "temperature_c": "value range 53.54 to 97.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.65 to 3.23; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M05-0001",
+    "episode_index": 5,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M06-0001",
+    "machine_id": "line3_motor2",
+    "start_time": "2026-05-20T19:50:31",
+    "end_time": "2026-05-20T19:55:56",
+    "duration_seconds": 326,
+    "severity": "medium",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.5338,
+    "mean_anomaly_score": 0.3395,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.21 to 16.14; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M06-0001",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M06-0002",
+    "machine_id": "line3_motor2",
+    "start_time": "2026-05-20T20:06:12",
+    "end_time": "2026-05-20T20:11:24",
+    "duration_seconds": 313,
+    "severity": "medium",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.5338,
+    "mean_anomaly_score": 0.3157,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.21 to 15.66; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M06-0002",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M06-0003-S01",
+    "machine_id": "line3_motor2",
+    "start_time": "2026-05-20T20:21:59",
+    "end_time": "2026-05-20T20:26:09",
+    "duration_seconds": 250,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4961,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.07 to 17.70; max sensor anomaly score 0.95",
+      "temperature_c": "value range 58.54 to 102.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.88 to 4.33; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M06-0003",
+    "episode_index": 1,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M06-0003-S02",
+    "machine_id": "line3_motor2",
+    "start_time": "2026-05-20T20:26:09",
+    "end_time": "2026-05-20T20:30:19",
+    "duration_seconds": 250,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4961,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.07 to 17.70; max sensor anomaly score 0.95",
+      "temperature_c": "value range 58.54 to 102.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.88 to 4.33; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M06-0003",
+    "episode_index": 2,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M06-0003-S03",
+    "machine_id": "line3_motor2",
+    "start_time": "2026-05-20T20:30:19",
+    "end_time": "2026-05-20T20:34:29",
+    "duration_seconds": 250,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4961,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.07 to 17.70; max sensor anomaly score 0.95",
+      "temperature_c": "value range 58.54 to 102.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.88 to 4.33; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M06-0003",
+    "episode_index": 3,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M06-0003-S04",
+    "machine_id": "line3_motor2",
+    "start_time": "2026-05-20T20:34:29",
+    "end_time": "2026-05-20T20:38:39",
+    "duration_seconds": 250,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4961,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.07 to 17.70; max sensor anomaly score 0.95",
+      "temperature_c": "value range 58.54 to 102.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.88 to 4.33; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M06-0003",
+    "episode_index": 4,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M06-0003-S05",
+    "machine_id": "line3_motor2",
+    "start_time": "2026-05-20T20:38:39",
+    "end_time": "2026-05-20T20:42:49",
+    "duration_seconds": 250,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4961,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.07 to 17.70; max sensor anomaly score 0.95",
+      "temperature_c": "value range 58.54 to 102.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.88 to 4.33; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M06-0003",
+    "episode_index": 5,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M06-0003-S06",
+    "machine_id": "line3_motor2",
+    "start_time": "2026-05-20T20:42:49",
+    "end_time": "2026-05-20T20:46:59",
+    "duration_seconds": 250,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4961,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.07 to 17.70; max sensor anomaly score 0.95",
+      "temperature_c": "value range 58.54 to 102.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.88 to 4.33; max sensor anomaly score 0.95"
+    },
+    "line_id": "line3",
+    "display_name": "Line 3 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M06-0003",
+    "episode_index": 6,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M07-0001",
+    "machine_id": "line4_motor1",
+    "start_time": "2026-05-20T21:04:32",
+    "end_time": "2026-05-20T21:04:55",
+    "duration_seconds": 24,
+    "severity": "low",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.3091,
+    "mean_anomaly_score": 0.3091,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.28 to 14.74; max sensor anomaly score 0.55"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M07-0001",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M07-0002",
+    "machine_id": "line4_motor1",
+    "start_time": "2026-05-20T21:33:05",
+    "end_time": "2026-05-20T21:33:33",
+    "duration_seconds": 29,
+    "severity": "low",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.3091,
+    "mean_anomaly_score": 0.3091,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.23 to 14.29; max sensor anomaly score 0.55"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M07-0002",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M07-0003-S01",
+    "machine_id": "line4_motor1",
+    "start_time": "2026-05-20T21:35:51",
+    "end_time": "2026-05-20T21:40:05",
+    "duration_seconds": 254,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4454,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.20 to 16.18; max sensor anomaly score 0.95",
+      "temperature_c": "value range 54.54 to 98.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.71 to 3.52; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M07-0003",
+    "episode_index": 1,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M07-0003-S02",
+    "machine_id": "line4_motor1",
+    "start_time": "2026-05-20T21:40:05",
+    "end_time": "2026-05-20T21:44:18",
+    "duration_seconds": 253,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4454,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.20 to 16.18; max sensor anomaly score 0.95",
+      "temperature_c": "value range 54.54 to 98.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.71 to 3.52; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M07-0003",
+    "episode_index": 2,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M07-0003-S03",
+    "machine_id": "line4_motor1",
+    "start_time": "2026-05-20T21:44:18",
+    "end_time": "2026-05-20T21:48:32",
+    "duration_seconds": 254,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4454,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.20 to 16.18; max sensor anomaly score 0.95",
+      "temperature_c": "value range 54.54 to 98.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.71 to 3.52; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M07-0003",
+    "episode_index": 3,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M07-0003-S04",
+    "machine_id": "line4_motor1",
+    "start_time": "2026-05-20T21:48:32",
+    "end_time": "2026-05-20T21:52:45",
+    "duration_seconds": 253,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4454,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.20 to 16.18; max sensor anomaly score 0.95",
+      "temperature_c": "value range 54.54 to 98.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.71 to 3.52; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M07-0003",
+    "episode_index": 4,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M07-0003-S05",
+    "machine_id": "line4_motor1",
+    "start_time": "2026-05-20T21:52:45",
+    "end_time": "2026-05-20T21:56:59",
+    "duration_seconds": 254,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4454,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.20 to 16.18; max sensor anomaly score 0.95",
+      "temperature_c": "value range 54.54 to 98.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.71 to 3.52; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M07-0003",
+    "episode_index": 5,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M08-0001",
+    "machine_id": "line4_motor2",
+    "start_time": "2026-05-20T22:10:22",
+    "end_time": "2026-05-20T22:16:04",
+    "duration_seconds": 343,
+    "severity": "medium",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.6142,
+    "mean_anomaly_score": 0.3559,
+    "contributing_sensors": [
+      "current_a",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 14.21 to 16.69; max sensor anomaly score 0.95",
+      "vibration_mm_s": "value range 1.04 to 1.43; max sensor anomaly score 0.55"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M08-0001",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M08-0002",
+    "machine_id": "line4_motor2",
+    "start_time": "2026-05-20T22:25:51",
+    "end_time": "2026-05-20T22:31:41",
+    "duration_seconds": 351,
+    "severity": "medium",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.5338,
+    "mean_anomaly_score": 0.3443,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.21 to 16.20; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M08-0002",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M08-0003-S01",
+    "machine_id": "line4_motor2",
+    "start_time": "2026-05-20T22:41:05",
+    "end_time": "2026-05-20T22:45:24",
+    "duration_seconds": 259,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5217,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.42 to 18.31; max sensor anomaly score 0.95",
+      "temperature_c": "value range 60.04 to 104.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.94 to 4.63; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M08-0003",
+    "episode_index": 1,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M08-0003-S02",
+    "machine_id": "line4_motor2",
+    "start_time": "2026-05-20T22:45:24",
+    "end_time": "2026-05-20T22:49:43",
+    "duration_seconds": 259,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5217,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.42 to 18.31; max sensor anomaly score 0.95",
+      "temperature_c": "value range 60.04 to 104.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.94 to 4.63; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M08-0003",
+    "episode_index": 2,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M08-0003-S03",
+    "machine_id": "line4_motor2",
+    "start_time": "2026-05-20T22:49:43",
+    "end_time": "2026-05-20T22:54:02",
+    "duration_seconds": 259,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5217,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.42 to 18.31; max sensor anomaly score 0.95",
+      "temperature_c": "value range 60.04 to 104.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.94 to 4.63; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M08-0003",
+    "episode_index": 3,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M08-0003-S04",
+    "machine_id": "line4_motor2",
+    "start_time": "2026-05-20T22:54:02",
+    "end_time": "2026-05-20T22:58:21",
+    "duration_seconds": 259,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5217,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.42 to 18.31; max sensor anomaly score 0.95",
+      "temperature_c": "value range 60.04 to 104.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.94 to 4.63; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M08-0003",
+    "episode_index": 4,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M08-0003-S05",
+    "machine_id": "line4_motor2",
+    "start_time": "2026-05-20T22:58:21",
+    "end_time": "2026-05-20T23:02:40",
+    "duration_seconds": 259,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5217,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.42 to 18.31; max sensor anomaly score 0.95",
+      "temperature_c": "value range 60.04 to 104.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.94 to 4.63; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M08-0003",
+    "episode_index": 5,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M08-0003-S06",
+    "machine_id": "line4_motor2",
+    "start_time": "2026-05-20T23:02:40",
+    "end_time": "2026-05-20T23:06:59",
+    "duration_seconds": 259,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5217,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.42 to 18.31; max sensor anomaly score 0.95",
+      "temperature_c": "value range 60.04 to 104.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.94 to 4.63; max sensor anomaly score 0.95"
+    },
+    "line_id": "line4",
+    "display_name": "Line 4 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M08-0003",
+    "episode_index": 6,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M09-0001-S01",
+    "machine_id": "line5_motor1",
+    "start_time": "2026-05-20T23:56:04",
+    "end_time": "2026-05-21T00:00:15",
+    "duration_seconds": 251,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4265,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.85 to 15.57; max sensor anomaly score 0.95",
+      "temperature_c": "value range 52.54 to 96.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.68 to 3.35; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M09-0001",
+    "episode_index": 1,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M09-0001-S02",
+    "machine_id": "line5_motor1",
+    "start_time": "2026-05-21T00:00:15",
+    "end_time": "2026-05-21T00:04:26",
+    "duration_seconds": 251,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4265,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.85 to 15.57; max sensor anomaly score 0.95",
+      "temperature_c": "value range 52.54 to 96.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.68 to 3.35; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M09-0001",
+    "episode_index": 2,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M09-0001-S03",
+    "machine_id": "line5_motor1",
+    "start_time": "2026-05-21T00:04:26",
+    "end_time": "2026-05-21T00:08:37",
+    "duration_seconds": 251,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4265,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.85 to 15.57; max sensor anomaly score 0.95",
+      "temperature_c": "value range 52.54 to 96.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.68 to 3.35; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M09-0001",
+    "episode_index": 3,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M09-0001-S04",
+    "machine_id": "line5_motor1",
+    "start_time": "2026-05-21T00:08:37",
+    "end_time": "2026-05-21T00:12:48",
+    "duration_seconds": 251,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4265,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.85 to 15.57; max sensor anomaly score 0.95",
+      "temperature_c": "value range 52.54 to 96.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.68 to 3.35; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M09-0001",
+    "episode_index": 4,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M09-0001-S05",
+    "machine_id": "line5_motor1",
+    "start_time": "2026-05-21T00:12:48",
+    "end_time": "2026-05-21T00:16:59",
+    "duration_seconds": 251,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4265,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.85 to 15.57; max sensor anomaly score 0.95",
+      "temperature_c": "value range 52.54 to 96.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.68 to 3.35; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M09-0001",
+    "episode_index": 5,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M10-0001",
+    "machine_id": "line5_motor2",
+    "start_time": "2026-05-21T00:30:22",
+    "end_time": "2026-05-21T00:37:08",
+    "duration_seconds": 407,
+    "severity": "medium",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.6864,
+    "mean_anomaly_score": 0.4058,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 17.39; max sensor anomaly score 0.95",
+      "temperature_c": "value range 72.13 to 82.76; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.07 to 1.57; max sensor anomaly score 0.55"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M10-0001",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M10-0002",
+    "machine_id": "line5_motor2",
+    "start_time": "2026-05-21T00:45:25",
+    "end_time": "2026-05-21T00:52:02",
+    "duration_seconds": 398,
+    "severity": "medium",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.6142,
+    "mean_anomaly_score": 0.4026,
+    "contributing_sensors": [
+      "current_a",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 16.88; max sensor anomaly score 0.95",
+      "vibration_mm_s": "value range 1.09 to 1.45; max sensor anomaly score 0.55"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M10-0002",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M10-0003-S01",
+    "machine_id": "line5_motor2",
+    "start_time": "2026-05-21T01:00:33",
+    "end_time": "2026-05-21T01:04:57",
+    "duration_seconds": 264,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5623,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.85 to 19.07; max sensor anomaly score 0.95",
+      "temperature_c": "value range 61.54 to 105.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.03 to 5.08; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M10-0003",
+    "episode_index": 1,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M10-0003-S02",
+    "machine_id": "line5_motor2",
+    "start_time": "2026-05-21T01:04:57",
+    "end_time": "2026-05-21T01:09:22",
+    "duration_seconds": 265,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5623,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.85 to 19.07; max sensor anomaly score 0.95",
+      "temperature_c": "value range 61.54 to 105.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.03 to 5.08; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M10-0003",
+    "episode_index": 2,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M10-0003-S03",
+    "machine_id": "line5_motor2",
+    "start_time": "2026-05-21T01:09:22",
+    "end_time": "2026-05-21T01:13:46",
+    "duration_seconds": 264,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5623,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.85 to 19.07; max sensor anomaly score 0.95",
+      "temperature_c": "value range 61.54 to 105.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.03 to 5.08; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M10-0003",
+    "episode_index": 3,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M10-0003-S04",
+    "machine_id": "line5_motor2",
+    "start_time": "2026-05-21T01:13:46",
+    "end_time": "2026-05-21T01:18:10",
+    "duration_seconds": 264,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5623,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.85 to 19.07; max sensor anomaly score 0.95",
+      "temperature_c": "value range 61.54 to 105.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.03 to 5.08; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M10-0003",
+    "episode_index": 4,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M10-0003-S05",
+    "machine_id": "line5_motor2",
+    "start_time": "2026-05-21T01:18:10",
+    "end_time": "2026-05-21T01:22:35",
+    "duration_seconds": 265,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5623,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.85 to 19.07; max sensor anomaly score 0.95",
+      "temperature_c": "value range 61.54 to 105.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.03 to 5.08; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M10-0003",
+    "episode_index": 5,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M10-0003-S06",
+    "machine_id": "line5_motor2",
+    "start_time": "2026-05-21T01:22:35",
+    "end_time": "2026-05-21T01:26:59",
+    "duration_seconds": 264,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.5623,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 10.85 to 19.07; max sensor anomaly score 0.95",
+      "temperature_c": "value range 61.54 to 105.81; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.03 to 5.08; max sensor anomaly score 0.95"
+    },
+    "line_id": "line5",
+    "display_name": "Line 5 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M10-0003",
+    "episode_index": 6,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M11-0001",
+    "machine_id": "line6_motor1",
+    "start_time": "2026-05-21T01:44:11",
+    "end_time": "2026-05-21T01:45:41",
+    "duration_seconds": 91,
+    "severity": "medium",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.5338,
+    "mean_anomaly_score": 0.3295,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 15.30; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M11-0001",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M11-0002",
+    "machine_id": "line6_motor1",
+    "start_time": "2026-05-21T01:56:39",
+    "end_time": "2026-05-21T01:58:05",
+    "duration_seconds": 87,
+    "severity": "low",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.3091,
+    "mean_anomaly_score": 0.3091,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 14.85; max sensor anomaly score 0.55"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M11-0002",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M11-0003",
+    "machine_id": "line6_motor1",
+    "start_time": "2026-05-21T02:00:17",
+    "end_time": "2026-05-21T02:00:40",
+    "duration_seconds": 24,
+    "severity": "low",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.3091,
+    "mean_anomaly_score": 0.3091,
+    "contributing_sensors": [
+      "current_a"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 14.85; max sensor anomaly score 0.55"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M11-0003",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "FLEET-M11-0004-S01",
+    "machine_id": "line6_motor1",
+    "start_time": "2026-05-21T02:12:07",
+    "end_time": "2026-05-21T02:17:05",
+    "duration_seconds": 298,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4608,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.55 to 16.79; max sensor anomaly score 0.95",
+      "temperature_c": "value range 56.04 to 100.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.77 to 3.82; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M11-0004",
+    "episode_index": 1,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M11-0004-S02",
+    "machine_id": "line6_motor1",
+    "start_time": "2026-05-21T02:17:05",
+    "end_time": "2026-05-21T02:22:04",
+    "duration_seconds": 299,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4608,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.55 to 16.79; max sensor anomaly score 0.95",
+      "temperature_c": "value range 56.04 to 100.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.77 to 3.82; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M11-0004",
+    "episode_index": 2,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M11-0004-S03",
+    "machine_id": "line6_motor1",
+    "start_time": "2026-05-21T02:22:04",
+    "end_time": "2026-05-21T02:27:02",
+    "duration_seconds": 298,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4608,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.55 to 16.79; max sensor anomaly score 0.95",
+      "temperature_c": "value range 56.04 to 100.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.77 to 3.82; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M11-0004",
+    "episode_index": 3,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M11-0004-S04",
+    "machine_id": "line6_motor1",
+    "start_time": "2026-05-21T02:27:02",
+    "end_time": "2026-05-21T02:32:01",
+    "duration_seconds": 299,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4608,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.55 to 16.79; max sensor anomaly score 0.95",
+      "temperature_c": "value range 56.04 to 100.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.77 to 3.82; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M11-0004",
+    "episode_index": 4,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M11-0004-S05",
+    "machine_id": "line6_motor1",
+    "start_time": "2026-05-21T02:32:01",
+    "end_time": "2026-05-21T02:36:59",
+    "duration_seconds": 298,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.4608,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.55 to 16.79; max sensor anomaly score 0.95",
+      "temperature_c": "value range 56.04 to 100.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 0.77 to 3.82; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 1",
+    "parent_incident_id": "FLEET-M11-0004",
+    "episode_index": 5,
+    "episode_count": 5
+  },
+  {
+    "incident_id": "FLEET-M12-0001-S01",
+    "machine_id": "line6_motor2",
+    "start_time": "2026-05-21T02:50:05",
+    "end_time": "2026-05-21T02:54:41",
+    "duration_seconds": 276,
+    "severity": "medium",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.6864,
+    "mean_anomaly_score": 0.4798,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 14.21 to 18.08; max sensor anomaly score 0.95",
+      "temperature_c": "value range 71.64 to 84.26; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.08 to 1.71; max sensor anomaly score 0.55"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M12-0001",
+    "episode_index": 1,
+    "episode_count": 2
+  },
+  {
+    "incident_id": "FLEET-M12-0001-S02",
+    "machine_id": "line6_motor2",
+    "start_time": "2026-05-21T02:54:41",
+    "end_time": "2026-05-21T02:59:18",
+    "duration_seconds": 277,
+    "severity": "medium",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.6864,
+    "mean_anomaly_score": 0.4798,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 14.21 to 18.08; max sensor anomaly score 0.95",
+      "temperature_c": "value range 71.64 to 84.26; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.08 to 1.71; max sensor anomaly score 0.55"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M12-0001",
+    "episode_index": 2,
+    "episode_count": 2
+  },
+  {
+    "incident_id": "FLEET-M12-0002-S01",
+    "machine_id": "line6_motor2",
+    "start_time": "2026-05-21T03:05:25",
+    "end_time": "2026-05-21T03:08:55",
+    "duration_seconds": 210,
+    "severity": "medium",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.6142,
+    "mean_anomaly_score": 0.4806,
+    "contributing_sensors": [
+      "current_a",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 14.18 to 17.55; max sensor anomaly score 0.95",
+      "vibration_mm_s": "value range 1.11 to 1.58; max sensor anomaly score 0.55"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M12-0002",
+    "episode_index": 1,
+    "episode_count": 2
+  },
+  {
+    "incident_id": "FLEET-M12-0002-S02",
+    "machine_id": "line6_motor2",
+    "start_time": "2026-05-21T03:08:55",
+    "end_time": "2026-05-21T03:12:26",
+    "duration_seconds": 211,
+    "severity": "medium",
+    "suspected_fault": "current_anomaly",
+    "max_anomaly_score": 0.6142,
+    "mean_anomaly_score": 0.4806,
+    "contributing_sensors": [
+      "current_a",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 14.18 to 17.55; max sensor anomaly score 0.95",
+      "vibration_mm_s": "value range 1.11 to 1.58; max sensor anomaly score 0.55"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M12-0002",
+    "episode_index": 2,
+    "episode_count": 2
+  },
+  {
+    "incident_id": "FLEET-M12-0003-S01",
+    "machine_id": "line6_motor2",
+    "start_time": "2026-05-21T03:18:41",
+    "end_time": "2026-05-21T03:23:24",
+    "duration_seconds": 283,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.6108,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 11.28 to 19.84; max sensor anomaly score 0.95",
+      "temperature_c": "value range 63.04 to 107.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.12 to 5.53; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M12-0003",
+    "episode_index": 1,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M12-0003-S02",
+    "machine_id": "line6_motor2",
+    "start_time": "2026-05-21T03:23:24",
+    "end_time": "2026-05-21T03:28:07",
+    "duration_seconds": 283,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.6108,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 11.28 to 19.84; max sensor anomaly score 0.95",
+      "temperature_c": "value range 63.04 to 107.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.12 to 5.53; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M12-0003",
+    "episode_index": 2,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M12-0003-S03",
+    "machine_id": "line6_motor2",
+    "start_time": "2026-05-21T03:28:07",
+    "end_time": "2026-05-21T03:32:50",
+    "duration_seconds": 283,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.6108,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 11.28 to 19.84; max sensor anomaly score 0.95",
+      "temperature_c": "value range 63.04 to 107.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.12 to 5.53; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M12-0003",
+    "episode_index": 3,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M12-0003-S04",
+    "machine_id": "line6_motor2",
+    "start_time": "2026-05-21T03:32:50",
+    "end_time": "2026-05-21T03:37:33",
+    "duration_seconds": 283,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.6108,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 11.28 to 19.84; max sensor anomaly score 0.95",
+      "temperature_c": "value range 63.04 to 107.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.12 to 5.53; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M12-0003",
+    "episode_index": 4,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M12-0003-S05",
+    "machine_id": "line6_motor2",
+    "start_time": "2026-05-21T03:37:33",
+    "end_time": "2026-05-21T03:42:16",
+    "duration_seconds": 283,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.6108,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 11.28 to 19.84; max sensor anomaly score 0.95",
+      "temperature_c": "value range 63.04 to 107.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.12 to 5.53; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M12-0003",
+    "episode_index": 5,
+    "episode_count": 6
+  },
+  {
+    "incident_id": "FLEET-M12-0003-S06",
+    "machine_id": "line6_motor2",
+    "start_time": "2026-05-21T03:42:16",
+    "end_time": "2026-05-21T03:46:59",
+    "duration_seconds": 283,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7974,
+    "mean_anomaly_score": 0.6108,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 11.28 to 19.84; max sensor anomaly score 0.95",
+      "temperature_c": "value range 63.04 to 107.31; max sensor anomaly score 0.95",
+      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.12 to 5.53; max sensor anomaly score 0.95"
+    },
+    "line_id": "line6",
+    "display_name": "Line 6 Conveyor Motor 2",
+    "parent_incident_id": "FLEET-M12-0003",
+    "episode_index": 6,
+    "episode_count": 6
+  }
+]

@@ -1,12 +1,13 @@
 """Hybrid deterministic + AI-backed copilot orchestrator for TwinAgent AI.
 
-Default behavior remains deterministic and offline-friendly. When
-TWINAGENT_AI_ENABLED=1 and OPENAI_API_KEY is configured, the copilot builds a
-minimal trusted context package and asks the LLM to generate a focused answer.
+The project supports three modes:
 
-If the external AI provider is unavailable, rate-limited, or misconfigured, the
-user-facing answer stays clean and falls back to the deterministic focused answer.
-Raw provider errors are never appended to dashboard/API answers.
+- deterministic: free/offline focused answers from trusted local project data.
+- ai: use the configured AI provider; if unavailable, fall back cleanly.
+- auto: use AI only when TWINAGENT_AI_ENABLED=1 and provider credentials exist.
+
+This version also exposes answer metadata and suggested follow-up questions so
+the dashboard can feel more like a real assistant.
 """
 
 from __future__ import annotations
@@ -14,12 +15,18 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 from textwrap import indent
+from typing import Any
 
 from twinagent.agent.ai_context import CopilotContextBuilder
 from twinagent.agent.ai_provider import LLMResponse, create_llm_provider
+from twinagent.agent.copilot_mode import CopilotMode, normalize_copilot_mode
 from twinagent.agent.memory import CopilotMemory
 from twinagent.agent.prompts import COPILOT_RESPONSE_POLICY
-from twinagent.agent.question_intent import CopilotIntent, classify_copilot_question
+from twinagent.agent.question_intent import (
+    CopilotIntent,
+    classify_copilot_question,
+    suggested_followups_for_intent,
+)
 from twinagent.agent.tools import TwinAgentTools
 
 
@@ -36,6 +43,39 @@ Rules:
 - Mention uncertainty when recommending technician action.
 - Do not dump a full report unless the intent is full_report.
 """
+
+
+@dataclass(frozen=True)
+class CopilotAnswer:
+    """Structured copilot answer with metadata."""
+
+    answer: str
+    incident_id: str
+    question: str
+    intent: str
+    intent_confidence: float
+    intent_reason: str
+    copilot_mode: str
+    provider: str
+    model: str
+    used_ai: bool
+    suggested_followups: list[str]
+
+    def to_dict(self) -> dict[str, Any]:
+        """Return JSON-serializable metadata."""
+        return {
+            "answer": self.answer,
+            "incident_id": self.incident_id,
+            "question": self.question,
+            "intent": self.intent,
+            "intent_confidence": self.intent_confidence,
+            "intent_reason": self.intent_reason,
+            "copilot_mode": self.copilot_mode,
+            "provider": self.provider,
+            "model": self.model,
+            "used_ai": self.used_ai,
+            "suggested_followups": self.suggested_followups,
+        }
 
 
 @dataclass
@@ -62,45 +102,77 @@ class TwinAgentCopilot:
         self,
         incident_id: str,
         question: str = "What happened?",
+        copilot_mode: str | CopilotMode | None = CopilotMode.AUTO,
     ) -> str:
-        """Answer an incident question using intent routing, tools, and optional AI."""
+        """Return only the answer text for backward compatibility."""
+        return self.answer_incident_question_with_metadata(
+            incident_id=incident_id,
+            question=question,
+            copilot_mode=copilot_mode,
+        ).answer
+
+    def answer_incident_question_with_metadata(
+        self,
+        incident_id: str,
+        question: str = "What happened?",
+        copilot_mode: str | CopilotMode | None = CopilotMode.AUTO,
+    ) -> CopilotAnswer:
+        """Answer an incident question and return answer metadata."""
         incident = self.tools.get_incident(incident_id)
         intent_result = classify_copilot_question(question)
         intent = intent_result.intent
+        mode = normalize_copilot_mode(copilot_mode.value if isinstance(copilot_mode, CopilotMode) else copilot_mode)
 
         deterministic_answer = self._answer_with_rules(
             incident=incident,
             question=question,
             intent=intent,
         )
-        response = self._try_ai_answer(
+
+        response = self._answer_for_mode(
+            mode=mode,
             incident=incident,
             question=question,
             intent=intent,
             deterministic_answer=deterministic_answer,
         )
 
-        answer = response.text if response.used_ai and response.text.strip() else deterministic_answer
+        answer = response.text.strip() if response.text.strip() else deterministic_answer
+        followups = suggested_followups_for_intent(intent)
+
         self._remember(
             question=question,
             answer=answer,
             intent=intent.value,
-            provider=response.provider if response.used_ai else "deterministic",
-            model=response.model if response.used_ai else "rules",
+            provider=response.provider,
+            model=response.model,
             incident_id=incident_id,
         )
-        return answer
 
-    def _try_ai_answer(
+        return CopilotAnswer(
+            answer=answer,
+            incident_id=incident_id,
+            question=question,
+            intent=intent.value,
+            intent_confidence=intent_result.confidence,
+            intent_reason=intent_result.reason,
+            copilot_mode=mode.value,
+            provider=response.provider,
+            model=response.model,
+            used_ai=response.used_ai,
+            suggested_followups=followups,
+        )
+
+    def _answer_for_mode(
         self,
+        mode: CopilotMode,
         incident: dict,
         question: str,
         intent: CopilotIntent,
         deterministic_answer: str,
     ) -> LLMResponse:
-        """Attempt a real AI answer if configured, otherwise return deterministic fallback."""
-        provider = create_llm_provider()
-        if not provider.is_available():
+        """Generate an answer according to the selected mode."""
+        if mode == CopilotMode.DETERMINISTIC:
             return LLMResponse(
                 text=deterministic_answer,
                 provider="deterministic",
@@ -108,6 +180,45 @@ class TwinAgentCopilot:
                 used_ai=False,
             )
 
+        provider = create_llm_provider()
+
+        if mode == CopilotMode.AI and not provider.is_available():
+            return LLMResponse(
+                text=(
+                    deterministic_answer
+                    + "\n\n_AI mode was selected, but no usable AI provider is available. "
+                    "This answer used the local deterministic fallback._"
+                ),
+                provider="deterministic_ai_unavailable",
+                model="rules",
+                used_ai=False,
+            )
+
+        if mode == CopilotMode.AUTO and not provider.is_available():
+            return LLMResponse(
+                text=deterministic_answer,
+                provider="deterministic",
+                model="rules",
+                used_ai=False,
+            )
+
+        return self._try_ai_answer(
+            incident=incident,
+            question=question,
+            intent=intent,
+            deterministic_answer=deterministic_answer,
+            provider=provider,
+        )
+
+    def _try_ai_answer(
+        self,
+        incident: dict,
+        question: str,
+        intent: CopilotIntent,
+        deterministic_answer: str,
+        provider,
+    ) -> LLMResponse:
+        """Attempt a real AI answer; fall back cleanly if the provider fails."""
         memory_items = []
         if self.memory is not None:
             memory_items = self.memory.recent_interactions(
@@ -136,9 +247,6 @@ class TwinAgentCopilot:
         try:
             return provider.generate(system_prompt=SYSTEM_PROMPT, user_prompt=user_prompt)
         except Exception:
-            # Important: do not leak provider stack traces, retry errors, quota messages,
-            # or raw exception objects into the dashboard. The fallback answer is still
-            # correct because it is generated from trusted project data.
             return LLMResponse(
                 text=deterministic_answer,
                 provider="deterministic_after_ai_error",

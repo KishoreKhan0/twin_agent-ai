@@ -1,0 +1,99 @@
+machine:
+  machine_id: line1_motor1
+  type: conveyor_motor
+  sampling_rate_hz: 1
+  duration_minutes: 360
+  random_seed: 84
+  start_time: "2026-05-20T14:00:00"
+
+operation:
+  operating_mode: production
+  load_baseline_pct: 68
+  load_variation_pct: 20
+
+sensors:
+  temperature_c:
+    normal_range: [40, 75]
+    noise_std: 0.8
+  vibration_mm_s:
+    normal_range: [0.1, 0.8]
+    noise_std: 0.05
+  rpm:
+    normal_range: [1200, 1800]
+    noise_std: 12
+  current_a:
+    normal_range: [5, 12]
+    noise_std: 0.35
+  load_pct:
+    normal_range: [20, 95]
+    noise_std: 2.5
+  belt_speed_mps:
+    normal_range: [0.5, 2.0]
+    noise_std: 0.02
+  throughput_units_min:
+    normal_range: [40, 160]
+    noise_std: 4.0
+  ambient_temperature_c:
+    normal_range: [18, 32]
+    noise_std: 0.3
+
+faults:
+  - type: bearing_wear
+    start_time: "00:20:00"
+    duration_minutes: 10
+    severity: medium
+
+  - type: overheating
+    start_time: "00:47:00"
+    duration_minutes: 8
+    severity: high
+
+  - type: belt_misalignment
+    start_time: "01:15:00"
+    duration_minutes: 9
+    severity: medium
+
+  - type: motor_overload
+    start_time: "01:45:00"
+    duration_minutes: 7
+    severity: high
+
+  - type: bearing_wear
+    start_time: "02:12:00"
+    duration_minutes: 12
+    severity: high
+
+  - type: cooling_failure
+    start_time: "02:44:00"
+    duration_minutes: 10
+    severity: high
+
+  - type: belt_misalignment
+    start_time: "03:16:00"
+    duration_minutes: 8
+    severity: high
+
+  - type: sensor_drift
+    start_time: "03:48:00"
+    duration_minutes: 12
+    severity: medium
+
+  - type: overheating
+    start_time: "04:22:00"
+    duration_minutes: 11
+    severity: high
+
+  - type: bearing_wear
+    start_time: "04:55:00"
+    duration_minutes: 14
+    severity: high
+
+  - type: motor_overload
+    start_time: "05:28:00"
+    duration_minutes: 9
+    severity: medium
+
+  - type: belt_misalignment
+    start_time: "05:45:00"
+    duration_minutes: 10
+    severity: high

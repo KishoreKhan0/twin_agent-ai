@@ -27,6 +27,7 @@ from twinagent.analytics import (  # noqa: E402
     IncidentDetector,
     PredictiveMaintenanceAdvisor,
 )
+from twinagent.analytics.incident_segments import expand_incident_episodes  # noqa: E402
 
 
 def parse_args() -> argparse.Namespace:
@@ -84,7 +85,8 @@ def main() -> None:
         config = yaml.safe_load(file)
 
     incident_detector = IncidentDetector.from_config(config)
-    incidents = incident_detector.detect_incidents(processed)
+    raw_incidents = incident_detector.detect_incidents(processed)
+    incidents = expand_incident_episodes(raw_incidents)
 
     args.processed_output.parent.mkdir(parents=True, exist_ok=True)
     args.incidents_output.parent.mkdir(parents=True, exist_ok=True)
@@ -107,13 +109,17 @@ def main() -> None:
     print(f"Maintenance urgency counts: {urgency_counts}")
     print(f"Minimum health score: {int(processed['health_score'].min())}")
     print(f"Latest health score: {int(processed['health_score'].iloc[-1])}")
-    print(f"Incidents created: {len(incidents)}")
+    print(f"Raw detector incidents: {len(raw_incidents)}")
+    print(f"Operational incidents created: {len(incidents)}")
 
     for incident in incidents:
+        episode = ""
+        if int(incident.get("episode_count", 1)) > 1:
+            episode = f" | episode {incident['episode_index']}/{incident['episode_count']}"
         print(
             f"- {incident['incident_id']} | {incident['severity']} | "
             f"{incident['suspected_fault']} | "
-            f"{incident['start_time']} -> {incident['end_time']}"
+            f"{incident['start_time']} -> {incident['end_time']}{episode}"
         )
 
     print(f"Processed CSV: {args.processed_output}")

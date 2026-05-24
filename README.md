@@ -1,337 +1,277 @@
-# TwinAgent AI: Agentic Copilot for Industrial Digital Twins
+# TwinAgent AI — Agentic Copilot for Industrial Digital Twins
 
+![Python](https://img.shields.io/badge/Python-3.12+-blue)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-green)
+![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-red)
+![Docker](https://img.shields.io/badge/Docker-Compose-blue)
+![ML](https://img.shields.io/badge/ML-Fault%20Diagnosis-purple)
+![Tests](https://img.shields.io/badge/Tests-114%20Passing-brightgreen)
 
----
+TwinAgent AI is an end-to-end industrial digital-twin maintenance platform for simulated conveyor-motor assets. It combines sensor simulation, anomaly detection, health scoring, incident detection, ML fault diagnosis, diagnosis reconciliation, fleet triage, work-order generation, FastAPI serving, Docker deployment, and a Streamlit monitoring workspace.
 
-**TwinAgent AI is an agentic AI copilot prototype that monitors a simulated industrial conveyor-motor digital twin, detects sensor anomalies, retrieves engineering knowledge, and generates evidence-grounded maintenance explanations through a dashboard and API.**
+## Why this project matters
 
----
+Industrial maintenance systems should not only detect anomalies; they should explain what happened, prioritize assets, generate technician-ready actions, and expose the results through reliable APIs. TwinAgent AI demonstrates that complete workflow in a reproducible local system.
 
-## System architecture
+## Key features
+
+- Synthetic industrial sensor simulation for conveyor-motor digital twins
+- Rule-based anomaly detection and health scoring
+- Incident detection with severity, contributing sensors, and maintenance urgency
+- ML fault classifier using time-windowed sensor features
+- ML explainability with feature importance, error analysis, audit CSV, and model card
+- ML-assisted incident diagnosis and final diagnosis reconciliation
+- Fleet-scale demo with 12 machines, 43,200 readings, and 80 fleet incidents
+- Technician-ready maintenance work orders
+- Full backend pipeline orchestrator
+- FastAPI artifact API with Swagger/ReDoc
+- Streamlit dashboard
+- Docker Compose workflow
+- Automated test suite
+
+## Validated demo output
+
+A full pipeline run produces:
 
 ```text
-Synthetic conveyor-motor digital twin
-        ↓
-Generated sensor CSV
-        ↓
+Local incidents: 24
+Reconciled incidents: 24
+Fleet machines: 12
+Fleet incidents: 80
+ML windows/classes: 359 / 7
+ML weighted F1: 0.9332
+Local work orders: 24
+Fleet work orders: 80
+```
+
+## Screenshots
+
+Add screenshots under `docs/assets/` using the names below.
+
+| Dashboard | API |
+|---|---|
+| ![Overview](docs/assets/overview.png) | ![Swagger](docs/assets/swagger.png) |
+| ![Incidents](docs/assets/incidents.png) | ![Pipeline](docs/assets/pipeline-output.png) |
+| ![Work Orders](docs/assets/work-orders.png) | ![Docker](docs/assets/docker-running.png) |
+
+## Architecture
+
+```text
+Sensor simulation
+    ↓
 Anomaly detection
-        ↓
-Incident generation
-        ↓
-Health score + maintenance urgency
-        ↓
-SQLite persistence
-        ↓
-Engineering knowledge retrieval
-        ↓
-Tool-based agentic copilot
-        ↓
-FastAPI backend + Streamlit dashboard
-        ↓
-Markdown report export + evaluation metrics
-        ↓
-Docker Compose demo
+    ↓
+Health scoring
+    ↓
+Incident detection
+    ↓
+ML fault diagnosis
+    ↓
+ML explainability
+    ↓
+ML incident enrichment
+    ↓
+Diagnosis reconciliation
+    ↓
+Work-order generation
+    ↓
+FastAPI + Streamlit + Docker
 ```
 
----
-
-## Implemented features
-
-### Digital twin simulation
-
-- Configurable synthetic conveyor-motor simulator
-- Normal operating behavior with load variation and sensor noise
-- Fault injection for bearing wear, overheating, belt misalignment, motor overload, sensor drift, and cooling failure
-- Deterministic data generation using a random seed
-
-### Analytics
-
-- Interpretable anomaly scoring
-- Incident grouping
-- Health-score calculation
-- Risk-level classification
-- Maintenance urgency assignment
-- Maintenance recommendation generation
-
-### RAG and agentic copilot
-
-- Local Markdown engineering knowledge base
-- Local TF-IDF retrieval
-- Citation-friendly retrieved references
-- Tool-based copilot that queries incidents, sensor windows, retrieved documents, and maintenance checklist logic
-- Evidence-grounded answers with uncertainty statements
-
-### Dashboard
-
-- Streamlit UI
-- Machine overview
-- Sensor timelines
-- Anomaly score timeline
-- Health score timeline
-- Incident table
-- Incident details
-- Copilot explanation panel
-
-### API
-
-- FastAPI backend
-- Swagger UI at `/docs`
-- Health endpoint
-- Machine latest-state endpoint
-- Machine time-window endpoint
-- Incident list/detail endpoints
-- Agent question endpoint
-
-### Storage and streaming
-
-- SQLite storage layer for processed sensor rows and incidents
-- MQTT-style dry-run sensor replay
-- Optional live MQTT publisher/subscriber skeleton with `paho-mqtt`
-
-### Evaluation and reporting
-
-- Binary anomaly detection metrics
-- Detection delay
-- Incident overlap score
-- Incident-level diagnosis accuracy
-- Row-level fault alignment metric
-- JSON and Markdown evaluation reports
-- Markdown incident report export
-
-### Docker
-
-- Dockerfile
-- Docker Compose setup
-- API container
-- Dashboard container
-- Demo-data bootstrap script
-
----
-
-## Current evaluation snapshot
-
-Default evaluation output:
+## Project structure
 
 ```text
-Precision: 1.0
-Recall: 0.7076
-F1 score: 0.8287
-False positive rate: 0.0
-Mean detection delay seconds: 142.0
-Incident overlap score: 0.8924
-Incident diagnosis accuracy: 1.0
-Row-level fault alignment accuracy: 0.1852
+configs/                 YAML configs for simulation and anomaly detection
+data/                    Generated local/fleet artifacts
+docs/                    Project documentation
+models/                  ML model and metrics artifacts
+scripts/                 CLI scripts and pipeline runners
+src/twinagent/           Main Python package
+tests/                   Automated test suite
 ```
 
-Interpretation:
-
-- Binary detection is strong for the current synthetic fault setup.
-- Incident-level diagnosis is the most relevant diagnosis metric because the copilot explains incidents.
-- Row-level fault alignment is stricter and lower because fault windows can overlap and evolve.
-- Results are measured on synthetic data and should not be presented as real-world predictive-maintenance accuracy.
-
----
-
-## Tech stack
-
-- Python
-- NumPy
-- Pandas
-- PyYAML
-- Pydantic
-- scikit-learn
-- Plotly
-- Streamlit
-- FastAPI
-- Uvicorn
-- SQLite
-- paho-mqtt
-- pytest
-- Docker / Docker Compose
-
----
-
-## Local setup on Windows CMD
-
-Create and activate a virtual environment:
+## Quick start
 
 ```cmd
 python -m venv .venv
 .venv\Scripts\activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-```
-
-Run tests:
-
-```cmd
 python -m pytest
+python scripts\run_full_pipeline.py
 ```
 
-Expected current result:
-
-```text
-57 passed
-```
-
----
-
-## Local demo commands
-
-Run the core pipeline:
-
-```cmd
-python scripts\generate_synthetic_data.py
-python scripts\run_anomaly_detection.py
-python scripts\export_to_sqlite.py
-python scripts\run_agent.py
-python scripts\evaluate_detectors.py
-python scripts\export_incident_report.py --incident-id INC-0001
-```
-
-Launch the Streamlit dashboard:
-
-```cmd
-python scripts\launch_dashboard.py
-```
-
-Open:
-
-```text
-http://localhost:8501
-```
-
-Launch the FastAPI backend:
+Start the API:
 
 ```cmd
 python scripts\launch_api.py
 ```
 
-Open:
+Open Swagger:
 
 ```text
-http://127.0.0.1:8000/docs
+http://localhost:8000/docs
 ```
 
-Run MQTT-style dry-run replay:
+Start the dashboard in another terminal:
 
 ```cmd
-python scripts\replay_sensor_stream.py --dry-run --limit-rows 2
+python scripts\launch_dashboard.py
 ```
 
-Bootstrap all demo artifacts in one command:
+Open dashboard:
 
-```cmd
-python scripts\bootstrap_demo_data.py
+```text
+http://localhost:8501
 ```
 
----
+## Docker workflow
 
-## Docker demo
-
-Build and run both API and dashboard:
+First build and run:
 
 ```cmd
 docker compose up --build
 ```
 
-Open:
-
-```text
-FastAPI Swagger UI: http://127.0.0.1:8000/docs
-Streamlit dashboard: http://127.0.0.1:8501
-```
-
-Run tests inside Docker:
+Later starts:
 
 ```cmd
-docker compose run --rm api python -m pytest
+docker compose up
 ```
 
-Stop containers:
+Stop:
 
 ```cmd
 docker compose down
 ```
 
----
+Run the pipeline inside Docker:
 
-## Generated outputs
-
-The pipeline creates:
-
-```text
-data/generated/sensor_data.csv
-data/processed/sensor_data_with_anomalies.csv
-data/processed/twinagent.db
-data/incidents/incidents.json
-data/reports/evaluation_metrics.json
-data/reports/evaluation_report.md
-data/reports/INC-0001_report.md
+```cmd
+docker compose --profile pipeline run --rm pipeline
 ```
 
----
+## API smoke test
 
-## API endpoints
+With the API running:
+
+```cmd
+python scripts\smoke_test_api.py
+```
+
+Expected ending:
+
+```text
+TwinAgent AI API smoke test passed.
+```
+
+## Important URLs
+
+```text
+Swagger:   http://localhost:8000/docs
+ReDoc:     http://localhost:8000/redoc
+Dashboard: http://localhost:8501
+```
+
+## Core API endpoints
 
 ```text
 GET  /health
-GET  /machines/latest?machine_id=line1_motor1
-GET  /machines/{machine_id}/window
-GET  /incidents
-GET  /incidents/{incident_id}
+GET  /summary
+GET  /artifacts/status
+GET  /incidents/reconciled
+GET  /ml/metrics
+GET  /ml/error-analysis
+GET  /ml/feature-importance
+GET  /work-orders/local
+GET  /fleet/summary
+GET  /fleet/triage
+GET  /work-orders/fleet
 POST /agent/incident-question
 ```
 
-Example POST body:
+## Full pipeline
+
+```cmd
+python scripts\run_full_pipeline.py
+```
+
+The pipeline runs:
+
+```text
+bootstrap local demo data
+→ train ML fault classifier
+→ predict fault windows
+→ export ML explainability
+→ enrich incidents with ML diagnosis
+→ reconcile rule/ML diagnosis
+→ generate fleet demo data
+→ export fleet analysis
+→ export fleet triage
+→ export work orders
+```
+
+With tests first:
+
+```cmd
+python scripts\run_full_pipeline.py --include-tests
+```
+
+Local-only run:
+
+```cmd
+python scripts\run_full_pipeline.py --local-only
+```
+
+## Tests vs runtime scripts
+
+The `tests/` folder is for development and regression checks. It is not part of normal runtime.
+
+Normal use:
+
+```cmd
+python scripts\run_full_pipeline.py
+```
+
+Before pushing changes:
+
+```cmd
+python -m pytest
+```
+
+Full validation:
+
+```cmd
+python scripts\run_full_pipeline.py --include-tests
+```
+
+## ML diagnosis flow
+
+```text
+rule-based incident diagnosis
+→ ML fault prediction
+→ ML incident enrichment
+→ final diagnosis reconciliation
+→ work-order generation
+```
+
+Example final diagnosis fields:
 
 ```json
 {
-  "incident_id": "INC-0001",
-  "question": "Why did this incident trigger and what should the technician inspect first?"
+  "final_diagnosis": "bearing_wear",
+  "final_diagnosis_source": "ml_override_generic_rule",
+  "diagnosis_confidence": "high",
+  "requires_review": false
 }
 ```
 
----
+## Limitations
 
-## Documentation
+- Uses synthetic demo data, not certified production maintenance data.
+- ML metrics are for the simulated dataset and should not be overclaimed as real-world performance.
+- Outputs are decision-support signals, not certified maintenance decisions.
 
-See:
+## License
 
-- `docs/architecture.md`
-- `docs/simulation.md`
-- `docs/anomaly_detection.md`
-- `docs/rag_agent.md`
-- `docs/dashboard.md`
-- `docs/evaluation.md`
-- `docs/storage.md`
-- `docs/mqtt_streaming.md`
-- `docs/api.md`
-- `docs/docker.md`
-- `docs/completion_checklist.md`
-- `docs/cv_notes.md`
-
----
-
-## Technical honesty and limitations
-
-This is a prototype built with synthetic data.
-
-It does **not** claim:
-
-- certified safety behavior
-- real-world predictive-maintenance accuracy
-- production deployment readiness
-- confirmed physical fault diagnosis
-- validated remaining-useful-life estimation
-
-Correct wording:
-
-- synthetic industrial digital twin
-- simulated sensor stream
-- anomaly-detection prototype
-- predictive-maintenance scoring proxy
-- evidence-grounded incident explanation
-- agentic AI copilot prototype
-
----
+MIT License. See `LICENSE`.

@@ -1,36 +1,41 @@
-r"""Launch the TwinAgent AI FastAPI backend.
+r"""Launch the TwinAgent AI FastAPI app.
 
-Run from the project root after exporting SQLite data:
+Run from the project root:
 
     python scripts\launch_api.py
+
+Swagger UI:
+
+    http://localhost:8000/docs
 """
 
 from __future__ import annotations
 
-import subprocess
-import sys
+import os
 from pathlib import Path
+import sys
+
+import uvicorn
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SRC_DIR = PROJECT_ROOT / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
 
 
 def main() -> None:
-    """Launch the FastAPI backend using uvicorn."""
-    command = [
-        sys.executable,
-        "-m",
-        "uvicorn",
-        "twinagent.api.main:app",
-        "--app-dir",
-        str(PROJECT_ROOT / "src"),
-        "--host",
-        "127.0.0.1",
-        "--port",
-        "8000",
-        "--reload",
-    ]
-    subprocess.run(command, check=True, cwd=PROJECT_ROOT)
+    """Launch the API server."""
+    host = os.getenv("TWINAGENT_API_HOST", "0.0.0.0")
+    port = int(os.getenv("TWINAGENT_API_PORT", "8000"))
+    reload = os.getenv("TWINAGENT_API_RELOAD", "0") == "1"
+
+    uvicorn.run(
+        "twinagent.api.app:app",
+        host=host,
+        port=port,
+        reload=reload,
+    )
 
 
 if __name__ == "__main__":

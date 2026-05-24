@@ -15,6 +15,14 @@ class IncidentQuestionRequest(BaseModel):
     question: str = Field(
         default="Why did this incident trigger and what should the technician inspect first?"
     )
+    copilot_mode: str = Field(
+        default="auto",
+        description="Copilot mode: deterministic, ai, or auto.",
+    )
+    include_metadata: bool = Field(
+        default=True,
+        description="Return intent, provider, and suggested follow-up metadata.",
+    )
 
 
 def register_agent_routes(context: ApiContext) -> APIRouter:
@@ -23,20 +31,32 @@ def register_agent_routes(context: ApiContext) -> APIRouter:
 
     @router.post("/incident-question")
     def answer_incident_question(request: IncidentQuestionRequest) -> dict:
-        """Answer an incident question using the deterministic copilot."""
+        """Answer an incident question using the selected copilot mode."""
         try:
-            answer = context.copilot().answer_incident_question(
+            copilot = context.copilot()
+
+            if request.include_metadata and hasattr(copilot, "answer_incident_question_with_metadata"):
+                result = copilot.answer_incident_question_with_metadata(
+                    incident_id=request.incident_id,
+                    question=request.question,
+                    copilot_mode=request.copilot_mode,
+                )
+                return result.to_dict()
+
+            answer = copilot.answer_incident_question(
                 incident_id=request.incident_id,
                 question=request.question,
+                copilot_mode=request.copilot_mode,
             )
         except ValueError as error:
-            raise HTTPException(status_code=404, detail=str(error)) from error
+            raise HTTPException(status_code=400, detail=str(error)) from error
         except FileNotFoundError as error:
             raise HTTPException(status_code=409, detail=str(error)) from error
 
         return {
             "incident_id": request.incident_id,
             "question": request.question,
+            "copilot_mode": request.copilot_mode,
             "answer": answer,
         }
 

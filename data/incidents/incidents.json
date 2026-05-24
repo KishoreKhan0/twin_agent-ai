@@ -2,24 +2,533 @@
   {
     "incident_id": "INC-0001",
     "machine_id": "line1_motor1",
-    "start_time": "2026-05-20T14:37:22",
-    "end_time": "2026-05-20T14:56:59",
-    "duration_seconds": 1178,
+    "start_time": "2026-05-20T14:21:29",
+    "end_time": "2026-05-20T14:24:19",
+    "duration_seconds": 170,
+    "severity": "medium",
+    "suspected_fault": "vibration_anomaly",
+    "max_anomaly_score": 0.5662,
+    "mean_anomaly_score": 0.3723,
+    "contributing_sensors": [
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "vibration_mm_s": "value range 1.40 to 2.84; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0002",
+    "episode_index": 1,
+    "episode_count": 3
+  },
+  {
+    "incident_id": "INC-0002",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T14:24:19",
+    "end_time": "2026-05-20T14:27:09",
+    "duration_seconds": 170,
+    "severity": "medium",
+    "suspected_fault": "vibration_anomaly",
+    "max_anomaly_score": 0.5662,
+    "mean_anomaly_score": 0.3723,
+    "contributing_sensors": [
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "vibration_mm_s": "value range 1.40 to 2.84; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0002",
+    "episode_index": 2,
+    "episode_count": 3
+  },
+  {
+    "incident_id": "INC-0003",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T14:27:09",
+    "end_time": "2026-05-20T14:29:59",
+    "duration_seconds": 170,
+    "severity": "medium",
+    "suspected_fault": "vibration_anomaly",
+    "max_anomaly_score": 0.5662,
+    "mean_anomaly_score": 0.3723,
+    "contributing_sensors": [
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "vibration_mm_s": "value range 1.40 to 2.84; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0002",
+    "episode_index": 3,
+    "episode_count": 3
+  },
+  {
+    "incident_id": "INC-0004",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T14:48:24",
+    "end_time": "2026-05-20T14:54:59",
+    "duration_seconds": 396,
+    "severity": "medium",
+    "suspected_fault": "overheating",
+    "max_anomaly_score": 0.5523,
+    "mean_anomaly_score": 0.4253,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c"
+    ],
+    "evidence": {
+      "current_a": "value range 8.99 to 14.59; max sensor anomaly score 0.55",
+      "temperature_c": "value range 82.20 to 95.91; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0003",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "INC-0005",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T15:16:16",
+    "end_time": "2026-05-20T15:23:59",
+    "duration_seconds": 464,
+    "severity": "low",
+    "suspected_fault": "vibration_anomaly",
+    "max_anomaly_score": 0.3894,
+    "mean_anomaly_score": 0.3281,
+    "contributing_sensors": [
+      "current_a",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.64 to 14.61; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 2.21; max sensor anomaly score 0.55"
+    },
+    "parent_incident_id": "INC-0006",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "INC-0006",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T15:45:01",
+    "end_time": "2026-05-20T15:51:59",
+    "duration_seconds": 419,
+    "severity": "medium",
+    "suspected_fault": "overheating",
+    "max_anomaly_score": 0.6061,
+    "mean_anomaly_score": 0.5068,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 20.61; max sensor anomaly score 0.95",
+      "temperature_c": "value range 65.71 to 84.11; max sensor anomaly score 0.55"
+    },
+    "parent_incident_id": "INC-0008",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "INC-0007",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T16:10:32",
+    "end_time": "2026-05-20T16:11:19",
+    "duration_seconds": 48,
+    "severity": "low",
+    "suspected_fault": "throughput_anomaly",
+    "max_anomaly_score": 0.2903,
+    "mean_anomaly_score": 0.2903,
+    "contributing_sensors": [
+      "throughput_units_min"
+    ],
+    "evidence": {
+      "throughput_units_min": "value range 53.30 to 55.00; max sensor anomaly score 0.55"
+    },
+    "parent_incident_id": "INC-0009",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "INC-0008",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T16:13:28",
+    "end_time": "2026-05-20T16:16:58",
+    "duration_seconds": 210,
+    "severity": "medium",
+    "suspected_fault": "vibration_anomaly",
+    "max_anomaly_score": 0.6278,
+    "mean_anomaly_score": 0.4639,
+    "contributing_sensors": [
+      "current_a",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.79 to 14.87; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 3.52; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0010",
+    "episode_index": 1,
+    "episode_count": 3
+  },
+  {
+    "incident_id": "INC-0009",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T16:16:58",
+    "end_time": "2026-05-20T16:20:29",
+    "duration_seconds": 211,
+    "severity": "medium",
+    "suspected_fault": "vibration_anomaly",
+    "max_anomaly_score": 0.6278,
+    "mean_anomaly_score": 0.4639,
+    "contributing_sensors": [
+      "current_a",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.79 to 14.87; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 3.52; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0010",
+    "episode_index": 2,
+    "episode_count": 3
+  },
+  {
+    "incident_id": "INC-0010",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T16:20:29",
+    "end_time": "2026-05-20T16:23:59",
+    "duration_seconds": 210,
+    "severity": "medium",
+    "suspected_fault": "vibration_anomaly",
+    "max_anomaly_score": 0.6278,
+    "mean_anomaly_score": 0.4639,
+    "contributing_sensors": [
+      "current_a",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.79 to 14.87; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 3.52; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0010",
+    "episode_index": 3,
+    "episode_count": 3
+  },
+  {
+    "incident_id": "INC-0011",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T16:47:27",
+    "end_time": "2026-05-20T16:53:59",
+    "duration_seconds": 393,
+    "severity": "medium",
+    "suspected_fault": "overheating",
+    "max_anomaly_score": 0.5523,
+    "mean_anomaly_score": 0.3987,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c"
+    ],
+    "evidence": {
+      "current_a": "value range 9.17 to 14.30; max sensor anomaly score 0.55",
+      "temperature_c": "value range 82.09 to 94.18; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0013",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "INC-0012",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T17:16:10",
+    "end_time": "2026-05-20T17:20:04",
+    "duration_seconds": 234,
+    "severity": "medium",
+    "suspected_fault": "vibration_anomaly",
+    "max_anomaly_score": 0.5662,
+    "mean_anomaly_score": 0.3583,
+    "contributing_sensors": [
+      "current_a",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.68 to 14.51; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 2.72; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0015",
+    "episode_index": 1,
+    "episode_count": 2
+  },
+  {
+    "incident_id": "INC-0013",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T17:20:04",
+    "end_time": "2026-05-20T17:23:59",
+    "duration_seconds": 235,
+    "severity": "medium",
+    "suspected_fault": "vibration_anomaly",
+    "max_anomaly_score": 0.5662,
+    "mean_anomaly_score": 0.3583,
+    "contributing_sensors": [
+      "current_a",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 9.68 to 14.51; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 2.72; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0015",
+    "episode_index": 2,
+    "episode_count": 2
+  },
+  {
+    "incident_id": "INC-0014",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T18:27:50",
+    "end_time": "2026-05-20T18:32:59",
+    "duration_seconds": 310,
+    "severity": "medium",
+    "suspected_fault": "overheating",
+    "max_anomaly_score": 0.6587,
+    "mean_anomaly_score": 0.5046,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c"
+    ],
+    "evidence": {
+      "current_a": "value range 9.89 to 15.39; max sensor anomaly score 0.95",
+      "temperature_c": "value range 82.00 to 113.53; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0019",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "INC-0015",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T18:56:21",
+    "end_time": "2026-05-20T18:59:31",
+    "duration_seconds": 190,
     "severity": "high",
     "suspected_fault": "bearing_wear",
-    "max_anomaly_score": 0.7526,
-    "mean_anomaly_score": 0.3971,
+    "max_anomaly_score": 0.7001,
+    "mean_anomaly_score": 0.4717,
     "contributing_sensors": [
       "current_a",
       "temperature_c",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.71 to 15.15; max sensor anomaly score 0.55",
+      "temperature_c": "value range 56.77 to 85.09; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 3.57; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0020",
+    "episode_index": 1,
+    "episode_count": 4
+  },
+  {
+    "incident_id": "INC-0016",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T18:59:31",
+    "end_time": "2026-05-20T19:02:40",
+    "duration_seconds": 189,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7001,
+    "mean_anomaly_score": 0.4717,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.71 to 15.15; max sensor anomaly score 0.55",
+      "temperature_c": "value range 56.77 to 85.09; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 3.57; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0020",
+    "episode_index": 2,
+    "episode_count": 4
+  },
+  {
+    "incident_id": "INC-0017",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T19:02:40",
+    "end_time": "2026-05-20T19:05:49",
+    "duration_seconds": 189,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7001,
+    "mean_anomaly_score": 0.4717,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.71 to 15.15; max sensor anomaly score 0.55",
+      "temperature_c": "value range 56.77 to 85.09; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 3.57; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0020",
+    "episode_index": 3,
+    "episode_count": 4
+  },
+  {
+    "incident_id": "INC-0018",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T19:05:49",
+    "end_time": "2026-05-20T19:08:59",
+    "duration_seconds": 190,
+    "severity": "high",
+    "suspected_fault": "bearing_wear",
+    "max_anomaly_score": 0.7001,
+    "mean_anomaly_score": 0.4717,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.71 to 15.15; max sensor anomaly score 0.55",
+      "temperature_c": "value range 56.77 to 85.09; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 3.57; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0020",
+    "episode_index": 4,
+    "episode_count": 4
+  },
+  {
+    "incident_id": "INC-0019",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T19:26:25",
+    "end_time": "2026-05-20T19:27:08",
+    "duration_seconds": 44,
+    "severity": "low",
+    "suspected_fault": "throughput_anomaly",
+    "max_anomaly_score": 0.2903,
+    "mean_anomaly_score": 0.2903,
+    "contributing_sensors": [
+      "throughput_units_min"
+    ],
+    "evidence": {
+      "throughput_units_min": "value range 52.42 to 54.15; max sensor anomaly score 0.55"
+    },
+    "parent_incident_id": "INC-0021",
+    "episode_index": 1,
+    "episode_count": 1
+  },
+  {
+    "incident_id": "INC-0020",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T19:29:19",
+    "end_time": "2026-05-20T19:33:09",
+    "duration_seconds": 230,
+    "severity": "medium",
+    "suspected_fault": "overheating",
+    "max_anomaly_score": 0.6061,
+    "mean_anomaly_score": 0.5046,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 18.55; max sensor anomaly score 0.95",
+      "temperature_c": "value range 65.96 to 83.88; max sensor anomaly score 0.55"
+    },
+    "parent_incident_id": "INC-0022",
+    "episode_index": 1,
+    "episode_count": 2
+  },
+  {
+    "incident_id": "INC-0021",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T19:33:09",
+    "end_time": "2026-05-20T19:36:59",
+    "duration_seconds": 230,
+    "severity": "medium",
+    "suspected_fault": "overheating",
+    "max_anomaly_score": 0.6061,
+    "mean_anomaly_score": 0.5046,
+    "contributing_sensors": [
+      "current_a",
+      "temperature_c"
+    ],
+    "evidence": {
+      "current_a": "value range 14.20 to 18.55; max sensor anomaly score 0.95",
+      "temperature_c": "value range 65.96 to 83.88; max sensor anomaly score 0.55"
+    },
+    "parent_incident_id": "INC-0022",
+    "episode_index": 2,
+    "episode_count": 2
+  },
+  {
+    "incident_id": "INC-0022",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T19:45:20",
+    "end_time": "2026-05-20T19:48:33",
+    "duration_seconds": 193,
+    "severity": "medium",
+    "suspected_fault": "belt_misalignment",
+    "max_anomaly_score": 0.609,
+    "mean_anomaly_score": 0.3692,
+    "contributing_sensors": [
+      "current_a",
       "throughput_units_min",
       "vibration_mm_s"
     ],
     "evidence": {
-      "current_a": "value range 8.68 to 15.26; max sensor anomaly score 0.95",
-      "temperature_c": "value range 51.04 to 95.31; max sensor anomaly score 0.95",
-      "throughput_units_min": "value range 49.87 to 158.66; max sensor anomaly score 0.55",
-      "vibration_mm_s": "value range 0.63 to 2.99; max sensor anomaly score 0.95"
-    }
+      "current_a": "value range 8.97 to 15.17; max sensor anomaly score 0.55",
+      "throughput_units_min": "value range 49.21 to 140.70; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 2.68; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0023",
+    "episode_index": 1,
+    "episode_count": 3
+  },
+  {
+    "incident_id": "INC-0023",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T19:48:33",
+    "end_time": "2026-05-20T19:51:46",
+    "duration_seconds": 193,
+    "severity": "medium",
+    "suspected_fault": "belt_misalignment",
+    "max_anomaly_score": 0.609,
+    "mean_anomaly_score": 0.3692,
+    "contributing_sensors": [
+      "current_a",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.97 to 15.17; max sensor anomaly score 0.55",
+      "throughput_units_min": "value range 49.21 to 140.70; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 2.68; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0023",
+    "episode_index": 2,
+    "episode_count": 3
+  },
+  {
+    "incident_id": "INC-0024",
+    "machine_id": "line1_motor1",
+    "start_time": "2026-05-20T19:51:46",
+    "end_time": "2026-05-20T19:54:59",
+    "duration_seconds": 193,
+    "severity": "medium",
+    "suspected_fault": "belt_misalignment",
+    "max_anomaly_score": 0.609,
+    "mean_anomaly_score": 0.3692,
+    "contributing_sensors": [
+      "current_a",
+      "throughput_units_min",
+      "vibration_mm_s"
+    ],
+    "evidence": {
+      "current_a": "value range 8.97 to 15.17; max sensor anomaly score 0.55",
+      "throughput_units_min": "value range 49.21 to 140.70; max sensor anomaly score 0.55",
+      "vibration_mm_s": "value range 1.40 to 2.68; max sensor anomaly score 0.95"
+    },
+    "parent_incident_id": "INC-0023",
+    "episode_index": 3,
+    "episode_count": 3
   }
 ]

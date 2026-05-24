@@ -2,33 +2,27 @@
 
 ## Executive summary
 
-Incident `INC-0001` affected machine `line1_motor1` between `2026-05-20T14:37:22` and `2026-05-20T14:56:59`.
-The system classified the event as **high** severity with suspected fault **bearing_wear**.
-The maximum anomaly score was **0.7526** and the mean anomaly score was **0.3971**.
+Incident `INC-0001` affected machine `line1_motor1` between `2026-05-20T14:21:29` and `2026-05-20T14:24:19`.
+The system classified the event as **medium** severity with suspected fault **vibration_anomaly**.
+The maximum anomaly score was **0.5662** and the mean anomaly score was **0.3723**.
 
 ## Machine health and maintenance status
 
-- Minimum health score in incident window: **27**
-- Latest health score in incident window: **67**
+- Minimum health score in incident window: **68**
+- Latest health score in incident window: **68**
 - Latest risk level in incident window: **medium**
 - Latest maintenance urgency in incident window: **inspect_within_48h**
 - Latest row-level maintenance recommendation: Inspect mechanical alignment, bearings, fasteners, and vibration trend.
 
 ## Sensor evidence
 
-The queried sensor window contains **1178** rows from `2026-05-20T14:37:22` to `2026-05-20T14:56:59`.
+The queried sensor window contains **171** rows from `2026-05-20T14:21:29` to `2026-05-20T14:24:19`.
 
-- `current_a` ranged from **8.68** to **15.26** (start **12.18**, end **10.33**, change **-1.85**).
-- `temperature_c` ranged from **51.04** to **95.31** (start **69.54**, end **57.0**, change **-12.54**).
-- `throughput_units_min` ranged from **49.87** to **158.66** (start **116.06**, end **70.44**, change **-45.62**).
-- `vibration_mm_s` ranged from **0.604** to **2.987** (start **1.409**, end **2.139**, change **0.73**).
+- `vibration_mm_s` ranged from **1.326** to **1.759** (start **1.478**, end **1.735**, change **0.257**).
 
 ### Detector evidence
 
-- `current_a`: value range 8.68 to 15.26; max sensor anomaly score 0.95
-- `temperature_c`: value range 51.04 to 95.31; max sensor anomaly score 0.95
-- `throughput_units_min`: value range 49.87 to 158.66; max sensor anomaly score 0.55
-- `vibration_mm_s`: value range 0.63 to 2.99; max sensor anomaly score 0.95
+- `vibration_mm_s`: value range 1.40 to 2.84; max sensor anomaly score 0.95
 
 ## Retrieved engineering references
 
@@ -54,10 +48,10 @@ The queried sensor window contains **1178** rows from `2026-05-20T14:37:22` to `
 
 ## Recommended technician actions
 
-- Reduce load or stop operation if the machine remains critical.
-- Inspect bearing housing for heat, noise, and mechanical play.
-- Check lubrication condition and bearing seals.
-- Compare vibration and temperature trends before restarting at full load.
+- Schedule technician inspection and keep close monitoring enabled.
+- Review the incident evidence and contributing sensors.
+- Inspect the affected mechanical and electrical components.
+- Record technician findings to improve future diagnosis.
 
 ## Uncertainty and limitations
 

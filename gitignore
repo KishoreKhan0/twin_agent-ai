@@ -1,46 +1,72 @@
-# Python bytecode and caches
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
 # Virtual environments
 .venv/
 venv/
 env/
+ENV/
 
-# Build outputs
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build artifacts
 build/
 dist/
 *.egg-info/
 
-# Test and coverage outputs
-.pytest_cache/
-.coverage
-htmlcov/
+# Logs
+*.log
 
-# Ruff cache
-.ruff_cache/
+# SQLite runtime files
+*.sqlite-shm
+*.sqlite-wal
+*.db-journal
 
-# Environment files
-.env
-.env.local
+# Generated TwinAgent data artifacts
+# These can be regenerated with:
+# python scripts/run_full_pipeline.py
+data/generated/
+data/processed/
+data/incidents/
+data/reports/
+data/fleet/generated/
+data/fleet/processed/
+data/fleet/incidents/
+data/fleet/reports/
 
-# OS/editor files
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# ML artifacts
+models/*.joblib
+models/*.pkl
+models/*.pickle
+models/fault_classifier_metrics.json
+models/fault_classifier_report.md
+models/fault_classifier_feature_importance.csv
+models/fault_classifier_error_analysis.json
+models/fault_classifier_model_card.md
 
-# Project-generated data
-data/raw/*
-data/generated/*
-data/processed/*
-data/incidents/*
-data/reports/*
+# Keep folders if .gitkeep files are added
+!data/**/.gitkeep
+!models/.gitkeep
 
-# Keep folder placeholders if added later
-!data/raw/.gitkeep
-!data/generated/.gitkeep
-!data/processed/.gitkeep
-!data/incidents/.gitkeep
-!data/reports/.gitkeep
+# Docker override files
+docker-compose.override.yml
